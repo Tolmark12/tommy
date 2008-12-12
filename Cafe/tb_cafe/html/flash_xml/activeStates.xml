@@ -1,0 +1,42 @@
+<MAIN>
+	<states>
+		<state id="TX">
+			<loc x="212" y="194" name="someplace" type="cafe" link="http://www.somelink.com">
+				<description>This is where some sort of description could go.</description>
+			</loc>
+			<loc x="206" y="223" name="someplace" type="cafe" link="http://www.somelink.com">
+				<description>This is where some sort of description could go.</description>
+			</loc>
+		</state>
+		<state id="NV">
+			<loc x="63" y="131" name="someplace" type="cafe" link="http://www.somelink.com">
+				<description>This is where <a href="asdf">some</a> sort of description could go.</description>
+			</loc>
+		</state>
+		<state id="FL" >
+			<loc x="340" y="222" name="someplace" type="cafe" link="http://www.somelink.com">
+				<description>This is where <a href="asdf">some</a> sort of description could go.</description>
+			</loc>
+		</state>
+		<state id="HI" >
+			<loc x="66" y="258" name="someplace" type="cafe" link="http://www.somelink.com">
+				<description>This is where <a href="asdf">some</a> sort of description could go.</description>
+			</loc>
+		</state>
+		<state id="AZ" >
+			<loc x="87" y="172" name="someplace" type="cafe" link="http://www.somelink.com">
+				<description>This is where <a href="asdf">some</a> sort of description could go.</description>
+			</loc>
+		</state>
+		<state id="SC" >
+			<loc x="337" y="171" name="someplace" type="cafe" link="http://www.somelink.com">
+				<description>This is where <a href="asdf">some</a> sort of description could go.</description>
+			</loc>
+		</state>
+		<state id="CA" >
+			<loc x="36" y="151" name="someplace" type="cafe" link="http://www.somelink.com">
+				<description>This is where <a href="asdf">some</a> sort of description could go.</description>
+			</loc>
+		</state>
+	</states>
+</MAIN>

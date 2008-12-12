@@ -1,0 +1,80 @@
+<MAIN>
+	<logo src="media/TB001/images/static/cafes/flash_resources/logo_tropical_cafe.png" href="http://www.somesite.com/page/" x="488" y="42" ></logo>
+	<frame id="lightTan"></frame>
+	<topnav>
+		<a href="cafe_template_find.html">Lunch &amp; Dinner</a>
+		<a href="cafe_template_find.html">Cocktails</a>
+		<a href="cafe_template_menus.html">Menus</a>
+		<a href="cafe_template_recipes.html">Recipes</a>
+		<a href="cafe_template_find.html" id="currentPage">Invite A Friend</a>
+		<a href="cafe_template_find.html">Find A Cafe</a>
+		<a href="cafe_template_find.html">Reserve A Table</a>
+	</topnav>
+	<slides imagePath="media/TB001/images/static/cafes/flash_placeholder/" autoPlay="true" autoPlaySpeed="1">
+		<slide href="http://www.somesite.com" target="_blank" >
+			<main_img>temp_image_1.jpg</main_img>
+			<thmb_img>temp_image_1_thmb.jpg</thmb_img>
+		</slide>
+		<slide>
+			<main_img>temp_image_2.jpg</main_img>
+			<thmb_img>temp_image_2_thmb.jpg</thmb_img>
+			<text>
+				<h1>This is a header</h1><br/><p>Two Phasellus non lorem vel elit <a href="http://www.somesite.com">consectetuer egestas</a>. Curabitur vitae sem sit amet nisi fermentum molestie. Morbi vel lacus. Vivamus massa. Aliquam accumsan tempus purus. Suspendisse molestie eros a massa. Proin at ante vel turpis bibendum convallis. Donec quis dolor. Integer eu nisi. Aliquam dapibus scelerisque justo. Fusce sem. Nulla sed mauris sit amet erat rutrum venenatis.</p><br/>
+				<p>Integer rhoncus tellus sit amet nibh. Maecenas pellentesque tincidunt elit. Ut sem lorem, commodo sit amet, accumsan eget, condimentum et, nulla. Suspendisse potenti. In leo sem, condimentum at, laoreet vitae, suscipit vel, lectus. Ut ullamcorper lacus eu nunc dapibus vulputate. Proin porta erat vel ante. porttitor.</p>
+			</text>
+		</slide>
+
+		<slide>
+			<main_img>temp_image_4.jpg</main_img>
+			<thmb_img>temp_image_4_thmb.jpg</thmb_img>
+		</slide>
+		<slide>
+			<main_img>temp_image_1.jpg</main_img>
+			<thmb_img>temp_image_1_thmb.jpg</thmb_img>
+		</slide>
+		<slide>
+			<main_img>temp_image_2.jpg</main_img>
+			<thmb_img>temp_image_2_thmb.jpg</thmb_img>
+		</slide>
+		<slide>
+			<main_img>temp_image_3.jpg</main_img>
+			<thmb_img>temp_image_3_thmb.jpg</thmb_img>
+		</slide>
+		<slide>
+			<main_img>temp_image_4.jpg</main_img>
+			<thmb_img>temp_image_4_thmb.jpg</thmb_img>
+		</slide>
+		<slide>
+			<main_img>temp_image_1.jpg</main_img>
+			<thmb_img>temp_image_1_thmb.jpg</thmb_img>
+		</slide>
+		<slide>
+			<main_img>temp_image_2.jpg</main_img>
+			<thmb_img>temp_image_2_thmb.jpg</thmb_img>
+		</slide>
+		<slide>
+			<main_img>temp_image_3.jpg</main_img>
+			<thmb_img>temp_image_3_thmb.jpg</thmb_img>
+		</slide>
+		<slide>
+			<main_img>temp_image_4.jpg</main_img>
+			<thmb_img>temp_image_4_thmb.jpg</thmb_img>
+		</slide>
+	</slides>
+	<css>
+		h1{
+			display:block;
+			font-size:14;
+			color:#303030;
+		}
+		a{
+			display:inline;
+			color:#7C9DAF;
+		}
+		a:hover{
+			text-decoration:underline;
+			color:#B55E1E;
+		}
+		
+	</css>
+</MAIN>

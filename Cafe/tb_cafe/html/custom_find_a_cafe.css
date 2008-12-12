@@ -1,0 +1,24 @@
+/****************
+	navigation
+****************/
+.find_cafe_nav {position: relative; width: 755px; list-style-type: none; margin: auto;}
+.find_cafe_nav li {float: left; display: inline; margin-left: 20px; margin-right: 20px;}
+.find_cafe_nav a {font-size: 12px; color: #0a7a69; text-decoration: none; display: block;}
+.find_cafe_nav a:hover {color: #b33428;}
+.find_cafe_nav a:active {color: #b33428;}
+
+/**************
+	main
+**************/
+.find_cafe_main{margin-top: 80px; margin-bottom: 20px;}
+.find_cafe_main .map {float: left;}
+.find_cafe_main .details {float: left; width: 250px; margin-left: 60px; display: inline;}
+.cafe_info {position: relative; margin-bottom: 20px; color: #878778; line-height: 14px;}
+.cafe_info .cafe_name {color: #515042; text-transform: uppercase;}
+.cafe_info .view_menu {margin-top: 10px;}
+.cafe_info .view_menu a {color: #18366f;}
+a.view_map {position: absolute; width: 86px; height: 19px; top: 0px; right: -30px; background: url(media/TB001/images/static/cafes/viewmap_off.png) no-repeat;}
+a:hover.view_map{background: url(media/TB001/images/static/cafes/viewmap_on.png) no-repeat;}
+a.reservation {position: absolute; width: 86px; height: 19px; top: 30px; right: -30px; background: url(media/TB001/images/static/cafes/reservation_off.png) no-repeat;}
+a:hover.reservation{background: url(media/TB001/images/static/cafes/reservation_on.png) no-repeat;}
+a.view_map span, a.reservation span{display: none;}

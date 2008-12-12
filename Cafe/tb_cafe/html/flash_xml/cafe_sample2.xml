@@ -1,0 +1,56 @@
+<MAIN>
+	<logo src="http://s7d2.scene7.com/is/image/TommyBahama/cafes_logo_tropical_cafe?$PNG24$" href="/TBG/Cafes.jsp" x="488" y="42"/>
+	<frame id="lightTan"></frame>
+	<topnav>
+		<a href="/TBG/Cafes/Lunch_Dinner.jsp">Lunch &amp; Dinner</a>
+		<a href="/TBG/Cafes/Cocktails.jsp" id="currentPage">Cocktails</a>
+		<a href="/TBG/Cafes/Menus.jsp">Menus</a>
+		<a href="/TBG/Cafes/Recipes.jsp">Recipes</a>
+		<a href="/TBG/Cafes/Invite.jsp">Invite A Friend</a>
+		<a href="/TBG/Cafes/Find.jsp">Find A Cafe</a>
+		<a href="/TBG/Cafes/Find.jsp#FindAnchor">Reserve A Table</a>
+	</topnav>
+	<slides imagePath="http://s7d2.scene7.com/is/image/TommyBahama/">
+		<slide href="show_details" >
+			<main_img>cafes_cocktails_02</main_img>
+			<thmb_img>cafes_cocktails_02_thmb</thmb_img>
+			<text>
+				<h1>Coconut Cloud Martini</h1><br />
+				<p>
+				<a href="/TBG/By_Tommy_Bahama/Rum.jsp" target="_blank">Tommy Bahama White Sand Rum,</a>vanilla vodka and coconut rum are blended with cream of coconut and topped with toasted coconut, the perfect start to Island Time.
+			</p>
+			<p>
+				<a href="/TBG/Cafes/Find.jsp" target="_parent">View Hours of Island Time</a>
+				*Please check individual locations for Island Times.
+				</p>
+				<a href="/TBG/Cafes/Menus.jsp">View Menus>></a><br/>
+				<a href="/TBG/Cafes/Find.jsp">Reserve A Table>></a><br/>
+				<a href="/TBG/Cafes/Find.jsp">Find A Cafe>></a>
+			</text>
+		</slide>
+	</slides>
+	<css>
+		p{
+			color:#303030;
+			text-indent:0;
+			margin-left:0;
+		}
+		
+		h1{
+			text-indent:0;
+			display:block;
+			font-size:24;
+			color:#303030;
+		}
+		a{
+			text-indent:0;
+			display:inline;
+			color:#7C9DAF;
+			margin-left:0;
+		}
+		a:hover{
+			text-decoration:underline;
+			color:#B55E1E;
+		}
+	</css>
+</MAIN>

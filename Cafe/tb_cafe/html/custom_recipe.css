@@ -1,0 +1,37 @@
+/**************
+	main
+**************/
+.recipe_main {position: relative;margin-top: 50px;margin-bottom: 20px;font-family: clarendon;}
+
+/**************
+	navigation
+**************/
+.recipe_nav {position: relative; margin-left: 80px;	font-family: clarendon;	list-style-type: none;}
+.recipe_nav li {float: left;display: inline;}
+.recipe_nav a {	margin-left: 37px; margin-right: 38px;	display: block;	font-size: 12px; font-weight: bold; color: #0a7a69; text-transform: uppercase;	text-decoration: none;}
+.recipe_nav a:hover {color: #b33428;}
+.recipe_nav a:active {color: #b33428;}
+
+/**************
+	left side
+**************/
+.recipe_left_side {float: left;display: inline;padding-top: 20px;width: 180px;}
+.recipe_left_side .label {margin-left: 3px;font-size: 12px;font-weight: bold;color: #515042;text-transform: uppercase;}
+.recipe_left_side ul{margin-top: 10px;list-style-type: none;}
+.recipe_left_side ul li{margin-bottom: 10px; background: url(media/TB001/images/static/cafes/list_dash.jpg) no-repeat left 3px;}
+.recipe_left_side a {display: block; margin-left: 10px;color: #18366f;text-decoration: none;}
+
+/**************
+	right side
+**************/
+.recipe_right_side {position: relative; float: left; display: inline;width: 560px;}
+.recipe_paper_top {width: 532px;height: 85px;background: url(media/TB001/images/static/cafes/recipe_paper_top.png) no-repeat;}
+.recipe_paper_middle {width: 532px;min-height: 490px;color: #515042;padding: 10px 0 20px 0;background: url(media/TB001/images/static/cafes/recipe_paper_mid_repeat.png) repeat-y;}
+.beauty_image {width: 255px; height: 330px; float: right; margin-top: -80px; display: inline;}
+.beauty_image img {position: absolute; right: -10px;}
+.recipe_paper_bottom {width: 532px;height: 35px;background: url(media/TB001/images/static/cafes/recipe_paper_btm.png) no-repeat;}
+.recipe_right_side .label {font-weight: bold;text-transform: uppercase;margin-left: 40px;}
+.ingredients {list-style-type: none;margin-left: 40px;}
+.ingredients li {padding-top: 5px;}
+.instruction {max-width: 460px;margin-top: 10px;margin-left: 40px; margin-right: 20px;}
+.instruction p {margin-top: 20px;}
