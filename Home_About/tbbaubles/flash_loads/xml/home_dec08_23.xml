@@ -74,12 +74,7 @@ Available tags: <h1>, <a href>
 	</globals>
 	
 	<baubles>
-		<bauble id="pen" file="HOME_pen_nov08.swf" x="346" y="77" clickable="false" depth="-2" fade="hide" />
-		<bauble id="gifts_paradise" file="HOME_gifts_paradise.swf" frames="roll" x="0" y="0" depth="-1" fade="hide" />
-		<bauble id="ribbon" file="HOME_left_ribbon.swf" x="-11" y="212" clickable="false" depth="-3" fade="hide" />
-		<bauble id="gift_cards" file="HOME_giftcards_nov08.swf" x="-61" y="242" frames="roll" depth="-4" fade="hide" />
-		<bauble id="blue_stamp" file="HOME_blue_stamp.swf" useHandCursor="false" x="0" y="0" depth="-5" fade="hide"/>
-		<bauble id="shipping_card" file="HOME_shipping_pcard_b.swf" frames="roll" x="0" y="0" depth="-6" fade="hide" />
+		<bauble id="pen" file="HOME_pen_clean.swf" x="346" y="77" clickable="false" depth="-2" fade="hide" />
      	<bauble id="bottom_nav" file="HOME_bottom_nav_light.swf" x="6" y="445" maskMc="bottomNavMask" depth="2" fade="hide" clickable="false"   >
 	 		<baubleContent>
 				<nav>
@@ -93,7 +88,7 @@ Available tags: <h1>, <a href>
 		</bauble>
 		
 		<!-- Book -->
-		<bauble id="book" file="HOME_book_nov_08.swf" x="0" y="0" clickable="false" depth="1" fade="hide" />
+		<bauble id="book" file="HOME_book_dec_08.swf" x="0" y="0" clickable="false" depth="1" fade="hide" />
 		
 		<!-- Intro -->
 		<bauble id="logo" file="HOME_logo_and_music_nov.swf" x="center" y="200" depth="4" fade="fast" frames="animation" clickable="false" animationDoneCallBack="nov08Callback"/>
