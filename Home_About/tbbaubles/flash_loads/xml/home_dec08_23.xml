@@ -74,8 +74,8 @@ Available tags: <h1>, <a href>
 	</globals>
 	
 	<baubles>
-		<bauble id="pen" file="HOME_pen_clean.swf" x="346" y="77" clickable="false" depth="-2" fade="hide" />
-     	<bauble id="bottom_nav" file="HOME_bottom_nav_light.swf" x="6" y="445" maskMc="bottomNavMask" depth="2" fade="hide" clickable="false"   >
+		<bauble id="pen" file="HOME_pen_clean.swf" x="340" y="53" hover_x="5" depth="-2" fade="hide" />
+     	<bauble id="bottom_nav" file="HOME_bottom_nav_light_08.swf" x="6" y="440" depth="2" fade="hide" clickable="false"   >
 	 		<baubleContent>
 				<nav>
 					<link id="l1" text="Stores" href="http://www.tommybahama.com" subText="Home/Accessories/Rum" />
