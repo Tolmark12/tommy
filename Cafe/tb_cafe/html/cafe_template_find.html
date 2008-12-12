@@ -1,0 +1,778 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+        
+
+
+
+
+
+
+
+
+<!-- <head> begin -->
+
+				<link rel="stylesheet" type="text/css" href="http://www.tommybahama.com/media/TB001/css/style_v1_m56577569830479959.css" />
+
+				<link rel="stylesheet" type="text/css" href="style_d.css" />
+				
+				<link rel="stylesheet" type="text/css" href="http://www.tommybahama.com/media/TB001/css/sifr-print_v1_m56577569830470569.css" media="print" />
+
+				<link rel="stylesheet" type="text/css" href="http://www.tommybahama.com/media/TB001/css/sifr_v1_m56577569830473446.css" />
+
+				<link rel="stylesheet" type="text/css" href="http://www.tommybahama.com/media/TB001/css/smoothbox_v1_m56577569830470571.css" />
+				
+				<link rel="stylesheet" type="text/css" href="custom_global.css" />
+				
+				<link rel="stylesheet" type="text/css" href="custom_find_a_cafe.css" />
+
+					<!--[if gte ie 5.5000]>
+
+				<link rel="stylesheet" type="text/css" href="http://www.tommybahama.com/media/TB001/css/dropshadow_ie_v1_m56577569830478533.css" />
+				<link rel="stylesheet" type="text/css" href="dropshadow_ie_d.css" />
+				<link rel="stylesheet" type="text/css" href="dropshadow_ie_delorum.css" />
+					<![endif]-->
+				
+			<script type="text/javascript" src="http://www.tommybahama.com/media/TB001/js/mootools.v1.00.full.packed_v1_m56577569830473915.js" ></script>
+
+			<script type="text/javascript" src="http://www.tommybahama.com/media/TB001/js/base_v1_m56577569830479730.js" ></script>
+
+			<script type="text/javascript" src="http://www.tommybahama.com/media/TB001/js/smoothbox_v1_m56577569830476339.js" ></script>
+
+			<script type="text/javascript" src="http://www.tommybahama.com/media/TB001/js/swfobject_v1_m56577569830478020.js" ></script>
+
+			<script type="text/javascript" src="http://www.tommybahama.com/media/TB001/js/sifr_v1_m56577569830476358.js" ></script>
+
+			<script type="text/javascript" src="http://www.tommybahama.com/media/TB001/js/checkout_payment_v1_m56577569830471011.js" ></script>
+
+			<script type="text/javascript" src="http://www.tommybahama.com/media/TB001/js/product_giftwrap_v1_m56577569830479369.js" ></script>
+
+			<script type="text/javascript" src="http://www.tommybahama.com/media/TB001/js/product_swatches_v1_m56577569830478645.js" ></script>
+
+			<script type="text/javascript" src="http://www.tommybahama.com/media/TB001/js/jd.gallery_v1_m56577569830471269.js" ></script>
+			
+			<!-- Delorum Insert -->
+			<script type="text/javascript" src="js/swfobject/swfobject.js"></script>
+			<script type="text/javascript" src="js/swfaddress/swfaddress.js"></script>
+			<script type="text/javascript">
+				/* <![CDATA[ */
+					flashVars   = { xmlPath: 'flash_xml/cafe_sample.xml'  };
+					flashParams = {bgcolor:  '#F7EDD9', menu: 'false', wmode:"transparent"};
+					swfobject.embedSWF( 'CafeFlash.swf', 'cafe_flash', '790', '598', '9.0.45', 
+			    	                	'js/swfobject/expressinstall.swf', flashVars, flashParams, {id: 'website'}  );
+				/* ]]> */
+			</script>
+			<!-- Flash Embed END -->
+			
+			<!--  End Delorum Insert -->
+			
+	<meta name="title" content="">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<script type="text/javascript" language="javascript">
+
+		function init(){
+			// Test out the minicart drop down
+			if (document.location.href.indexOf("addtocart=1")>-1)
+			{
+				showMiniCart(true);
+			}
+			//TODO: END
+
+
+			if(typeof sIFR == "function"){
+				sIFR.replaceElement("h1", named({sFlashSrc: "http://www.tommybahama.com/media/TB001/fonts/clare.swf", sColor: "#515042", sBGColor: "#F6ECDB", sWmode: "transparent"}));
+				sIFR.replaceElement(".h1_large", named({sFlashSrc: "http://www.tommybahama.com/media/TB001/fonts/clare.swf", sColor: "#878279", sBGColor: "#F6ECDB", sWmode: "transparent"}));
+				sIFR.replaceElement("h2", named({sFlashSrc: "http://www.tommybahama.com/media/TB001/fonts/clare.swf", sColor: "#515042", sBGColor: "#F6ECDB", sWmode: "transparent"}));
+				sIFR.replaceElement(".h2_alt", named({sFlashSrc: "http://www.tommybahama.com/media/TB001/fonts/dearsara.swf", sColor: "#515042", sBGColor: "#F6ECDB", sWmode: "transparent"}));
+				sIFR.replaceElement(".h2_alt_blue", named({sFlashSrc: "http://www.tommybahama.com/media/TB001/fonts/dearsara.swf", sColor: "#314E69", sBGColor: "#F6ECDB", sWmode: "transparent"}));
+				sIFR.replaceElement(".h2_alt_modal", named({sFlashSrc: "http://www.tommybahama.com/media/TB001/fonts/dearsara.swf", sColor: "#314E69", sBGColor: "#F6ECDB", sWmode: "transparent"}));
+				sIFR.replaceElement("h3", named({sFlashSrc: "http://www.tommybahama.com/media/TB001/fonts/clare.swf", sColor: "#515042", sBGColor: "#F6ECDB", sWmode: "transparent"}));
+				sIFR.replaceElement(".h3_red", named({sFlashSrc: "http://www.tommybahama.com/media/TB001/fonts/clare.swf", sColor: "#7D0C00", sBGColor: "#F6ECDB", sWmode: "transparent"}));
+				sIFR.replaceElement(".detailprice", named({sFlashSrc: "http://www.tommybahama.com/media/TB001/fonts/zapfino.swf", sColor: "#353530", sBGColor: "#F6ECDB", sWmode: "transparent"}));
+			};
+		}
+
+		//FIX for IE flicker with CSS rollover images
+		try {
+			document.execCommand("BackgroundImageCache", false, true);
+		} catch(err) {}
+
+
+		window.onload=function(){
+			init();
+
+			var searchInput = document.getElementById("searchFor");
+
+			if (searchInput != null)
+			{
+				if (document.referrer != document.location.href)
+					searchInput.value = 'Search';
+			}
+		}
+
+		window.addEvent('domready', function() {
+
+			});
+	</script>
+
+
+
+
+
+
+
+	<title>Tommy Bahama - About Tommy Bahama</title>
+
+
+
+<!-- </head> end -->
+    </head>
+
+    <body class="contentbody">
+        
+
+
+
+
+<div class="fullwidth">
+    
+
+
+
+
+
+<div class="top_bg">
+	<div class="content_container">
+		<!-- START tommy logo -->
+		<div class="logo">
+			
+
+
+
+
+
+
+
+
+
+<div id="main_logo" class="main_logo">
+	<a href="/store/index.jsp" title="Home"  >
+		<img src="http://www.tommybahama.com/media/TB001/images/static/spacer.gif" alt="Home"  style="border: 0px;"  width="328"  height="54"  />
+
+	</a>
+</div>
+
+		</div>
+		<!-- END tommy logo -->
+		<div class="checkout_box_container">
+			
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+.nav_mini_cs {
+    background: url("http://www.tommybahama.com/media/TB001/images/global/minicart_cs_on_v1_m56577569830470709.gif") no-repeat;
+}
+.nav_mini_ya {
+    background: url("http://www.tommybahama.com/media/TB001/images/global/minicart_ya_on_v1_m56577569830470714.gif") no-repeat;
+}
+.nav_mini_sb {
+    background: url("http://www.tommybahama.com/media/TB001/images/global/minicart_shoppingbag_on_v1_m56577569830476984.gif") no-repeat;
+}
+</style>
+
+
+<div class="checkout_box_bg"></div>
+<div class="checkout_box">
+
+    <table cellpadding="0" cellspacing="0" width="225">
+        <tr>
+            <td colspan="3">
+                <div class="nav_mini_cs">
+                    <a href="http://www.tommybahama.com/TBG/GeneralContent/CustomerService.jsp">
+                        <img src="http://www.tommybahama.com/media/TB001/images/global/minicart_cs_off_v1_m56577569830470708.gif" border="0px"  />
+                    </a>
+                </div>
+                <div class="nav_mini_ya">
+
+                    <a href="/store/account/login_or_register.jsp">
+                        <img src="http://www.tommybahama.com/media/TB001/images/global/minicart_ya_off_v1_m56577569830470713.gif" border="0px"  />
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td width="100%">
+                <div class="nav_mini_sb">
+
+                	<a href="http://www.tommybahama.com/store/checkout/cart.jsp?bmForm=checkout_cart&bmFormID=1215622103053&bmSubmit=display_cart&bmHash=c15a1858ee2bc0d07dc21f6eb99f1f6433df89e3"><img src="http://www.tommybahama.com/media/TB001/images/global/minicart_shoppingbag_off_v1_m56577569830476983.gif" border="0px"  /></a>
+                </div>
+            </td>
+            <td align="right">
+                <a href="http://www.tommybahama.com/store/checkout/cart.jsp?bmForm=checkout_cart&bmFormID=1215622103053&bmSubmit=display_cart&bmHash=c15a1858ee2bc0d07dc21f6eb99f1f6433df89e3"><img src="http://www.tommybahama.com/media/TB001/images/global/minicart_bag_v1_m56577569830470707.gif" border="0px"  /></a>
+            </td>
+            <td align="left" style="padding-right: 6px">
+                <a href="http://www.tommybahama.com/store/checkout/cart.jsp?bmForm=checkout_cart&bmFormID=1215622103053&bmSubmit=display_cart&bmHash=c15a1858ee2bc0d07dc21f6eb99f1f6433df89e3">&nbsp;0&nbsp;Items</a>
+
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+
+
+
+	<!-- START top nav background -->
+	<div class="top_nav_bg">
+	    <div class="content_container">
+	        <div class="top_nav_container">
+	            
+
+
+
+
+
+
+
+
+
+	<!-- TODO: replace image with search functionality -->
+	<div>
+		<form name="basic_search" method="POST" action="http://test.tommybahama.com/TBG/GeneralContent/AboutTommyBahama.jsp">
+
+<input type="hidden" name="bmForm" value="basic_search">
+<input type="hidden" name="bmFormID" value="1217442281643">
+<input type="hidden" name="bmUID" value="1217442281643">
+<input type="hidden" name="bmIsForm" value="true">
+<input type="hidden" name="bmPrevTemplate" value="/TBG/GeneralContent/AboutTommyBahama.jsp">
+			<div class="nav_search_btn">
+				<a href="javascript: document.getElementById('product_search_by_brand').click()"><img border="0" width="30" height="31" src="http://www.tommybahama.com/media/TB001/images/static/spacer.gif"><input type="hidden" name="bmImage" value="product_search_by_brand.x"><input type="hidden" name="bmImage" value="product_search_by_brand.y"><input type="hidden" name="bmImage" value="product_search_by_brand"><input width="1" height="1" type="image" style="border:0px;" id="product_search_by_brand" name="product_search_by_brand" value="Search" src="http://www.tommybahama.com/media/TB001/images/static/spacer.gif"></a>
+			</div>
+			<div class="nav_search_bg">
+				<div class="nav_search_input">
+					<input type="hidden" name="bmHidden" value="redirectTemplate"><input type="hidden" name="redirectTemplate" value="/store/catalog/search_results.jsp">
+
+					<input type="hidden" name="bmHidden" value="SEARCH_INPUT<>objectTypes"><input type="hidden" name="SEARCH_INPUT<>objectTypes" value="PRODUCT">
+					<input type="hidden" name="bmHidden" value="SEARCH_INPUT<>path"><input type="hidden" name="SEARCH_INPUT<>path" value="/Assortments/Primary/TB001/Site_001">
+					<input type="hidden" name="bmHidden" value="SEARCH_INPUT<>orderBy"><input type="hidden" name="SEARCH_INPUT<>orderBy" value="relevance">
+					<input type="hidden" name="bmHidden" value="SEARCH_INPUT<>searchTextOperator"><input type="hidden" name="SEARCH_INPUT<>searchTextOperator" value="and">
+					<input type="hidden" name="bmHidden" value="urlSearch"><input type="hidden" name="urlSearch" value="false">
+
+
+					<input type="hidden" name="bmHidden" value="SEARCH_INPUT<>additionalCondition"><input type="hidden" name="SEARCH_INPUT<>additionalCondition" value="bmstring2a:equals(&quot;T&quot;)">
+					<input type="hidden" name="bmHidden" value="SEARCH_INPUT<>ATR_lst_search_brand"><input type="hidden" name="SEARCH_INPUT<>ATR_lst_search_brand" value="">
+					<input type="hidden" name="bmHidden" value="SEARCH_INPUT<>firstRowByBrand"><input type="hidden" name="SEARCH_INPUT<>firstRowByBrand" value="0">
+
+					<input type="hidden" name="bmHidden" value="SEARCH_INPUT<>maxRowsByBrand"><input type="hidden" name="SEARCH_INPUT<>maxRowsByBrand" value="3">
+					<input type="hidden" name="bmText" value="SEARCH_INPUT<>searchFor"><input type="text" name="SEARCH_INPUT<>searchFor" id="searchFor" value="" size="20" onclick="this.value='';" onkeydown="if (((window.event) && (event.keyCode == 13)) || ((event.which == 13))) { document.getElementById('product_search_by_brand').click(); return false; }"/>
+				</div>
+			</div>
+		<input type="hidden" name="bmFields" value="bmForm,bmFormID,bmUID,bmIsForm,bmPrevTemplate,bmImage,bmHidden,bmText">
+<input type="hidden" name="bmHash" value="52211849d52c2d47f17ab9c1f3084a42967d70c6">
+</form>
+	</div>
+	<!-- TODO: End search functionality -->
+
+
+	            
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- START nav menu rollover buttons -->
+    <div>
+        <ul class="top_nav">
+
+
+            <li class="nav_Men" >
+
+               <a href="http://test.tommybahama.com/TBG/Men.jsp" title="Men"  >
+
+                    
+                            <img src="http://www.tommybahama.com/media/TB001/images/static/spacer.gif" alt="Men"  width="36"  height="16"  id="nav_image_Men"  />
+
+                    
+               </a>
+
+            </li>
+
+
+            <li class="nav_Womens" >
+
+               <a href="http://test.tommybahama.com/TBG/Women.jsp" title="Women"  >
+
+                    
+                            <img src="http://www.tommybahama.com/media/TB001/images/static/spacer.gif" alt="Women"  width="58"  height="16"  id="nav_image_Womens"  />
+                    
+               </a>
+
+            </li>
+
+
+            <li class="nav_Swim" >
+
+               <a href="http://test.tommybahama.com/TBG/Swimwear.jsp" title="Swim"  >
+
+                    
+                            <img src="http://www.tommybahama.com/media/TB001/images/static/spacer.gif" alt="Swim"  width="44"  height="16"  id="nav_image_Swim"  />
+                    
+               </a>
+
+            </li>
+
+
+            <li class="nav_Golf" >
+
+               <a href="http://test.tommybahama.com/TBG/Golf.jsp" title="Default Value"  >
+
+                    
+                            <img src="http://www.tommybahama.com/media/TB001/images/static/spacer.gif" alt="Default Value"  width="38"  height="16"  id="nav_image_Golf"  />
+                    
+               </a>
+
+            </li>
+
+
+            <li class="nav_Gifts" >
+
+               <a href="http://test.tommybahama.com/TBG/Gifts.jsp" title="Gifts & Decor"  >
+
+                    
+                            <img src="http://www.tommybahama.com/media/TB001/images/static/spacer.gif" alt="Gifts & Decor"  width="107"  height="16"  id="nav_image_Gifts"  />
+                    
+               </a>
+
+            </li>
+
+
+            <li class="nav_StoresCafes" >
+
+               <a href="http://test.tommybahama.com/TBG/StoresAndCafes.jsp" title="Stores &amp; Cafes"  >
+
+                    
+                            <img src="http://www.tommybahama.com/media/TB001/images/static/spacer.gif" alt="Stores &amp; Cafes"  width="120"  height="16"  id="nav_image_StoresCafes"  />
+                    
+               </a>
+
+            </li>
+
+
+            <li class="nav_EmailSignup" >
+
+               <a href="http://test.tommybahama.com/TBG/EmailSignup.jsp" title="Email Signup">
+
+                    
+                            <img src="http://www.tommybahama.com/media/TB001/images/static/spacer.gif" alt="Email Signup"  width="104"  height="16"  id="nav_image_EmailSignup"  />
+                    
+               </a>
+
+            </li>
+
+            
+        </ul>
+    </div>
+    <!-- END nav menu -->
+
+
+	        </div>
+	    </div>
+	</div>
+
+	<!-- END top nav background -->
+
+	<!-- END header -->
+
+	<!-- START main background -->
+	<div class="main_background">
+
+		<div>
+		<!-- START main flash -->
+
+		<!-- Delorum: your HTML goes here.  Please put media files in the following relative directory structure:
+				/media/TB001/images/static/cafes/
+				Thanks!  -->
+				
+				<div class="main_content">
+					<div class="flash_placeholder">
+						<div id="cafe_flash">
+						    <p>In order to view this page you need Flash Player 9+ support!</p>
+						    <p>
+						        <a href="http://www.adobe.com/go/getflashplayer">
+						            <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+						        </a>
+						    </p>
+						</div>
+					</div>
+					<div class="content_information">
+						<div class="break">
+						</div>
+						<ul class="find_cafe_nav">
+							<li>
+								<a href="#">ARIZONA</a>
+							</li>
+							<li>
+								<a href="#">CALIFORNIA</a>
+							</li>
+							<li>
+								<a href="#">FLORIDA</a>
+							</li>
+							<li>
+								<a href="#">HAWAII</a>
+							</li>
+							<li>
+								<a href="#">NEVADA</a>
+							</li>
+							<li>
+								<a href="#">SOUTH CAROLINA</a>
+							</li>
+							<li>
+								<a href="#">TEXAS</a>
+							</li>
+						</ul>
+						<div class="find_cafe_main">
+							<div class="map">
+								<script type="text/javascript">
+						            /* <![CDATA[ */
+						            	flashVars   = { xmlPath:"flash_xml/activeStates.xml" };
+						                flashParams = { bgcolor:"#fffeeb", menu: 'false' };
+						                swfobject.embedSWF( 'MapFinder.swf', 'map_flash_div', '420', '300', '9.0.45', 
+						                                    'js/swfobject/expressinstall.swf', flashVars, flashParams, {id: 'map_flash'}  );
+										
+									
+										function flashStateClicked( stateAbreviation )
+										{
+											//alert( stateAbreviation );
+										}
+						
+						            /* ]]> */
+						        </script>
+								<div id="map_flash_div" >
+					                <p>In order to view this page you need Flash Player 9+ support. Click on the following link to download it.</p>
+					                <p>
+					                    <a href="http://www.adobe.com/go/getflashplayer">
+					                        <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+					                    </a>
+					                </p>
+					            </div>
+							</div>
+							<div class="details">
+								<div class="cafe_info">
+									<div class="cafe_name">
+										NAPLES
+									</div>
+									<div class="street_address">
+										1220 3rd St. South
+									</div>
+									<div class="city_state_zip">
+										Naples, FL 34102
+									</div>
+									<div class="phone">
+										(239) 643-6889
+									</div>
+									<div class="view_menu">
+										<a href="#">View Menu</a>
+									</div>
+									<a class="view_map" href="#"><span>View Map<span></a>
+									<a class="reservation" href="#"><span>Reservations</span></a>
+								</div>
+								<div class="cafe_info">
+									<div class="cafe_name">
+										POINTE ORLANDO
+									</div>
+									<div class="street_address">
+										9101 International Drive
+									</div>
+									<div class="city_state_zip">
+										Orlando, FL 32819
+									</div>
+									<div class="phone">
+										(321) 281-5888
+									</div>
+									<div class="view_menu">
+										<a href="#">View Menu</a>
+									</div>
+									<a class="view_map" href="#"><span>View Map<span></a>
+									<a class="reservation" href="#"><span>Reservations</span></a>
+								</div>
+								<div class="cafe_info">
+									<div class="cafe_name">
+										SANDESTIN
+									</div>
+									<div class="street_address">
+										525 Grand Blvd.
+									</div>
+									<div class="city_state_zip">
+										Sandestin, FL 32550
+									</div>
+									<div class="phone">
+										(850) 654-1743
+									</div>
+									<div class="view_menu">
+										<a href="#">View Menu</a>
+									</div>
+									<a class="view_map" href="#"><span>View Map<span></a>
+									<a class="reservation" href="#"><span>Reservations</span></a>
+								</div>
+								<div class="cafe_info">
+									<div class="cafe_name">
+										SARASOTE
+									</div>
+									<div class="street_address">
+										300 John Ringling Blvd
+									</div>
+									<div class="city_state_zip">
+										Sarasota, FL 34236
+									</div>
+									<div class="phone">
+										(941) 388-2888
+									</div>
+									<div class="view_menu">
+										<a href="#">View Menu</a>
+									</div>
+									<a class="view_map" href="#"><span>View Map<span></a>
+									<a class="reservation" href="#"><span>Reservations</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+
+
+
+		<!-- END main flash -->
+
+		<div class="content_container">
+
+			<!--  Start Footer -->
+	        
+	        <div id="navcontainer">
+	            <ul id="navlist">
+	                
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+function popupWindow(lnk, h, w) {
+	var topOffset = (screen.height - h) / 2;
+	var leftOffset = (screen.width - w) / 2;
+	settings='width='+w+',height='+h+',top='+topOffset+',left='+leftOffset;
+	var popupname='defaultName';
+	var win = window.open(lnk, popupname , settings);
+}
+
+
+function newWindow(lnk) {
+	var win = window.open(lnk, "fullscreen");
+}
+</script>
+
+
+					<li>
+						<a href="http://test.tommybahama.com/TBG/GeneralContent/CustomerService.jsp" >
+		          			Customer Service
+
+		        		</a>
+	        		</li>
+
+					<li>
+						<a href="http://www.tommybahama.com/TBG/GeneralContent/CustomerService.jsp#faq" >
+		          			FAQ
+
+		        		</a>
+
+	        		</li>
+
+					<li>
+						<a href="/store/account/order_history_summary.jsp" >
+		          			Order Status
+
+		        		</a>
+	        		</li>
+
+					<li>
+						<a href="/store/myaccount/returns_login_start.jsp" >
+
+		          			Returns
+
+		        		</a>
+	        		</li>
+
+					<li>
+						<a href="javascript:showModal('http://test.tommybahama.com/TBG/GeneralContent/Shipping.jsp', '525', '560')" >
+		          			Shipping
+
+		        		</a>
+	        		</li>
+
+					<li>
+
+						<a href="http://test.tommybahama.com/TBG/Gifts/GiftCards_M.jsp" >
+		          			Gift Cards
+
+		        		</a>
+	        		</li>
+
+					<li>
+						<a href="http://test.tommybahama.com/TBG/GeneralContent/AboutTommyBahama.jsp" >
+		          			About Tommy Bahama
+
+		        		</a>
+	        		</li>
+
+					<li>
+						<a href="http://test.tommybahama.com/TBG/ParadiseNation.jsp" >
+		          			Paradise Nation
+
+		        		</a>
+	        		</li>
+
+
+	            </ul>
+	        </div>
+	        <div id="navcontainer2">
+
+	        	<ul id="navlist2">
+	        		
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+function popupWindow(lnk, h, w) {
+	var topOffset = (screen.height - h) / 2;
+	var leftOffset = (screen.width - w) / 2;
+	settings='width='+w+',height='+h+',top='+topOffset+',left='+leftOffset;
+	var popupname='defaultName';
+	var win = window.open(lnk, popupname , settings);
+}
+
+
+function newWindow(lnk) {
+	var win = window.open(lnk, "fullscreen");
+}
+</script>
+
+
+					<li>
+						<a href="http://test.tommybahama.com/TBG/GeneralContent/TermsOfUse.jsp" >
+		          			Copyright &copy; 2008 Tommy Bahama
+
+		        		</a>
+	        		</li>
+
+					<li>
+						<a href="http://test.tommybahama.com/TBG/GeneralContent/PrivacyPolicy.jsp" >
+		          			Privacy Policy
+
+		        		</a>
+	        		</li>
+
+					<li>
+						<a href="http://test.tommybahama.com/TBG/GeneralContent/TermsOfUse.jsp" >
+		          			Terms of Use
+
+		        		</a>
+
+	        		</li>
+
+					<li>
+						<a href="http://test.tommybahama.com/TBG/GeneralContent/Careers.jsp" >
+		          			Careers
+
+		        		</a>
+	        		</li>
+
+					<li>
+						<a href="http://test.tommybahama.com/TBG/GeneralContent/SiteMap.jsp" >
+
+		          			Site Map
+
+		        		</a>
+	        		</li>
+
+					<li>
+						<a href="http://test.tommybahama.com/TBG/GeneralContent/ContactUs.jsp" >
+		          			Contact Us
+
+		        		</a>
+	        		</li>
+
+					<li>
+
+						<a href="http://test.tommybahama.com/TBG/GeneralContent/Redirect/TB_Radio_footer.jsp" >
+		          			TB Radio
+
+		        		</a>
+	        		</li>
+
+					<li>
+						<a href="http://test.tommybahama.com/TBG/GeneralContent/ContactUs.jsp" >
+		          			1-866-986-8282
+
+		        		</a>
+	        		</li>
+
+
+	        	</ul>
+	        </div>
+	        <!-- END footer -->
+
+	    </div>
+	    <!-- END content container -->
+
+	</div>
+	<!-- END main background -->
+
+</div>
+<!-- END full width -->
+
+        
+        
+
+
+
+
+
+
+
+
+
+    </body>
+
+</html>

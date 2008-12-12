@@ -1,0 +1,48 @@
+/****************
+	global
+****************/
+.content_information .break {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='media/TB001/images/static/cafes/header_break.png', sizingMethod='scale'); background: none;}
+.content_header img {behavior: url(iepngfix.htc);}
+
+/****************
+	recipe
+****************/
+
+.recipe_paper_top {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='media/TB001/images/static/cafes/recipe_paper_top.png', sizingMethod='scale'); background: none;}
+/*.recipe_paper_middle {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='media/TB001/images/static/cafes/recipe_paper_mid_repeat.png', sizingMethod='scale'); background: none;}*/
+.recipe_paper_bottom {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='media/TB001/images/static/cafes/recipe_paper_btm.png', sizingMethod='scale'); background: none;}
+.instruction {max-width: none;}
+
+.recipe_paper_middle,
+.beauty_image img,
+.recipe_title {behavior: url(iepngfix.htc);}
+
+/***************
+	menus
+***************/
+/*
+ old way
+.top_left{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='media/TB001/images/static/cafes/menu_shadow/top_left.png', sizingMethod='scale'); background: none;}
+.top{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='media/TB001/images/static/cafes/menu_shadow/top.png', sizingMethod='scale'); background: none;}
+.top_right{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='media/TB001/images/static/cafes/menu_shadow/top_right.png', sizingMethod='scale'); background: none;}
+.btm_left{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='media/TB001/images/static/cafes/menu_shadow/bottom_left.png', sizingMethod='scale'); background: none;}
+.btm_right{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='media/TB001/images/static/cafes/menu_shadow/bottom_right.png', sizingMethod='scale'); background: none;}
+.bottom{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='media/TB001/images/static/cafes/menu_shadow/bottom.png', sizingMethod='scale'); background: none;}
+.left{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='media/TB001/images/static/cafes/menu_shadow/left.png', sizingMethod='scale'); background: none;}
+.right{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='media/TB001/images/static/cafes/menu_shadow/right.png', sizingMethod='scale'); background: none;}
+*/
+
+.top_left,
+.top,
+.top_right,
+.btm_left,
+.btm_right,
+.bottom,
+.left,
+.right{behavior: url(iepngfix.htc);}
+
+/**************
+	find a cafe
+**************/
+
+

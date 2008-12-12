@@ -1,0 +1,26 @@
+/*********************
+	menu content
+*********************/
+.menus_wrapper {position: relative; width: 770px; height: 465px;}
+.menus_content{position: relative; width: 770px; height: 465px; background: url(media/TB001/images/static/cafes/menu_bg.jpg) no-repeat;}
+.restaurants_container {position: absolute; width: 495px; height: 275px; margin: 150px 0 0 238px;}
+.cafe_list {width: 495px;}
+.cafe_list a {color: #495471; text-decoration: none;}
+.cafe_list .cafe_name {width: 180px; color: #ffffff;}
+.cafe_list .one {width: 56px;}
+.cafe_list .two {width: 62px;}
+.cafe_list .three {width: 108px;}
+.cafe_list .four {width: 5px;}
+.cafe_list .five {width: 95px;}
+
+/********************
+      shadow
+ *******************/
+.top_left {position: absolute; width: 19px; height: 19px; left: -10px; top: -9px; background: url(media/TB001/images/static/cafes/menu_shadow/top_left.png) no-repeat;}
+.top_right {position: absolute; width: 29px; height: 27px; left: 765px; top: -9px; background: url(media/TB001/images/static/cafes/menu_shadow/top_right.png) no-repeat;}
+.top {position: absolute; width: 756px; height: 9px; left: 9px; top: -9px; background: url(media/TB001/images/static/cafes/menu_shadow/top.png) repeat-x;}
+.btm_left {position: absolute; width: 19px; height: 19px; left: -10px; top: 461px; background: url(media/TB001/images/static/cafes/menu_shadow/bottom_left.png) no-repeat;}
+.btm_right {position: absolute; width: 19px; height: 19px; left:765px; top: 461px; background: url(media/TB001/images/static/cafes/menu_shadow/bottom_right.png) no-repeat;} 
+.bottom {position: absolute; width: 756px; height: 15px; left: 9px; top: 465px; background: url(media/TB001/images/static/cafes/menu_shadow/bottom.png) repeat-x;}
+.left {position: absolute; width: 10px; height: 451px; top: 10px; left: -10px; background: url(media/TB001/images/static/cafes/menu_shadow/left.png) repeat-y;}
+.right {position: absolute; width: 14px; height: 451px; top: 10px; left: 770px; background: url(media/TB001/images/static/cafes/menu_shadow/right.png) repeat-y;}

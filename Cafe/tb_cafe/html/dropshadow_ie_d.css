@@ -1,0 +1,124 @@
+/**************************
+TOP NAV
+**************************/
+ul.top_nav li a img{
+    position: relative;
+    top: -3px;
+	}
+
+/*li.nav_BarMusicGifts a {
+    margin-top: 1px;
+}*/
+
+/**************************
+CHECKOUT/MINICART
+**************************/
+.checkout_box_bg {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.tommybahama.com/media/TB001/images/static/minicart_bg.png', sizingMethod='crop');
+	background: none;
+	}
+.minicart_drop_bg {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.tommybahama.com/media/TB001/images/static/minicart_drop_bg.png', sizingMethod='crop');
+	background: none;
+	}
+/**************************
+BOOK CONTAINER
+**************************/
+.book_top {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.tommybahama.com/media/TB001/images/static/book_top.png', sizingMethod='crop');
+	background: none;
+	height:57px;
+	}
+
+.book_repeat {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.tommybahama.com/media/TB001/images/static/book_repeat_ie.png', sizingMethod='scale');
+	background: none;
+	height: 100%;
+	width: 876px;
+	/*background: url("http://www.tommybahama.com/media/TB001/images/static/book_repeat.png") repeat-y;*/
+	position:relative;
+	}
+.book_btm {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.tommybahama.com/media/TB001/images/static/book_btm.png', sizingMethod='crop');
+	background: none;
+	/*background: url("http://www.tommybahama.com/media/TB001/images/static/book_btm.png") no-repeat;*/
+	height:90px;
+	}
+
+/**************************
+CATEGORY DETAIL 
+**************************/
+.product_detail_bg {
+	position: absolute;
+	/*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.tommybahama.com/media/TB001/images/static/product_detail_bg.png', sizingMethod='crop');
+	background: none;*/
+	float: left;
+	height: 480px;
+	left: 0px;
+	width: 374px;
+	z-index: 100;
+	}
+.product_detail_bg2 {
+	position: absolute;
+	/*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.tommybahama.com/media/TB001/images/static/product_detail_bg.png', sizingMethod='crop');
+	background: none;*/
+	}
+	
+.detail_paperclip {
+	position: relative;
+	left: 369px;
+	/*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.tommybahama.com/media/TB001/images/static/product_detail_paperclip.png', sizingMethod='crop');
+	background: none;*/
+	height: 115px;
+	width: 256px;
+	}
+	
+.detail_paperclip_end {
+	position: absolute;
+	left: 624px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.tommybahama.com/media/TB001/images/static/product_detail_paperclip_end.png', sizingMethod='crop');
+	background: none;
+	height: 115px;
+	width: 16px;
+	}
+
+.firefox_padding {
+	height:0px;
+}
+/**************************
+MODAL DETAIL 
+**************************/
+.modal_detail_bg {
+	position: absolute;
+	/*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.tommybahama.com/media/TB001/images/static/product_detail_bg.png', sizingMethod='scale');
+	background: none; */
+	float: left;
+	height: 480px;
+	width: 374px;
+	z-index: 100;
+	}
+
+/**************************
+PRODUCT DETAIL 
+**************************/
+
+.product_info {
+	margin-left: 384px;
+	}
+
+.leftnav_dotted {
+	width: 169px;
+	}
+.product_detail {
+	margin-right: 6px; 
+}
+.btm_add_to_bag {
+	margin-left: -12px;
+	}
+/**************************
+MODALS
+**************************/
+/* Gift Services */
+.firefox_padding30 {display:none; height:0px;} 
+
+
