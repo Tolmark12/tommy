@@ -80,6 +80,8 @@ public class MainSlideMediator extends Mediator implements IMediator
 		mainHolder.addChild( _slideHolder );
 		mainHolder.addChild( _slideInfo   );
 		//mainHolder.addChild(_progressHolder);
+		
+		mainHolder.addEventListener( SlideInfo.SHOW_SLIDE_DETAILS, _onShowDetailsClick );
 	}
 	
 	// Set the "_newSlide" variable in preparation to showing the slide
@@ -136,6 +138,11 @@ public class MainSlideMediator extends Mediator implements IMediator
 	}
 	
 	// ______________________________________________________________ Event Handlers
+	
+	private function _onShowDetailsClick ( e:Event ):void
+	{
+		sendNotification( AppFacade.SHOW_DETAILS );
+	}
 	
 	public function _handleSlideUrlRequest ( e:Event ):void {
 		var request:URLRequest = new URLRequest( e.currentTarget.href );

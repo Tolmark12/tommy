@@ -8,6 +8,7 @@ import flash.text.StyleSheet;
 
 public class SlideInfo extends Sprite
 {
+	public static const SHOW_SLIDE_DETAILS:String = "show_slide_details";
 	private var _text:TextMc_swc;
 	private var _showDetailsButton:ShowDetailsBtn_swc;
 	private var _closeDetailsButton:CloseDetailsBtn_swc;
@@ -51,9 +52,6 @@ public class SlideInfo extends Sprite
 	
 	public function build (  ):void
 	{
-		// TODO: remove this
-		//this.visible = false;
-
 		_text = new TextMc_swc();
 		this.addChild(_text);
 //		_text.x = 675;
@@ -102,7 +100,7 @@ public class SlideInfo extends Sprite
 		Tweener.addTween(_showDetailsButton, {alpha: 0, time: .3, onComplete: _hideButton});
 		Tweener.addTween(_text, {x: 350, alpha: 1, time: 1});
 		_text.displayTxt.styleSheet = _styleSheet;
-		
+		this.dispatchEvent( new Event(SHOW_SLIDE_DETAILS, true) );
 	}
 
 	private function _hideSlideDescription( e:MouseEvent=null ):void

@@ -24,6 +24,7 @@ public class AppFacade extends Facade implements IFacade
 	public static const ONLY_ONE_SLIDE:String 			= "only_one_slide";
 	public static const HIT_RIGHT_WALL:String 			= "hit_right_wall";
 	public static const HIT_LEFT_WALL:String 			= "hit_left_wall";
+	public static const SHOW_DETAILS:String 			= "show_details";
 	
 	// Navigation
 	public static const INIT_FRAME:String 				= "init_navigation";
@@ -62,7 +63,7 @@ public class AppFacade extends Facade implements IFacade
 		registerCommand( LOGO_BTN_CLICK, LogoBtnClick );
 		registerCommand( NEXT_SLIDE, PrevNextClick );
 		registerCommand( PREV_SLIDE, PrevNextClick );
-		
+		registerCommand( SHOW_DETAILS, PrevNextClick );
 	}
 
 }
