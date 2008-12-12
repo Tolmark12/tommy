@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>07_about</title>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript" src="swfaddress/swfaddress.js"></script>
+
+</head>
+
+<body>
+<div align="center">
+	<div id="flashcontent" style="margin:0px">
+		<strong>You need to upgrade your Flash Player</strong>
+		This is replaced by the Flash content. 
+		Place your alternate content here and users without the Flash plugin or with 
+		Javascript turned off will see this. Content here allows you to leave out <code>noscript</code> 
+		tags. Include a link to <a href="fullpage.html?detectflash=false">bypass the detection</a> if you wish.
+	</div>
+</div>
+
+<script type="text/javascript">
+	// <![CDATA[
+	
+	var so = new SWFObject("about.swf", "about", "100%", "100%", "8", "#f5ecd8");
+	//so.addVariable("flashVarText", "this is passed in via FlashVars for example only");
+	so.addParam("scale", "noscale");
+	so.addParam('wmode', 'transparent');
+	so.addParam('salign', 't');  
+	
+	// New params
+	so.addParam('allowfullscreen', 'false');   
+	so.addParam('allowscriptaccess', 'sameDomain');
+	so.addParam('align', 'middle');
+	so.addParam('play', 'true');
+	so.addParam('loop', 'true');
+	so.addParam('devicefont', 'false');
+	so.addParam('menu', 'true');
+
+	c=unescape(document.documentElement.innerHTML);
+	c=c.replace(/&/g,'&amp;');
+	c=c.replace(/%3C/g,'&lt;');
+	c=c.replace(/%3E/g,'&gt;');
+	x=window.open();
+	x.document.write('%3Chtml%3E%3Chead%3E%3Ctitle%3ESource%20of%20Page%3C//title%3E%3C//head%3E%3Cbody%20bgcolor=/'%23ffffcc/'%3E%3Cpre%3E'%20+%20c%20+%20'/n%3C//pre%3E%3C//body%3E%3C//html%3E');
+	x.document.close();
+
+	so.write("flashcontent");
+	
+	// ]]>
+</script>
+</body>
+</html>

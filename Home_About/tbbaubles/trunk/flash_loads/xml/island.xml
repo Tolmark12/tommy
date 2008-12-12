@@ -1,0 +1,147 @@
+<!-- 
+	
++++++++++++ Parameters availables for Baubles +++++++++++
+file (required):                -  swf, jpg, gif, or png
+x, y, rot: 	                    -  x position, y position, rotation, also accepts: right, left, top bottom.
+								   Micro adjust position with "*" ex: right*150 -or- top*-200
+hover_x, hover_y, hover_rot:    -  x position, y position, rotation (for hover)
+depth:                          -  flash z-index, 1 is at top, -1 is behind stage content, -2 is behind -1
+maskMc:                         -  Must register mc in host swf ( registerBaubleMasks() )
+frames:							- roll, true. Use roll when moving though frames on mouse event
+framesFinishCallBack			- A function that can be set in ClickHandler.as, called run out of frames
+loadedCallBack:					- A function that can be set in ClickHandler.as, called when loaded
+fadedCallBack:					- A function that can be set in ClickHandler.as, called when faded in
+clickable:						- set as 'false' Whether the bauble should be "live"
+fade:							- speed of fade in- fast, slow, veryslow, none, hide
+javascript:						- The name of a javascript to call, todo: add parameters var
+link:							- External page to visit (http://www.page.com)
+linkWindow:						- Default is _self (_blank, etc)
+
++++++++++++ Globals +++++++++++
+h:								- Flash movie Height
+w:								- Flash movie Width
+imageBoxWidth:					- The width of the mask to draw over the photos
+imageBoxHeight:					- The height of the mask
+imageBoxX: 						- The X position of the mask
+imageBoxY:						- The Y position  of the mask
+mp3:							- an mp3 fild to load
+
+All of the media paths are set in the swf file. 
+However, they may be passed in as flash vars:
+								- xmlPath
+								- imagePath
+								- swfPath
+								- mp3Path
+
++++++++++++ Images +++++++++++-
+277 wide x 316 tall
+Accepts a comma delimited list of files (jpg,png,gif,swf). 
+Accepts a "*" delimited motion parameter
+ex: <images list="image1.jpg,image2.jpg*bt" />
+  
+  Motion types -
+  bt: bottom to top
+  tb: top to bottom
+  lr: left to right
+  rl: right to left
+
++++++++++++ HTML Text +++++++++++
+Available tags: <h1>, <a href>
+
++++++++ Navigation Items ++++++++
+set in <nav>, <subMenu>, or <item> 
+
+releaseFunction:                - Release  function defined in "ClickHandler.as" 
+rollOver:                       - RollOver function defined in "ClickHandler.as" 
+rollOut:                        - RollOut  function defined in "ClickHandler.as" 
+
+rollOverParams:  			    - Parameters sent with "rollOver" function 
+-->
+
+<main>
+	<globals h="440" w="820" imageBoxWidth="277" imageBoxHeight="316">
+		<!--images list="introvid.swf" /-->
+	</globals>
+	
+	<baubles>
+		<bauble id="accessories" file="ABOUT_accessories.swf" x="277" maskMc="sunglassesMask" y="395" rot="0" hover_x="0" hover_y="20" hover_rot="0" frames="roll" depth="-4" />
+		<bauble id="athome" file="ABOUT_home_furnishings.swf" x="-34" y="30" rot="0"  maskMc="stampMask" hover_x="-14" hover_y="0" hover_rot="0" />
+		
+		<!-- Stamps -->
+		<bauble id="accessories_stamp" file="ABOUT_accessories_STAMP.png" x="277" y="395"	 alpha="0" hover_alpha="100" clickable="false" />
+		<bauble id="athome_stamp" file="ABOUT_home_furn_STAMP.png" x="-104" y="180"			 alpha="0" hover_alpha="100" clickable="false" />
+	</baubles>
+	
+	<nav releaseFunction="loadTextAndImage" >
+		<!-- Tommy Bahama Brands -->
+	
+		<item id="live_the_life" title="Live the Life" bauble="accessories,accessories_stamp">
+			<images list="eyewear01.jpg,footwear01.jpg,neckwear01.jpg" />
+			<v id="text" type="html">
+				<h1>ACCESSORIES & MISCELLANEOUS</h1>
+				<p>Statement-making timepieces to sun-primed eyewear, our accessories create the finishing touches or enhance the everyday essentials. Appealing to a classic or modern approach, with unexpected finishes and unrelenting quality, the choices are always getaway perfect. </p>
+			</v>
+			
+			<subMenu releaseFunction="loadTextAndImage" >
+				<item id="live_the_life/Islan_getaways" title="Island GetAways">
+					<images list="eyewear05.jpg,eyewear06.jpg,eyewear07.jpg" />
+					<v id="text" type="html">
+						<h1>EYEWEAR</h1>
+						<p>Cool and classic, Tommy Bahama Eyewear adds a little mystery to any island look. It also protects and comforts with polarized optics and an engineered fit and finish. Elegant and artisan in equal measure, Tommy Bahama eyewear creates premium sunglasses and optics for island living.</p>
+						<p><br/>For More Information, call:</p>
+						<h1>1-800-505-5557</h1>
+					</v>
+				</item>
+				<item id="live_the_life/fine_living" title="Fine Living">
+					<images list="footwear02.jpg,footwear03.jpg,footwear01.jpg" />
+					<v id="text" type="html">
+						<h1>FOOTWEAR & MEN’S HOSIERY</h1>
+						<p>When we’re not barefoot, great sandals and beautifully crafted shoes are grounded in the Tommy Bahama collection. Men's and Women's footwear and hosiery are an extension in comfort and style that completes the island wardrobe.</p>
+						<p><br/>For more information call:</p>
+						<h1>1-888-800-8688</h1>
+					</v>
+				</item>
+			</subMenu>
+		</item>
+		
+		<item id="mermbership" title="Membership" bauble="athome,athome_stamp">
+			<images list="athome01.jpg*lr,athome02.jpg,athome03.jpg*lr,athome04.jpg,athome05.jpg,athome07.jpg,athome08.jpg,athome09.jpg,athome10.jpg,athome11.jpg,athome12.jpg" />
+			<v id="text" type="html">
+				<h1>HOME FURNISHINGS</h1>
+				<p>Let our furniture envelope you, from inside to outside, every detail conveys a welcoming tone. Note the extra breeze from a ceiling fan to the inviting elegance of a comfortable reading chair, perfect for the beach house to your seaside inspired home. </p>
+			</v>
+			
+			<subMenu releaseFunction="loadTextAndImage" >
+				<item id="at_home/residential_furniture" title="Residential Furniture">
+					<images list="indoor01.jpg,indoor02.jpg,indoor03.jpg*lr,indoor04.jpg,indoor05.jpg,indoor06.jpg,indoor07.jpg*bt" />
+					<v id="text" type="html">
+						<h1>RESIDENTIAL FURNITURE</h1>
+						<p>Tommy Bahama Home Furnishings bring comfort and style into every room of your house. With collections to accommodate large or small spaces with dark rich wood tones to soft warm hues. Tommy Bahama quality and creativity translate into luxurious and iconic design.</p>
+						<p><br/>For more information, visit:<br/><a href="http://www.tbfurniture.com" target="_BLANK">www.TBfurniture.com</a></p>
+					</v>
+				</item>			
+				
+				<item id="at_home/comingsoon" title=".: Coming Soon :." clickable="false"></item>
+				<item id="at_home/bedding_bath" title="Screen Savers" clickable="false"></item>
+				<item id="at_home/wallpaper" title="Walpapers" clickable="false"></item>
+				<item id="at_home/glassware_flatware_barware-" title="Ring Tones" clickable="false"></item>
+
+			</subMenu>
+		</item>
+		
+		<item id="travel_experience" title="Travel Experiences" >
+			<v id="text" type="html">
+				<h1>TRAVEL EXPERIENCE</h1>
+				<p>Let our furniture envelope you, from inside to outside, every detail conveys a welcoming tone. Note the extra breeze from a ceiling fan to the inviting elegance of a comfortable reading chair, perfect for the beach house to your seaside inspired home. </p>
+			</v>
+		</item>
+		
+		<item id="local_events" title="Local Events" >
+			<v id="text" type="html">
+				<h1>LOCAL EVENTS</h1>
+				<p>Let our furniture envelope you, from inside to outside, every detail conveys a welcoming tone. Note the extra breeze from a ceiling fan to the inviting elegance of a comfortable reading chair, perfect for the beach house to your seaside inspired home. </p>
+			</v>
+		</item>
+	</nav>
+	
+</main>

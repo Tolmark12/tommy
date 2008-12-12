@@ -1,0 +1,513 @@
+<!-- 
+	
++++++++++++ Parameters availables for Baubles +++++++++++
+file (required):                -  swf, jpg, gif, or png
+x, y, rot: 	                    -  x position, y position, rotation, also accepts: right, left, top bottom.
+								   Micro adjust position with "*" ex: right*150 -or- top*-200
+hover_x, hover_y, hover_rot:    -  x position, y position, rotation (for hover)
+depth:                          -  flash z-index, 1 is at top, -1 is behind stage content, -2 is behind -1
+maskMc:                         -  Must register mc in host swf ( registerBaubleMasks() )
+frames:							- roll, true. Use roll when moving though frames on mouse event
+framesFinishCallBack			- A function that can be set in ClickHandler.as, called run out of frames
+loadedCallBack:					- A function that can be set in ClickHandler.as, called when loaded
+fadedCallBack:					- A function that can be set in ClickHandler.as, called when faded in
+clickable:						- set as 'false' Whether the bauble should be "live"
+fade:							- speed of fade in- fast, slow, veryslow, none, hide
+javascript:						- The name of a javascript to call, todo: add parameters var
+link:							- External page to visit (http://www.page.com)
+linkWindow:						- Default is _self (_blank, etc)
+
++++++++++++ Globals +++++++++++
+h:								- Flash movie Height
+w:								- Flash movie Width
+imageBoxWidth:					- The width of the mask to draw over the photos
+imageBoxHeight:					- The height of the mask
+imageBoxX: 						- The X position of the mask
+imageBoxY:						- The Y position  of the mask
+mp3:							- an mp3 fild to load
+
+All of the media paths are set in the swf file. 
+However, they may be passed in as flash vars:
+								- xmlPath
+								- imagePath
+								- swfPath
+								- mp3Path
+
++++++++++++ Images +++++++++++-
+277 wide x 316 tall
+Accepts a comma delimited list of files (jpg,png,gif,swf). 
+Accepts a "*" delimited motion parameter
+ex: <images list="image1.jpg,image2.jpg*bt*[http://www.site.com]" />
+  
+  Motion types -
+  bt: bottom to top
+  tb: top to bottom
+  lr: left to right
+  rl: right to left
+
++++++++++++ HTML Text +++++++++++
+Available tags: <h1>, <a href>
+
++++++++ Navigation Items ++++++++
+set in <nav>, <subMenu>, or <item> 
+
+releaseFunction:                - Release  function defined in "ClickHandler.as" 
+rollOver:                       - RollOver function defined in "ClickHandler.as" 
+rollOut:                        - RollOut  function defined in "ClickHandler.as" 
+
+rollOverParams:  			    - Parameters sent with "rollOver" function 
+-->
+
+<main>
+	<globals h="440" w="820" imageBoxWidth="277" imageBoxHeight="316">
+		<images list="introvid.swf" />
+	</globals>
+	
+	<baubles>
+		<bauble id="brands" file="ABOUT_brands.swf" x="150" y="285" maskMc="brandsMask" rot="-10" hover_x="-50" hover_y="0" frames="roll" depth="-2"/>	
+		<bauble id="accessories" file="ABOUT_accessories.swf" x="277" maskMc="sunglassesMask" y="395" rot="0" hover_x="0" hover_y="20" hover_rot="0" frames="roll" depth="-4" />
+		<bauble id="athome" file="ABOUT_home_furnishings.swf" x="-34" y="30" rot="0"  maskMc="stampMask" hover_x="-14" hover_y="0" hover_rot="0" />
+		<bauble id="cafe" file="ABOUT_cafes.swf" x="513" y="101" rot="-30" maskMc="coasterMask" hover_x="-70" hover_y="-29" hover_rot="0" depth="-1" />
+		<bauble id="stores" file="ABOUT_stores.swf" x="520" y="201" hover_x="-70" maskMc="storesMask" hover_y="-29" hover_rot="0" depth="-5" />
+		<bauble id="news" file="ABOUT_in_the_news.swf" x="670" y="256" rot="0" maskMc="newsMask" hover_x="6" hover_y="-55" hover_rot="-2" depth="-3"/>
+		<bauble id="givingBack" file="ABOUT_giving_back.swf" x="right" y="300" maskMc="none" hover_x="-30" hover_y="0" hover_rot="7" />
+		
+		<!-- Stamps -->
+		<bauble id="brands_stamp" file="ABOUT_brands_STAMP.png" x="10" y="385" hover_x="-20" alpha="0" hover_alpha="100" clickable="false" />
+		<bauble id="accessories_stamp" file="ABOUT_accessories_STAMP.png" x="277" y="395"	 alpha="0" hover_alpha="100" clickable="false" />
+		<bauble id="athome_stamp" file="ABOUT_home_furn_STAMP.png" x="-104" y="180"			 alpha="0" hover_alpha="100" clickable="false" />
+		<bauble id="cafe_stamp" file="ABOUT_cafes_STAMP.png" x="343" y="-34" 				 alpha="0" hover_alpha="100" clickable="false" />
+		<bauble id="stores_stamp" file="ABOUT_stores_STAMP.png" x="343" y="-34" 			 alpha="0" hover_alpha="100" clickable="false" />
+		<bauble id="news_stamp" file="ABOUT_in_the_news_STAMP.png" x="500" y="-106" rot="0"  alpha="0" hover_alpha="100" clickable="false" />
+		<bauble id="givingBack_stamp" file="ABOUT_giving_STAMP.png" x="right*-280" y="300" hover_x="40"	alpha="0" hover_alpha="100" clickable="false" />
+		
+	</baubles>
+	
+	<nav releaseFunction="loadTextAndImage" >
+		<!-- Tommy Bahama Brands -->
+		<item id="brands" title="Tommy Bahama Brands" bauble="brands,brands_stamp">
+			<images list='home05.jpg,eyewear02.jpg,ip04.jpg,is02.jpg,tbw01.jpg,tbw08.jpg,tb18_01.jpg,tb18_02.jpg' />
+			<v id="text" type="html">
+				<h1>THE TOMMY BAHAMA FAMILY</h1>
+				<p>In 1992, Tony Margolis, Bob Emfield and Lucio Dalla Gasperina pooled all of their talents and launched their first collection of Tommy Bahama Menswear. From the on-set they had in mind a different way of approaching fashion and created clothes around how they liked to live and put the whole line on vacation.  To celebrate the best part of the week, the weekend and to make clothes that transport us to an island state of mind.  This island lifestyle became a way to express our creativity, our dedication to authentic quality and came to life as Tommy Bahama.</p>
+				<p>Tommy Bahama has since become an entire experience with ranges of clothing, accessories, food, rum and home furnishings.  It’s a whole collection of products, with expanded lines to take you through the ebb and flow of each day and year round. From the beach to elegant evenings out on the town, the subtle textures and refined finishes are carefully considered, meticulously crafted and infused with island life.</p>
+			</v>
+			
+			<subMenu releaseFunction="loadTextAndImage" rollOver="slideOutSubTag" rollOut="returnSubTag">
+				<item id="brands/mens_sportswear" title="Men's Sportswear" rollOverParams="brands,tommyMc">
+				  <images list='tb01.jpg,tb02.jpg,tb05.jpg' />
+					<v id="text" type="html">
+						<h1>TOMMY BAHAMA MEN'S SPORTSWEAR</h1>
+						<p>The true heart of the brand started with some vintage print, silk shirts and an incredibly elegant silk trouser and has evolved into a full range of products.  The feel is casual, but refined. A kind of island elegance that communicates a casual, laidback attitude of confidence and style. </p>
+					</v>
+				</item>
+				<item id="brands/relax" title="Relax" rollOverParams="brands,tommyRoundMc">
+					<images list="relax01.jpg,tb04.jpg*tb" />
+					<v id="text" type="html">
+						<h1>RELAX</h1>
+						<p>A natural extension to the Tommy Bahama sportswear line, RELAX emphasizes the laidback approach to your day. Perfect for a stylish outdoor lifestyle, all of the products reflect a comfortable sensibility. </p>
+					</v>
+				</item>
+				<item id="brands/indigo_palms" title="Indigo Palms" rollOverParams="brands,indigoMc">
+					<images list="ip01.jpg,ip02.jpg,ip03.jpg*lr,ip04.jpg" />
+					<v id="text" type="html">
+						<h1>INDIGO PALMS </h1>
+						<p>Denim based and inspired at its core, Indigo Palms allows a cool, modern way to add true Tommy Bahama laid back style to any gathering. Let the draw of premium fabrics and a full range of styles keep your look classic or with the trends. </p>
+						<br/>
+						<h1>INDIGO PALMS STORES:</h1>
+						<p>Fashion Island, Newport Beach, CA</p>
+						<p>Santana Row, San Jose, CA</p>
+						<p>Los Olas, Ft. Lauderdale, FL</p>
+						<br/>						
+						<h1>TOMMY BAHAMA STORES CARRYING INDIGO PALMS:</h1>						
+						<p>Forum Shops, Las Vegas, NV</p>
+						<p>Palm Desert, CA</p>
+						<p>Naples, FL</p>
+						<p>Fashion Show Mall, Las Vegas, NV</p>
+						<p>Newport Beach, CA</p>
+						<p>Scottsdale, AZ</p>
+						<p>Las Vegas Town Center, NV </p>
+						<p>Chicago, IL</p>
+						<p>Boca Raton, FL</p>
+						<p>Orlando, FL</p>
+						<p>Pointe Orlando, FL</p>
+						<p>Woodlands, TX</p>
+						<p>Fashion Valley, San Diego, CA</p>
+						<p>Tyson’s, VA</p>
+						<br/>
+						<h1>RETAIL PARTNER STORES:</h1>
+						<p>Nordstrom stores nationwide</p>
+						<br/>
+						<br/>
+					</v>
+				</item>
+				<item id="brands/island_soft" title="Island Soft" rollOverParams="brands,islandSoftMc">
+					<images list="is01.jpg,is02.jpg" />
+					<v id="text" type="html">
+						<h1>ISLAND SOFT</h1>
+						<p>The definition of refined elegance, Island Soft represents our finest level of fabrics and design. Elements of European craftsmanship and nods to contemporary silhouettes take our brand into a more fashion forward focus.</p>
+						<br/>
+						<h1>TOMMY BAHAMA STORES CARRYING ISLAND SOFT:</h1>
+						<p>Forum Shops, Las Vegas, NV</p>
+						<p>Palm Desert, CA</p>
+						<p>Naples, FL</p>
+						<p>Fashion Show Mall, Las Vegas, NV</p>
+						<p>Newport Beach, CA</p>
+						<p>Scottsdale, AZ</p>
+						<p>Las Vegas Town Center, NV </p>
+						<p>Chicago, IL</p>
+						<p>Farmers Market, CA</p>
+						<p>Orlando, FL</p>
+						<p>Pointe Orlando, FL</p>
+						<p>Woodlands, TX</p>
+						<p>Boca Raton, FL</p>
+						<p>Tyson’s, VA</p>
+						<p>Tampa International, FL</p>
+                        <br/>
+						<h1>RETAIL PARTNER STORES:</h1>
+						<p>Nordstrom stores nationwide</p>
+						<br/>
+						<br/>
+					</v>
+				</item>				
+				<item id="brands/womens_sportswear" title="Women's Sportswear" rollOverParams="brands,womensMc">
+					<images list="tbw01.jpg,tbw04.jpg*bt,tbw05.jpg,tbw07.jpg*bt" />
+					<v id="text" type="html">
+						<h1>TOMMY BAHAMA WOMEN'S SPORTSWEAR</h1>
+						<p>Elegance is most noteworthy when it is unexpected. Our line for women portrays a lifestyle that is elegant and refined, while it embraces its cool, relaxed roots. From fashionable year-round looks to that perfect piece that always fits in your resort wardrobe.</p>
+						<br/>
+						<h1>PARTNER STORES:</h1>
+						<p>Lord & Taylor</p>
+						<p>Macy's West</p>
+						<p>Mark Shale</p>
+						<p>Lee Newman</p>
+						<p>Irresitibles</p>
+						<p>The Mainsail</p>
+						<p>Finan McDonald</p>
+						<p>La Quinta Resort and Spa</p>
+						<p>Norm Thompson</p>						
+						<p>Tommy's Island</p>
+						<p>McCaulous</p>
+						<p>Faith - Anne</p>
+						<p>Bass Pro Shops</p>	
+						<br/>
+						<br/>
+					</v>
+				</item>
+				<item id="brands/womens_swim" title="Women's Swim" rollOverParams="brands,womensMc">
+					<images list="tbw02.jpg,tbw03.jpg*lr,tbw06.jpg*lr" />
+					<v id="text" type="html">
+						<h1>WOMEN'S SWIM COLLECTION</h1>
+						<p>A direct inspiration from our Women’s Sportswear, the Swim Collection is crafted in flattering shapes and finishes married to high-end fabrics. At home either lounging by the pool or at a favorite getaway, the Swim Collection is a chic, sun-soaked way to live the island lifestyle.</p>
+						<br/>
+						<h1>PARTNER STORES:</h1>
+						<p>Beach House of Naples</p>
+						<p>Bloomingdale’s</p>
+						<p>Blum’s</p>
+						<p>California Sunshine</p>
+						<p>Everything But Water</p>
+						<p>Great Shapes</p>
+						<p>Jerrie Shop</p>
+						<p>Lord & Taylor</p>
+						<p>Macy’s West</p>
+						<p>Nordstrom</p>
+						<br/>
+						<br/>						
+					</v>
+				</item>
+				<item id="brands/tb_18_golf" title="TB 18 Golf" rollOverParams="brands,golfMc">
+					<images list="tb18_01.jpg,tb18_02.jpg" />
+					<v id="text" type="html">
+						<h1>Golf TB 18</h1>
+						<p>Tommy Bahama takes to the golf course, with our own style of relaxed, technical golf wear for both men and women.  The collection lends itself to comfort, performance and style.  It features the latest in technical fabrics, yet maintains the casual island-inspired lifestyle of Tommy Bahama.</p>
+						<br/>
+						<h1>TOMMY BAHAMA GOLF RETAIL PARTNER STORES:</h1>
+						<p>Palm Beach Golf Center, Riviera Beach, FL</p>
+						<p>St. Andrews Forum Golf Shop, Las Vegas, NV </p>
+						<p>Ko Olina Golf Shop, Princeville, HI </p>
+						<p>Horseshoe Bay Resort, Horseshoe Bay, TX </p>
+						<p>Kaanapali, Lahaina, HI</p>
+						<p>Coeur D’Alene Resort, Coeur D’Alene, ID </p>
+						<p>Nemacolin Woodlands Resort, Uniontown, PA </p>
+						<p>Trump National Golf Club, Rancho Palos Verdes, CA </p>
+						<p>Wailea Golf Club, Wailea, HI </p>
+						<p>Newcastle Golf Club, Newcastle, WA </p>
+					</v>
+				</item>
+			</subMenu>
+			
+		</item>
+		
+		<item id="accessories" title="Accessories & Misc." bauble="accessories,accessories_stamp">
+			<images list="eyewear03.jpg,footwear05.jpg,neckwear01.jpg,eyewear02.jpg,neckwear02.jpg" />
+			<v id="text" type="html">
+				<h1>ACCESSORIES & MISCELLANEOUS</h1>
+				<p>Statement-making luggage to sun-primed eyewear, our accessories create the finishing touches or enhance the everyday essentials. Appealing to a classic or modern approach, with unexpected finishes and unrelenting quality, the choices are always getaway perfect. </p>
+			</v>
+			
+			<subMenu releaseFunction="loadTextAndImage" >
+				<item id="accessories/eyewear" title="Eyewear">
+					<images list="eyewear01.jpg,eyewear04.jpg" />
+					<v id="text" type="html">
+						<h1>EYEWEAR</h1>
+						<p>Cool and classic, Tommy Bahama Eyewear adds a little mystery to any island look. It also protects and comforts with polarized optics and an engineered fit and finish. Elegant and artisan in equal measure, Tommy Bahama eyewear creates premium sunglasses and optics for island living.</p>
+						<br/>
+						<p>See our complete assortment at a <a>Tommy Bahama store</a> near you.</p>
+						<p><br/>For more information call:</p>
+						<h1>1-800-505-5557</h1>
+					</v>
+				</item>
+				<item id="accessories/footwear_hoosiery" title="Footwear & Men's Hosiery">
+					<images list="footwear04.jpg,footwear05.jpg" />
+					<v id="text" type="html">
+						<h1>FOOTWEAR & MEN’S HOSIERY</h1>
+						<p>When we’re not barefoot, great sandals and beautifully crafted shoes are grounded in the Tommy Bahama collection. Men's and Women's footwear and hosiery are an extension in comfort and style that completes the island wardrobe.</p>
+						<br/>
+						<p>See our complete assortment at a <a>Tommy Bahama store</a> near you.</p>
+						<p><br/>For more information call:</p>
+						<h1>1-888-800-8688</h1>
+					</v>
+				</item>
+				<item id="accessories/belts_leather" title="Belts & Small Leather Goods">
+					<images list="belts03.jpg" />
+					<v id="text" type="html">
+						<h1>BELTS & SMALL LEATHER GOODS</h1>
+						<p>Whether the look calls for an understated dressy or toned down approach, our range of fabrics and weaves complete the finishing touch. The perfect belt, wallet or small leather goods are designed with Tommy Bahama signature quality and detailing to complement an elegant lifestyle. </p>
+						<br/>
+						<p>See our complete assortment at a <a>Tommy Bahama store</a> near you.</p>
+						<p><br/>For more information call:</p>
+						<h1>1-800-528-1388</h1>
+					</v>
+				</item>
+				<item id="accessories/neckwear" title="Neckwear">
+					<images list="neckwear01.jpg" />
+					<v id="text" type="html">
+						<h1>NECKWEAR</h1>
+						<p>When your plans call for heading from the beach to the boardroom, Tommy Bahama Ties convey a relaxed elegance appropriate for the captain’s table or casual Friday. Exquisite silks, innovative weaving and rich design offer uncompromising style and quality. </p>
+						<br/>
+						<p>See our complete assortment at a <a>Tommy Bahama store</a> near you.</p>
+						<p><br/>For more information visit:<br/>
+						<a href="http://www.tommybahamaties.com" target="_BLANK">www.tommybahamaties.com</a></p>
+					</v>
+				</item>	
+				<item id="accessories/dressShirts" title="Dress Shirts">
+					<images list="neckwear02.jpg" />
+					<v id="text" type="html">
+						<h1>DRESS SHIRTS</h1>
+						<p>For that special occasion, Tommy Bahama offers a distinct, elegant dress shirt collection created to express our unique character. Combining luxury fabrics with perfect silhouettes, it's the Tommy Bahama signature details that define these uniquely branded dress shirts. </p>
+						<p><br/>For more information call:<br/>
+						<h1>1-800-774-4787</h1></p>
+					</v>
+				</item>		
+				<item id="accessories/luggage" title="Luggage">
+					<images list="luggage01.jpg" />
+					<v id="text" type="html">
+						<h1>LUGGAGE</h1>
+						<p>Escape to a tropical paradise or a never-ending weekend with Tommy Bahama luggage, travel bags and business cases.  A fresh approach to design with quality, durability and attention to every detail, this luggage defines traveling in relaxed comfort and style.</p>
+						<p><br/>For more information call:</p>
+						<h1>1-973-826-1736</h1>
+					</v>
+				</item>
+				<item id="accessories/umbrellas" title="Umbrellas">
+					<images list="umbrella01.jpg" />
+					<v id="text" type="html">
+						<h1>UMBRELLAS</h1>
+						<p>Blue skies will prevail, but in the meantime, take cover with our collection of umbrellas. From a round of golf to shopping the open-air market, our colorful and lively patterned umbrellas are highly functional for when the winds change.</p>
+						<br/>
+						<p>See our complete assortment at select <a>Tommy Bahama stores</a> near you.</p>
+						<br/>
+						<p>For more information call:</p>
+						<h1>1-516-734-4418</h1>
+					</v>
+				</item>
+				
+			</subMenu>
+		</item>
+		
+		<item id="at_home" title="At Home" bauble="athome,athome_stamp">
+			<images list="athome01.jpg*lr,rugs01.jpg,athome02.jpg,athome11.jpg" />
+			<v id="text" type="html">
+				<h1>HOME FURNISHINGS</h1>
+				<p>Let our furniture envelope you, from inside to outside, every detail conveys a welcoming tone. Note the extra breeze from a ceiling fan to the inviting elegance of a comfortable reading chair, perfect for the beach house to your seaside inspired home. </p>
+			</v>
+			
+			<subMenu releaseFunction="loadTextAndImage" >
+				<item id="at_home/residential_furniture" title="Residential Furniture">
+					<images list="athome01.jpg" />
+					<v id="text" type="html">
+						<h1>RESIDENTIAL FURNITURE</h1>
+						<p>Tommy Bahama Home Furnishings bring comfort and style into every room of your house. With collections to accommodate large or small spaces with dark rich wood tones to soft warm hues. Tommy Bahama quality and creativity translate into luxurious and iconic design.</p>
+						<p><br/>For more information visit:<br/>
+						<a href="http://www.tbfurniture.com" target="_BLANK">www.TBfurniture.com</a></p>
+					</v>
+				</item>
+				<item id="at_home/outdoor_furniture" title="Outdoor Furniture">
+					<images list="outdoor08.jpg" />
+					<v id="text" type="html">
+						<h1>OUTDOOR FURNITURE</h1>
+						<p>Setting the standard for upscale casual living, Tommy Bahama outdoor, casual furniture and accessories provide the ultimate for relaxation. Furniture, hammocks, umbrellas and accessories allow you to drift away in true Tommy Bahama spirit.</p>
+						<p><br/>For more information call:</p>
+						<h1>1-954-675-7980</h1>
+					</v>
+				</item>
+				<item id="at_home/residential_outdoor_rugs" title="Rugs">
+					<images list="rugs01.jpg" />
+					<v id="text" type="html">
+						<h1>RUGS</h1>
+						<p>Tommy Bahama rugs are infused with carefully selected lush, sun-washed textures. With artisan quality weaving in the best of durable and natural fibers delivering elegance under foot.</p>
+						<p><br/>For more information visit:<br/>
+						<a href="http://www.shawfloors.com/area-rug/Tommy_Bahama_Home" target="_BLANK">www.shawfloors.com</a></p>
+					</v>
+				</item>
+				<item id="at_home/ceiling_fans" title="Ceiling Fans">
+					<images list="athome02.jpg" />
+					<v id="text" type="html">
+						<h1>CEILING FANS</h1>
+						<p>The perfect way to set a breezy mood, Tommy Bahama Ceiling Fans are created with cast details and rich textures, distinguishing them as uniquely-inspired. This creativity is backed up with solid performance and lasting quality.</p>
+						<p><br/>For more information visit:<br/>
+						<a href="http://www.tommybahamafans.com" target="_BLANK">www.tommybahamafans.com</a></p>
+					</v>
+				</item>
+				<item id="at_home/indoor_outdoor_fabrics" title="Fabrics">
+					<images list="athome08.jpg,athome11.jpg" />
+					<v id="text" type="html">
+						<h1>OUTDOOR - SUNBURY</h1>
+						<p>Retreat from the world of care with Tommy Bahama Outdoor Fabrics. Our beautiful patterns and textures are created with the utmost in durability and at the forefront of technology. Sunbrella's long-lasting fabrics handle the outdoor elements from the baking sun to endless rain, season after season. Rich colors and luscious textures are easy to clean and give peace of mind when living with children, pets or Mother Nature.</p>
+						<p><br/>For more information call:</p>
+						<h1>1-800-453-5777</h1>
+						<br/><h1>OUTDOOR - CRYPTON</h1>
+						<p>Retreat from the world of care with Tommy Bahama Outdoor Fabrics. Our beautiful patterns and textures are created with the utmost in durability and technology. Crypton is a specially engineered fabric with an integrated moisture barrier that promises permanent performance against stains and spills for soft, breathable upholstery without the worry.</p>
+						<p><br/>For more information call:</p>
+						<h1>1-800-333-3778</h1>
+						<br/><h1>RESIDENTIAL</h1>
+						<p>Inspired by eclectic sophistication, Tommy Bahama fabric translates natural beauty with a fresh approach to interior style. Lush wovens, bold geometrics and quiet texturals add interest and authenticity to the home.</p>
+						<p><br/>For more information call:</p>
+						<h1>1-212-292-3200, ext. 3247</h1>
+						<br/>
+						<br/>						
+					</v>
+				</item>				
+				
+				<item id="at_home/comingsoon" title=".: Coming Soon :." clickable="false"></item>
+				<item id="at_home/bedding_bath" title="Bedding & Bath - Jan '08" clickable="false"></item>
+				<item id="at_home/wallpaper" title="Wallpaper - Nov '07" clickable="false"></item>
+				<item id="at_home/glassware_flatware_barware-" title="Tableware - Jan '08" clickable="false"></item>
+
+			</subMenu>
+		</item>
+		
+		<item id="accessories/rum" title="Rum">
+			<images list="rum03.jpg" />
+			<v id="text" type="html">
+				<h1>RUM</h1>
+				<p>Taste paradise with Tommy Bahama Ultra-Premium rum. In two delightfully distinct flavors, Tommy Bahama® White Sand and Tommy Bahama® Golden Sun, our rum is made in Barbados with water naturally filtered through coral stone and aged in the perfect climate to bring you the taste of the tropics wherever you may be. </p>
+				<p><br/>For more information visit:<br/><a href="http://www.tommybahamarum.com" target="_BLANK">www.tommybahamarum.com</a></p>
+				<br/>
+				<p>To purchase Tommy Bahama Ultra-Premium rum visit:<br/><a href="http://www.877spirits.com/intro.asp?pcategory=856&src=TommyBahamaLP" target="_BLANK">www.877spirits.com</a></p>
+				<br/>
+				<small><p>Drink Responsibly</p>
+				<p>Tommy Bahama Rum, 40% alc./Vol. Imported by Sidney Frank Importing Co., Inc., New Rochelle, NY under license from the Tommy Bahama Group, Inc.</p></small>
+				<br/>
+				<br/>
+
+			</v>
+		</item>
+		
+		<item id="stores" title="Stores" bauble="stores,stores_stamp" >
+			<images list="stores01.jpg*lr,stores02.jpg,stores04.jpg" />
+			<v id="text" type="html">
+				<h1>TOMMY BAHAMA STORES</h1>
+				<p>Let the colors, sounds and scents draw you in to one of our unique store locations. With more than 65 stores nationwide, you can walk into a world filled with authentic collections of apparel, accessories and gifts. Please check our <a>Store Locator</a> for a Tommy Bahama store or retail partner near your location. </p> 
+			</v>
+		</item>
+		
+		<item id="cafes" title="Cafes" bauble="cafe,cafe_stamp" >
+			<images list="cafe01.jpg,cafe02.jpg,cafe03.jpg,cafe04.jpg,cafe05.jpg,cafe06.jpg,cafe07.jpg,cafe08.jpg" />
+			<v id="text" type="html">
+				<h1>TOMMY BAHAMA CAFES</h1>
+				<p>With the savory aroma of fresh seafood and the vision of enticing libations, our Tommy Bahama Tropical Cafes bring you recipes that are authentic. An experience not to be missed, adjoined to select Tommy Bahama Stores, the Cafes take you to a unique destination with the full flavor of the islands.</p>
+				<br/> 
+				<p>Make a Reservation at a Tropical Cafe:</p>
+				<p><a href="http://www.opentable.com/single.aspx?rid=6530&restref=6530" target="_BLANK">Mauna Lani</a>  &nbsp; <a href="/LunchMenu_AZ-NB-PD.PDF" target="_BLANK">Lunch Menu</a>&nbsp;&nbsp;<a href="/DinnerMenu_AZ-NB-PD.PDF" target="_BLANK">Lunch Menu</a>&nbsp;&nbsp;<a href="/LunchMenu_AZ-NB-PD.PDF" target="_BLANK">Drink Menu</a></p>
+				<p><a href="http://www.opentable.com/single.aspx?rid=6565&restref=6565" target="_BLANK">Naples</a></p>
+				<p><a href="http://www.opentable.com/single.aspx?rid=6559&restref=6559" target="_BLANK">Newport Beach</a></p>
+				<p><a href="http://www.opentable.com/single.aspx?rid=5399&restref=5399" target="_BLANK">Palm Desert</a></p>
+				<p><a href="http://www.opentable.com/single.aspx?rid=6567&restref=6567" target="_BLANK">Pointe Orlando</a></p>
+				<p><a href="http://www.opentable.com/single.aspx?rid=13288&restref=13288" target="_BLANK">Sandestin</a></p>
+				<p><a href="http://www.opentable.com/single.aspx?rid=6566&restref=6566" target="_BLANK">Sarasota</a></p>
+				<p><a href="http://www.opentable.com/single.aspx?rid=6562&restref=6562" target="_BLANK">Scottsdale</a></p>
+				<p><a href="http://www.opentable.com/single.aspx?rid=6532&restref=6532" target="_BLANK">Wailea</a></p>
+				<p><a href="http://www.opentable.com/single.aspx?rid=6564&restref=6564" target="_BLANK">Woodlands</a></p>
+				<br/>
+				<h1>Give the Perfect Gift:</h1>
+				<p><a href="/TBG/Gifts/GiftCards_M.jsp">Purchase a Gift Card</a></p>
+				<br/>
+
+			</v>
+		</item>
+		
+		<item id="news" title="In the News" bauble="news,news_stamp">
+			<images list="news01.jpg,news02.jpg*rl,news03.jpg,news04.jpg*lr,news05.jpg*rl,news06.jpg*lr,news07.jpg*rl,news08.jpg,news09.jpg,news10.jpg" />
+			<v id="text" type="html">
+				<h1>AS SEEN IN NAPLES ILLUSTRATED</h1>
+				<br/><p>One Long Weekend</p>
+				<br/><p>Two fashion veterans used Naples to make casual clothes a “rumaway” hit by creating Tommy Bahama.  Naples Illustrated recently talked with two of the company’s three founders – Bob Emfield and Tony Margolis – over lunch at the company’s Naples restaurant, their first and most successful enterprise and a wellspring for such pressing matters as how to feed your alter ego, what to wear during the summer, and why flexibility is important in business as well as fashion.</p>
+				<p>Tommy Bahama is more than a brand.  He’s a personality who lives in his own world.  With abundant leisure time, a free spirit, and an adequate trust fund to lubricate his interests, this Florida-based creative enjoys the good life without being anchored by possessions.  If he has any emotional baggage, there’s a big hole in it.</p>
+				<p>Tony Margolis, Bob Emfield, and Lucio Dalla Gasperina, creators of Tommy’s parallel fictional retail/dining/lifestyle universe, were deeply inspired by their own Gulf Coast experiences when creating a company focused on casual wear that was comfortable, versatile, and timeless.  They not only created a new brand in a saturated market, they also unleashed the inner Tommy in men everywhere.</p>
+				<p>“We all have our own version of Tommy,” says Margolis, who spends his winters in Naples.  “I think it’s always been there.  People have always had a fantasy escape.  We tried to find a way to bring that fantasy world into your everyday life.”</p>
+				<p>That world is embodied in the Third Street South Tommy Bahama compound in Naples – the first in the company – where retail and restaurant create an environment that makes it easy to relax and hard to leave.  In addition to showcasing clothing for men and women, home furnishings, watches, linen, rugs, eyewear, and beer are just a few of the many accessories being sold to maintain the perpetual vacation lifestyle.  Even in places far from the Tropics, Tommy Bahama store and restaurants capture that universal yearning for a life that revolves around lounging, sailing, dancing, and other moments in the sun.</p>
+				<br/><p>Tommy: The Windfall Wizard</p>
+				<br/><p>The saga of Tommy Bahama has its origin just north of Collier County on Bonita Beach, where Emfield and his late wife, Jan, bought a condominium 30 years ago, and convinced Bob’s colleague and good friend Margolis to invest in the nascent housing market of Southwest Florida.  Bob and Jan, who met at Kent State University and spent spring breaks along Florida’s legendary East Coast, had decided that the slower pace and smaller cities of Florida’s West Coast better suited them.  Starting from the Tampa area, the couple spent several vacations working their way down the coast until they checked into the Cove Inn on Naples Bay and found their condo.</p>
+				<p>“We knew this is what we wanted to do and where we wanted to be,” Emfield recalls.  “We just couldn’t get comfortable with the East Coast.”</p>
+				<p>The story goes that when Emfield and Margolis and their wives vacationed, they developed the Tommy Bahama persona as they were leaving their island paradise, imagining that they would like to be this person who didn’t have to work, but who lived his life as one long weekend.  Eventually, as Tommy developed, the clothing industry veterans couldn’t help but imagine what their hero would wear.</p>
+				<br/><p>Comfort Level</p>
+				<br/><p>During his career in retail, Margolis found comfort was lacking in men’s fashion.  Margolis remembers having to have a hat when he went on sales calls for Manhattan Shirt Co. in the late 1960’s.  He didn’t sell hats, didn’t even wear them, but his clients did, and he soon learned how multidimensional and dynamic the retail fashion industry was.</p>
+				<p>Leisure/sports apparel quickly abandoned hats and other constrictions, opening the market for emerging apparel brands that suggested a new lifestyle could be obtained by simply switching shirts.</p>
+				<p>After working together at companies including Brittania and Generra Sportswear Co., Margolis and Emfield began actively working on a concept for upscale casual menswear and set out to create a believable persona to market it.  They had an image of a seasoned man who loved the sun, but without having to don loud Hawaiian shirts.  Tommy liked all activities tropical – fishing, golf, boating, relaxing, dining outside – and wanted clothes for each pursuit.  In 1992, Margolis became CEO of the newly formed clothing importer Viewpoint International.  Emfield, who had been a regional sales manager at Generra, became marketing director, and Dalla Gasperina, who worked as vice president for Union Bay Sport, was made design director of Viewpoint.  The team decided to combine their experience and knowledge to create a brand that suited their vacation lifestyle in Southwest Florida.</p>
+				<p>As a result, they began a venture that would change how men aged 25 to 60 look at shopping and themselves.</p>
+				<p>After struggling to convince major retailers to carry their brand, the group found success among specialty shops during a time when the emerging Internet threatened all traditional businesses.  The company grew to 2,000 accounts, eventually landing stores like Nordstrom and Neiman Marcus.</p>
+				<p>The team felt it was time to open their own retail location, and they had the perfect spot – Naples, where Margolis and Emfield had vacationed for so many years.  Their Third Street South compound would soon become very busy helping people relax.</p>
+				<p> “This is our sweet spot.  This is the perfect community for what we do,” says Margolis, clad in a striped Tommy Bahama shirt with light khakis.  Just like Tommy, he’s a regular at the tropical restaurant, with its Bermuda shutters and tasty casual fare.  “The truth was, you couldn’t get a decent burger in town.  We were sort of out in the street, lost.”</p>
+				<p>Before they opened their first retail store in 1995, space next to it became available.  So in typical carefree Tommy Bahama fashion, the partners dove into two of the most hazardous ventures in American business:  fashion and restaurant, creating Tommy Bahama Tropical Cafe and Emporium.  The island-style restaurant is a destination, the only place to enjoy Tommy Bahama beer and purchase a silk camp shirt.  Their ability to capture crossover clients with retail restaurants and maintain their interest turned out to be an excellent model, one that has caught on.</p>
+				<p> “There’s a totally different edge about everything we did,” says Emfield, clad in jeans and sneakers, his long-sleeved denim shirtsleeves rolled up, like Tommy, of course.  “From a fashion standpoint, it’s a totally American look.  It didn’t look like anything that had been done.  It gave us a big field to play in.”</p>
+				<br/><p>Rum Away</p>
+				<br/><p>As the company and the brand continues to grow, research for the company’s next move can mean sipping tropical drinks and watching the sunset in order to conjure their inner Tommy, who is always just a rumrunner away.  Certainly there are stormy days, but most are washed away with a cool drink as each decision they make is posed the same way:  What would Tommy do?  Besides dabbling in yacht brokerage and ceiling fans, does he really wear socks and ties?
+				<br/>“He’d wear a tie to meet his financial planner,” Margolis says.
+				<br/>“No, he wouldn’t,” Emfield counters.
+				<br/>“We sell ties,” Margolis says.  “He’d wear one.”
+				<br/>“It would be on his car seat,” Emfield says.  The banter between them is a valuable asset.  The three partners are good enough friends to disagree once in awhile and give each other a different perspective.  Margolis and Emfield spend much of their time on the East Coast of the United States while Dalla Gasperina stays near the company headquarters on the West Coast.  According to Emfield, that separation is a plus because their get-togethers are a real event.  Twice a year they meet at a restaurant and taste-test the menu.  Last December, all three were bird hunting in Georgia without any talk of business.</p>
+				<p>“A lot of the reason we’ve been as successful as we have is that the three of us don’t see things the same way,” Emfield says.  “I think the three of us have an absolute respect for each other’s opinion.  We haven’t had an argument in 14 years.”</p>
+				<p>“It’s not that we were so clear-sighted in what we wanted to do,” Margolis says.  They know that making adjustments can be more important than making mistakes.  They see the things that need improvement.  Even if the original ideas weren’t good ones, it’s obvious they were thinking beyond that position.</p>
+				<p>In order to bring men into the store, the persona of Tommy was the vehicle for unique combinations of fabrics and colors.  Silk helped separate the brand from the competition, but the fit was different too, and the patterns weren’t wild enough to be faddish.  Quality was critical, because guys want to wear their favorite shirt as much as possible.  For cooler weather, there’s even the Aruba sweatshirt.  Tommy might occasionally snow ski, but his fashion foundation would still be a T-shirt.</p>
+				<p>Ideas flow from the team like draft beer.  It certainly helps to have the conscience of Tommy looking over them to guide their most capricious endeavors, but sound business practices also keep them grounded.  There are no sales or discounts in the retail stores, although the company recently opened a few outlet shops.  The company’s newest store at Coconut Point in Estero had the fourth largest sales in the chain one day in January.</p>
+				<p>“We consciously made a garment that lived up to the customer’s expectations,” Margolis says.  “Men get favorite garments and favorite brands.  Guys kind of get into a box they’re comfortable in and stay with it.  It’s not too extreme; it’s not over the top.”</p>
+				<br/><p>Island Time</p>
+				<br/><p>What started as a way to feed their families has become a concept that customers have latched onto with the same passion Tommy has for windsurfing.  Stories include tales of the country club manager who buys 90 shirts each year, or the family who made quilts using their departed brother’s Tommy Bahama shirts.</p>
+				<p>When Jan Emfield fought breast cancer in the early 1990’s, the idea of starting a new company was difficult for Bob.  It was a tough battle for her, but when she died in the 1994, Tommy Bahama turned out to be more than a mere distraction.</p>
+				<p>“I was going to pull out,” Emfield recalls.  “I thought it would be best.  She said, ‘That would be a tremendous mistake.  You’re going to need this after I’m gone.’  She was right.”</p>
+				<p>The nature of the company and the support of his partners were invaluable in his grieving process.  As a tribute to her spirit, the company has focused corporate giving on the Garden of Hope and Courage, an oasis of life and beauty for people fighting illness in hospitals.  The first garden was dedicated last fall at Naples Community Hospital, and provides a place where thriving plants give patients, families, and health workers a place to find peace or to be uplifted.  The company hopes to take the garden concept nationwide.  In addition, each store hosts a golf tournament to raise money for a local charity.</p>
+				<p>Tommy Bahama is more than a brand.  He’s a personality who lives in his own world.  As Tommy grows older, he has been slowing down a little bit.  “Lately, he’s been playing a lot of competitive bridge,” Emfield says, laughing.  The company was acquired by Oxford Industries in 2003, while the three partners continue to steer the company toward new horizons.  They got out of the yacht business, but plan to launch a rum line in June.</p>
+				<p>It can be difficult to discern where Tommy leaves off and his gregarious creators begin, but those ponderings are better suited for the next happy hour.  Somewhere in the world, it’s Island Time.
+				<br/>“I keep telling people Manhattan is an island,” Margolis says.
+				<br/>“So is Ireland,” Emfield adds.</p>
+				<p>The irony is that laid-back, relaxed Tommy still keeps Emfield and Margolis very busy.  They didn’t realize what they had created until one week after the first restaurant opened in Naples.  When they saw people waiting two hours to enter their lighthearted land for a taste of something new, it was the dawn of a new world.  As veterans of the fashion industry, the ability to make the shift to restaurants is a proud accomplishment for all of them, but how would Tommy maintain his handicap?</p>
+				<p>“We thought were going to work six months and play golf six months,” Margolis says.  “I gave up golf.”  NI</p>
+			</v>
+		</item>
+		
+		<item id="giving_back" title="Giving Back" bauble="givingBack,givingBack_stamp">
+			<images list="gohac01.jpg*lr,gohac02.jpg,gohac03.jpg,gohac04.jpg,gohac05.jpg" />
+			<v id="text" type="html">
+				<h1>THE GARDEN OF HOPE AND COURAGE</h1>
+				<p>The principals behind Tommy Bahama are committed to extending the relaxed, positive vibe of the brand into philanthropic efforts.  The company’s participation in the Garden of Hope and Courage is an example of this commitment.</p>
+				<p>The wife of one of the founders of Tommy Bahama, Janet Emfield, battled breast cancer.  During her struggle, she envisioned a peaceful garden in the midst of a sterile hospital setting — a place of tranquility and solace for cancer patients, their families and health care providers.  As an avid gardener, Emfield recognized the physical and psychological healing benefits that a natural garden setting could provide.  The Garden of Hope and Courage is dedicated to bringing the healing power of gardens to hospitals across the country.</p>
+				<p>The organization has several goals in addition to paying tribute to those who have fought against breast cancer: to increase public awareness of the disease, to provide current information about early detection and treatment, and to raise money for breast cancer research.</p>
+				<p>For all those who seek a place of sanctuary, a place of quiet, a place of beauty and of life, there is the Garden of Hope and Courage.  Inspired by the great courage of women faced with breast cancer, as well as all who have been touched by cancer; and in memory of sons, daughters, husbands, and dear friends, the garden serves as a living testament to courage, compassion, hope and love.</p>
+				<p>Please direct any charitable inquiries to: <a href="mailto:charityrequests@tommybahama.com">CharityRequests@tommybahama.com</a>. Please be aware that due to the number of requests we receive we cannot respond to everyone. If we are able to support your event you will hear from us within a few weeks of your request. We do appreciate you contacting us and wish you the very best of luck.</p>
+			</v>
+		</item>
+		
+		<item id="n7" title="Careers" releaseFunction="gotoURL" releaseParams="http://www.tommybahama.apply2jobs.com/,_blank" />		
+	</nav>
+	
+</main>

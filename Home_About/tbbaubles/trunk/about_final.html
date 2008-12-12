@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>07_about</title>
+<script type="text/javascript" src="jscripts/swfobject.js"></script>
+<script type="text/javascript" src="jscripts/swfaddress.js"></script>
+
+</head>
+<body style="margin:0">
+<div align="center">
+	<div id="someHeaderContent" style="height:113px; background:url(images/shortbg.jpg) #FFEEC4 repeat-x;margin:0">
+	</div>
+	<div id="flashcontent" style="margin:0px">
+		<strong>You need to upgrade your Flash Player</strong>
+	</div>
+	<div id="somefooterccontent" style="background:#666666;height:100px">
+	</div>
+</div>
+
+<script type="text/javascript">
+	// <![CDATA[
+	
+	var so = new SWFObject("about.swf", "about", "100%", "630px", "8", "#FFEEC4");
+	//so.addVariable("flashVarText", "this is passed in via FlashVars for example only");
+	so.addParam("scale", "noscale");
+	so.addParam('salign', 't');  
+	
+	// New params
+	so.addParam('allowfullscreen', 'false');   
+	so.addParam('allowscriptaccess', 'sameDomain');
+	so.addParam('align', 'middle');
+	so.addParam('play', 'true');
+	so.addParam('loop', 'true');
+
+	so.write("flashcontent");
+	
+	// ]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!-- 
+	
+############ Parameters availables for Baubles ############
+file (required):                -  swf, jpg, gif, or png
+alpha							-  The transparency
+x, y, rot: 	                    -  x position, y position, rotation, also accepts: right, left, top bottom.
+								   Micro adjust position with "*" ex: right*150 -or- top*-200
+scale							-  The scale 
+hover_x, hover_y, hover_rot:    -  x position, y position, rotation (for hover)
+hover_alpha						-  The transparency (for hover)
+hover_scale						-  The scale (for hover)
+depth:                          -  flash z-index, 1 is at top, -1 is behind stage content, -2 is behind -1
+maskMc:                         -  Must register mc in host swf ( registerBaubleMasks() )
+frames:							- roll, true. Use roll when moving though frames on mouse event
+framesFinishCallBack			- A function that can be set in ClickHandler.as, called run out of frames
+loadedCallBack:					- A function that can be set in ClickHandler.as, called when loaded
+fadedCallBack:					- A function that can be set in ClickHandler.as, called when faded in
+clickable:						- set as 'false' Whether the bauble should be "live"
+fade:							- speed of fade in- fast, slow, veryslow, none, hide
+javascript:						- The name of a javascript to call, todo: add parameters var
+link:							- External page to visit (http://www.page.com)
+linkWindow:						- Default is _self (_blank, etc)
+clickable:						- Set to "false" to disable clicking
+
+############ Globals ############
+h:								- Flash movie Height
+w:								- Flash movie Width
+imageBoxWidth:					- The width of the mask to draw over the photos
+imageBoxHeight:					- The height of the mask
+imageBoxX: 						- The X position of the mask
+imageBoxY:						- The Y position  of the mask
+mp3:							- an mp3 fild to load
+
+All of the media paths are set in the swf file. 
+However, they may be passed in as flash vars:
+								- xmlPath
+								- imagePath
+								- swfPath
+								- mp3Path
+
+############ Images ############-
+277 wide x 316 tall
+Accepts a comma delimited list of files (jpg,png,gif,swf). 
+Accepts a "*" delimited motion parameter
+ex: <images list="image1.jpg,image2.jpg*bt" />
+  
+  Motion types -
+  bt: bottom to top
+  tb: top to bottom
+  lr: left to right
+  rl: right to left
+
+Transition parameters (all optional):
+  delay				: # of seconds before slideshow starts
+  displayTime		: # of seconds to show slide
+  transitionSpeed	: # of seconds for transition to last
+
+ex: <imagesLeft delay="3" displayTime="6" transitionSpeed="1" [...] />
+
+############ HTML Text ############
+Available tags: <h1>, <a href>
+
+
+!!!!!!!!!! javascript="launchRadio" !!!!!!!!!!
+
+-->
+
+
+
+<main>
+	<globals h="700" w="820" imageBoxWidth="319" imageBoxHeight="369" imageBoxX="2" imageBoxY="4" mp3="home_intro_big.mp3" >
+		<imagesRight           displayTime="6" transitionSpeed="1"  list="home1.jpg" />
+		<imagesLeft  delay="3" displayTime="6" transitionSpeed="1"  list="home1.jpg" />
+	</globals>
+	
+	<baubles>		
+		<bauble id="pen" file="HOME_pen.swf" x="352" y="51" clickable="false" depth="-1" fade="hide" />
+     	<bauble id="bottom_nav" file="HOME_bottom_nav.swf" x="6" y="445" maskMc="bottomNavMask" depth="2" fade="hide" clickable="false"   >
+	 		<baubleContent>
+				<nav>
+					<link id="l1" text="Stores" href="http://www.tommybahama.com" subText="Home/Accessories/Rum" />
+					<link id="l2" text="Cafes" href="http://www.tommybahama.com" subText="Home/Accessories/Rum" subTextAlign="center"/>
+					<link id="l3" text="Paradise Nation" href="http://www.tommybahama.com" subText="Home/Accessories/Rum" subTextAlign="center"/>
+					<link id="l4" text="Gift Cards" href="http://www.tommybahama.com" subText="Home/Accessories/Rum" subTextAlign="center"/>
+					<link id="l5" text="By Tommy Bahama" href="http://www.tommybahama.com" subText="Home/Accessories/Rum" subTextAlign="right"/>
+				</nav>
+			</baubleContent>
+		</bauble>
+		<!-- Book -->
+		<bauble id="book" file="HOME_book_oct_08_short.swf" x="0" y="0" clickable="false" depth="1" fade="hide" />
+
+		
+		<!-- Tree / Sand -->
+		<bauble id="upper_left_tree" file="HOME_tree_bottom.swf" x="left" y="top" clickable="false" depth="5" fade="fast" />
+		<bauble id="sand_gradient" file="HOME_sand_gradient.swf" x="left" y="100" clickable="false" depth="6" width="100%" fade="hide" />
+		<bauble id="big_block" file="HOME_sand_block.swf" x="left" y="244" clickable="false" depth="7"  width="100%" fade="hide" />
+		
+		<!-- Rock and logo -->
+		<!-- Big Rock -->
+		<!-- <bauble id="big_rock" file="HOME_rock_swf.swf" x="right*-841" y="bottom*-390" clickable="false" depth="7" fade="fast" /> -->
+		<!-- Small Rock Soft edge bottom -->
+		<!-- <bauble id="big_rock" file="HOME_rock_small_soft.swf" x="right*-585" y="bottom*-271" clickable="false" depth="7" fade="fast" /> -->
+		<!-- Small Rock Hard edge bottom -->
+		<bauble id="big_rock" file="HOME_rock_small_hard.swf" x="right*-585" y="bottom*-241" clickable="false" depth="8" fade="fast" />
+		
+		<!-- Audio and initial pause -->
+		<bauble id="logo" file="HOME_logo_and_music.swf" x="center" y="200" depth="4" fade="fast" frames="animation" clickable="false" animationDoneCallBack="october08Callback"/>
+		
+	</baubles>
+</main>

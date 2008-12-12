@@ -1,0 +1,102 @@
+<!-- 
+	
+############ Parameters availables for Baubles ############
+file (required):                -  swf, jpg, gif, or png
+alpha							-  The transparency
+x, y, rot: 	                    -  x position, y position, rotation, also accepts: right, left, top bottom.
+								   Micro adjust position with "*" ex: right*150 -or- top*-200
+scale							-  The scale 
+hover_x, hover_y, hover_rot:    -  x position, y position, rotation (for hover)
+hover_alpha						-  The transparency (for hover)
+hover_scale						-  The scale (for hover)
+depth:                          -  flash z-index, 1 is at top, -1 is behind stage content, -2 is behind -1
+maskMc:                         -  Must register mc in host swf ( registerBaubleMasks() )
+frames:							- roll, true. Use roll when moving though frames on mouse event
+framesFinishCallBack			- A function that can be set in ClickHandler.as, called run out of frames
+loadedCallBack:					- A function that can be set in ClickHandler.as, called when loaded
+fadedCallBack:					- A function that can be set in ClickHandler.as, called when faded in
+clickable:						- set as 'false' Whether the bauble should be "live"
+fade:							- speed of fade in- fast, slow, veryslow, none, hide
+javascript:						- The name of a javascript to call, todo: add parameters var
+link:							- External page to visit (http://www.page.com)
+linkWindow:						- Default is _self (_blank, etc)
+clickable:						- Set to "false" to disable clicking
+
+############ Globals ############
+h:								- Flash movie Height
+w:								- Flash movie Width
+imageBoxWidth:					- The width of the mask to draw over the photos
+imageBoxHeight:					- The height of the mask
+imageBoxX: 						- The X position of the mask
+imageBoxY:						- The Y position  of the mask
+mp3:							- an mp3 fild to load
+
+All of the media paths are set in the swf file. 
+However, they may be passed in as flash vars:
+								- xmlPath
+								- imagePath
+								- swfPath
+								- mp3Path
+
+############ Images ############-
+277 wide x 316 tall
+Accepts a comma delimited list of files (jpg,png,gif,swf). 
+Accepts a "*" delimited motion parameter
+ex: <images list="image1.jpg,image2.jpg*bt" />
+  
+  Motion types -
+  bt: bottom to top
+  tb: top to bottom
+  lr: left to right
+  rl: right to left
+
+Transition parameters (all optional):
+  delay				: # of seconds before slideshow starts
+  displayTime		: # of seconds to show slide
+  transitionSpeed	: # of seconds for transition to last
+
+ex: <imagesLeft delay="3" displayTime="6" transitionSpeed="1" [...] />
+
+############ HTML Text ############
+Available tags: <h1>, <a href>
+
+
+!!!!!!!!!! javascript="launchRadio" !!!!!!!!!!
+
+-->
+
+
+
+<main>
+	<globals h="700" w="820" imageBoxWidth="319" imageBoxHeight="369" imageBoxX="2" imageBoxY="4" mp3="home_intro_big.mp3" >
+		<imagesRight displayTime="6" transitionSpeed="1"  list="home_right_01.jpg*[http://www.somelink.com],home_right_02.jpg,home_right_03.jpg,home_right_04.jpg,home_right_05.jpg,home_right_06.jpg" />
+	</globals>
+	
+	<baubles>		
+		<bauble id="book" file="HOME_book_aug_08.swf" x="0" y="0"  frames="roll" clickable="false" />
+     	<bauble id="giftcards" file="HOME_summer_giftcards.swf" x="-59" depth="-2" y="240" frames="roll" link="/TBG/StoresAndCafes.jsp" fade="hide" />
+
+   <!-- 
+	 Important: You seem to have renamed these some of these swfs on your server, The comments above each bauble indicate the bauble's corosponding
+	 name on the your server. If there is no comment above the bauble's tag, then there is no alternate swf name. 
+ 	-->
+
+   <!-- <bauble id="compass" file="HOME_compass.swf" x="-34" y="350" frames="roll" link="/TBG/StoresAndCafes.jsp" fade="hide" /> -->
+     	<bauble id="compass" file="HOME_compass_summer08.swf" x="-34" depth="-1" y="350" frames="roll" link="/TBG/StoresAndCafes.jsp" fade="hide" />
+
+   <!-- <bauble id="paradise" file="HOME_ParadiseNation.swf" x="800" y="65" maskMc="pn_mask" frames="roll" link="/TBG/ParadiseNation.jsp" depth="5" fade="hide" />  -->
+     	<bauble id="paradise" file="HOME_pNation_spring08.swf" x="800" y="65" maskMc="pn_mask" frames="roll" link="/TBG/ParadiseNation.jsp" depth="5" fade="hide" />  -->
+		<bauble id="postcard2" file="HOME_postcard_spring08.swf" x="800" y="45" maskMc="postcard_mask" frames="roll" link="/TBG/GeneralContent/AboutTommyBahama.jsp" depth="6" fade="hide" /> 
+
+   <!-- <bauble id="radio" file="HOME_radio.swf" x="726" y="401" frames="roll" javascript="launchRadio" maskMc="radio_mask" fade="hide" />  -->
+     	<bauble id="radio" file="HOME_radio_spring08.swf" x="726" y="401" frames="roll" javascript="launchRadio" maskMc="radio_mask" fade="hide" />  -->
+		<bauble id="fathersday" file="HOME_fatherday08.swf" x="-154" y="-53" frames="roll" link="/TBG/ParadiseNation.jsp" />
+
+		<!-- Shadows -->
+		<bauble id="shadowRight" file="HOME_shadowright.swf" x="802" y="67" depth="4" fade="hide" clickable="false" /> 
+		<bauble id="shadowBottom" file="HOME_shadowbottom.swf" x="700" y="401" fade="hide" clickable="false" /> 
+		<!-- Shadows -->
+		
+		<bauble id="postcard" file="HOME_postcard.swf" x="0" y="20" frames="animation" fade="veryslow" clickable="false" animationDoneCallBack="showSpringItems" />
+	</baubles>
+</main>

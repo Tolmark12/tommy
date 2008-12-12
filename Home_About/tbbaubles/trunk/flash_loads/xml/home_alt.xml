@@ -1,0 +1,71 @@
+<!-- 
+	
+---------- Parameters availables for Baubles ----------
+file (required):                -  swf, jpg, gif, or png
+x, y, rot: 	                    -  x position, y position, rotation, also accepts: right, left, top bottom.
+								   Micro adjust position with "*" ex: right*150 -or- top*-200
+hover_x, hover_y, hover_rot:    -  x position, y position, rotation (for hover)
+depth:                          -  flash z-index, 1 is at top, -1 is behind stage content, -2 is behind -1
+maskMc:                         -  Must register mc in host swf ( registerBaubleMasks() )
+frames:							- roll, true. Use roll when moving though frames on mouse event
+framesFinishCallBack			- A function that can be set in ClickHandler.as, called run out of frames
+loadedCallBack:					- A function that can be set in ClickHandler.as, called when loaded
+fadedCallBack:					- A function that can be set in ClickHandler.as, called when faded in
+clickable:						- set as 'false' Whether the bauble should be "live"
+fade:							- speed of fade in- fast, slow, veryslow, none, hide
+javascript:						- The name of a javascript to call, todo: add parameters var
+link:							- External page to visit (http://www.page.com)
+linkWindow:						- Default is _self (_blank, etc)
+
+---------- Globals ----------
+h:								- Flash movie Height
+w:								- Flash movie Width
+imageBoxWidth:					- The width of the mask to draw over the photos
+imageBoxHeight:					- The height of the mask
+imageBoxX: 						- The X position of the mask
+imageBoxY:						- The Y position  of the mask
+mp3:							- an mp3 fild to load
+
+All of the media paths are set in the swf file. 
+However, they may be passed in as flash vars:
+								- xmlPath
+								- imagePath
+								- swfPath
+								- mp3Path
+
+---------- Images -----------
+277 wide x 316 tall
+Accepts a comma delimited list of files (jpg,png,gif,swf). 
+Accepts a "*" delimited motion parameter
+ex: <images list="image1.jpg,image2.jpg*bt" />
+  
+  Motion types -
+  bt: bottom to top
+  tb: top to bottom
+  lr: left to right
+  rl: right to left
+
+---------- HTML Text ----------
+Available tags: <h1>, <a href>
+
+
+!!!!!!!!!! javascript="launchRadio" !!!!!!!!!!
+
+-->
+
+<main>
+	<globals h="700" w="820" imageBoxWidth="319" imageBoxHeight="369" imageBoxX="2" imageBoxY="4" >
+		<images list="home01.jpg*[http://www.somelink.com],home02.jpg,home03.jpg,home04.jpg,home05.jpg,home06.jpg" />
+	</globals>
+	
+	<baubles>
+		<bauble id="about" file="HOME_about.swf" x="12" y="90" maskMc="stampMask" frames="roll" link="/TBG/Men/Watches.jsp" />
+		
+		<bauble id="compass" file="HOME_compass.swf" x="left*-280" y="295" frames="roll" link="/TBG/StoresAndCafes.jsp" />
+		<bauble id="watch" file="HOME_watch.swf" x="right*-290" y="100" frames="roll" link="/TBG/Men/Watches.jsp"/>
+		<!--bauble id="palm" file="HOME_palm.swf" x="right" y="top" clickable="false" depth="1" fade="none" frames="animation" /-->
+		<bauble id="match" file="HOME_match.swf" x="57" y="400" frames="roll"   /> 
+		<bauble id="dollar" file="HOME_sanddollar.swf" x="800" y="145" frames="roll" link="/TBG/ParadiseNation.jsp" /> 
+		<bauble id="book" file="HOME_book.swf" x="0" y="0" depth="-1" clickable="false" />
+	</baubles>
+</main>
