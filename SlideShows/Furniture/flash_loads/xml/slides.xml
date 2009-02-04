@@ -1,0 +1,101 @@
+<MAIN>
+	<slides imagePath="flash_loads/images/">
+		<slide>
+			<main_img>temp_image_1.jpg</main_img>
+			<thmb_img>temp_image_1_thmb.jpg</thmb_img>
+			<text>
+				<p>one Phasellus non lorem vel elit consectetuer egestas. Curabitur vitae sem sit amet nisi fermentum molestie. Morbi vel lacus. Vivamus massa. Aliquam accumsan tempus purus. Suspendisse molestie eros a massa. Proin at ante vel turpis bibendum convallis. Donec quis dolor. Integer eu nisi. Aliquam dapibus scelerisque justo. Fusce sem. Nulla sed mauris sit amet erat rutrum venenatis. Vestibulum mi. Nam ut orci.</p>
+				<p>Integer rhoncus tellus sit amet nibh. Maecenas pellentesque tincidunt elit. Ut sem lorem, commodo sit amet, accumsan eget, condimentum et, nulla. Suspendisse potenti. In leo sem, condimentum at, laoreet vitae, suscipit vel, lectus. Ut ullamcorper lacus eu nunc dapibus vulputate. Proin porta erat vel ante. porttitor.</p>
+			</text>
+		</slide>
+		<slide>
+			<main_img>temp_image_2.jpg</main_img>
+			<thmb_img>temp_image_2_thmb.jpg</thmb_img>
+			<text>
+				<p>two Phasellus non lorem vel elit consectetuer egestas. Curabitur vitae sem sit amet nisi fermentum molestie. Morbi vel lacus. Vivamus massa. Aliquam accumsan tempus purus. Suspendisse molestie eros a massa. Proin at ante vel turpis bibendum convallis. Donec quis dolor. Integer eu nisi. Aliquam dapibus scelerisque justo. Fusce sem. Nulla sed mauris sit amet erat rutrum venenatis. Vestibulum mi. Nam ut orci.</p>
+				<p>Integer rhoncus tellus sit amet nibh. Maecenas pellentesque tincidunt elit. Ut sem lorem, commodo sit amet, accumsan eget, condimentum et, nulla. Suspendisse potenti. In leo sem, condimentum at, laoreet vitae, suscipit vel, lectus. Ut ullamcorper lacus eu nunc dapibus vulputate. Proin porta erat vel ante. porttitor.</p>
+			</text>
+		</slide>
+		<slide>
+			<main_img>temp_image_3.jpg</main_img>
+			<thmb_img>temp_image_3_thmb.jpg</thmb_img>
+			<text>
+				<p>three Phasellus non lorem vel elit consectetuer egestas. Curabitur vitae sem sit amet nisi fermentum molestie. Morbi vel lacus. Vivamus massa. Aliquam accumsan tempus purus. Suspendisse molestie eros a massa. Proin at ante vel turpis bibendum convallis. Donec quis dolor. Integer eu nisi. Aliquam dapibus scelerisque justo. Fusce sem. Nulla sed mauris sit amet erat rutrum venenatis. Vestibulum mi. Nam ut orci.</p>
+				<p>Integer rhoncus tellus sit amet nibh. Maecenas pellentesque tincidunt elit. Ut sem lorem, commodo sit amet, accumsan eget, condimentum et, nulla. Suspendisse potenti. In leo sem, condimentum at, laoreet vitae, suscipit vel, lectus. Ut ullamcorper lacus eu nunc dapibus vulputate. Proin porta erat vel ante. porttitor.</p>
+			</text>
+		</slide>
+		<slide>
+			<main_img>temp_image_4.jpg</main_img>
+			<thmb_img>temp_image_4_thmb.jpg</thmb_img>
+			<text>
+				<p>four Phasellus non lorem vel elit consectetuer egestas. Curabitur vitae sem sit amet nisi fermentum molestie. Morbi vel lacus. Vivamus massa. Aliquam accumsan tempus purus. Suspendisse molestie eros a massa. Proin at ante vel turpis bibendum convallis. Donec quis dolor. Integer eu nisi. Aliquam dapibus scelerisque justo. Fusce sem. Nulla sed mauris sit amet erat rutrum venenatis. Vestibulum mi. Nam ut orci.</p>
+				<p>Integer rhoncus tellus sit amet nibh. Maecenas pellentesque tincidunt elit. Ut sem lorem, commodo sit amet, accumsan eget, condimentum et, nulla. Suspendisse potenti. In leo sem, condimentum at, laoreet vitae, suscipit vel, lectus. Ut ullamcorper lacus eu nunc dapibus vulputate. Proin porta erat vel ante. porttitor.</p>
+			</text>
+		</slide>
+		<slide>
+			<main_img>temp_image_1.jpg</main_img>
+			<thmb_img>temp_image_1_thmb.jpg</thmb_img>
+			<text>
+				<p>five Phasellus non lorem vel elit consectetuer egestas. Curabitur vitae sem sit amet nisi fermentum molestie. Morbi vel lacus. Vivamus massa. Aliquam accumsan tempus purus. Suspendisse molestie eros a massa. Proin at ante vel turpis bibendum convallis. Donec quis dolor. Integer eu nisi. Aliquam dapibus scelerisque justo. Fusce sem. Nulla sed mauris sit amet erat rutrum venenatis. Vestibulum mi. Nam ut orci.</p>
+				<p>Integer rhoncus tellus sit amet nibh. Maecenas pellentesque tincidunt elit. Ut sem lorem, commodo sit amet, accumsan eget, condimentum et, nulla. Suspendisse potenti. In leo sem, condimentum at, laoreet vitae, suscipit vel, lectus. Ut ullamcorper lacus eu nunc dapibus vulputate. Proin porta erat vel ante. porttitor.</p>
+			</text>
+		</slide>
+		<slide>
+			<main_img>temp_image_2.jpg</main_img>
+			<thmb_img>temp_image_2_thmb.jpg</thmb_img>
+			<text>
+				<p>sixPhasellus non lorem vel elit consectetuer egestas. Curabitur vitae sem sit amet nisi fermentum molestie. Morbi vel lacus. Vivamus massa. Aliquam accumsan tempus purus. Suspendisse molestie eros a massa. Proin at ante vel turpis bibendum convallis. Donec quis dolor. Integer eu nisi. Aliquam dapibus scelerisque justo. Fusce sem. Nulla sed mauris sit amet erat rutrum venenatis. Vestibulum mi. Nam ut orci.</p>
+				<p>Integer rhoncus tellus sit amet nibh. Maecenas pellentesque tincidunt elit. Ut sem lorem, commodo sit amet, accumsan eget, condimentum et, nulla. Suspendisse potenti. In leo sem, condimentum at, laoreet vitae, suscipit vel, lectus. Ut ullamcorper lacus eu nunc dapibus vulputate. Proin porta erat vel ante. porttitor.</p>
+			</text>
+		</slide>
+		<slide>
+			<main_img>temp_image_3.jpg</main_img>
+			<thmb_img>temp_image_3_thmb.jpg</thmb_img>
+			<text>
+				<p>three Phasellus non lorem vel elit consectetuer egestas. Curabitur vitae sem sit amet nisi fermentum molestie. Morbi vel lacus. Vivamus massa. Aliquam accumsan tempus purus. Suspendisse molestie eros a massa. Proin at ante vel turpis bibendum convallis. Donec quis dolor. Integer eu nisi. Aliquam dapibus scelerisque justo. Fusce sem. Nulla sed mauris sit amet erat rutrum venenatis. Vestibulum mi. Nam ut orci.</p>
+				<p>Integer rhoncus tellus sit amet nibh. Maecenas pellentesque tincidunt elit. Ut sem lorem, commodo sit amet, accumsan eget, condimentum et, nulla. Suspendisse potenti. In leo sem, condimentum at, laoreet vitae, suscipit vel, lectus. Ut ullamcorper lacus eu nunc dapibus vulputate. Proin porta erat vel ante. porttitor.</p>
+			</text>
+		</slide>
+		<slide>
+			<main_img>temp_image_4.jpg</main_img>
+			<thmb_img>temp_image_4_thmb.jpg</thmb_img>
+			<text>
+				<p>four Phasellus non lorem vel elit consectetuer egestas. Curabitur vitae sem sit amet nisi fermentum molestie. Morbi vel lacus. Vivamus massa. Aliquam accumsan tempus purus. Suspendisse molestie eros a massa. Proin at ante vel turpis bibendum convallis. Donec quis dolor. Integer eu nisi. Aliquam dapibus scelerisque justo. Fusce sem. Nulla sed mauris sit amet erat rutrum venenatis. Vestibulum mi. Nam ut orci.</p>
+				<p>Integer rhoncus tellus sit amet nibh. Maecenas pellentesque tincidunt elit. Ut sem lorem, commodo sit amet, accumsan eget, condimentum et, nulla. Suspendisse potenti. In leo sem, condimentum at, laoreet vitae, suscipit vel, lectus. Ut ullamcorper lacus eu nunc dapibus vulputate. Proin porta erat vel ante. porttitor.</p>
+			</text>
+		</slide>
+		<slide>
+			<main_img>temp_image_1.jpg</main_img>
+			<thmb_img>temp_image_1_thmb.jpg</thmb_img>
+			<text>
+				<p>five Phasellus non lorem vel elit consectetuer egestas. Curabitur vitae sem sit amet nisi fermentum molestie. Morbi vel lacus. Vivamus massa. Aliquam accumsan tempus purus. Suspendisse molestie eros a massa. Proin at ante vel turpis bibendum convallis. Donec quis dolor. Integer eu nisi. Aliquam dapibus scelerisque justo. Fusce sem. Nulla sed mauris sit amet erat rutrum venenatis. Vestibulum mi. Nam ut orci.</p>
+				<p>Integer rhoncus tellus sit amet nibh. Maecenas pellentesque tincidunt elit. Ut sem lorem, commodo sit amet, accumsan eget, condimentum et, nulla. Suspendisse potenti. In leo sem, condimentum at, laoreet vitae, suscipit vel, lectus. Ut ullamcorper lacus eu nunc dapibus vulputate. Proin porta erat vel ante. porttitor.</p>
+			</text>
+		</slide>
+		<slide>
+			<main_img>temp_image_2.jpg</main_img>
+			<thmb_img>temp_image_2_thmb.jpg</thmb_img>
+			<text>
+				<p>sixPhasellus non lorem vel elit consectetuer egestas. Curabitur vitae sem sit amet nisi fermentum molestie. Morbi vel lacus. Vivamus massa. Aliquam accumsan tempus purus. Suspendisse molestie eros a massa. Proin at ante vel turpis bibendum convallis. Donec quis dolor. Integer eu nisi. Aliquam dapibus scelerisque justo. Fusce sem. Nulla sed mauris sit amet erat rutrum venenatis. Vestibulum mi. Nam ut orci.</p>
+				<p>Integer rhoncus tellus sit amet nibh. Maecenas pellentesque tincidunt elit. Ut sem lorem, commodo sit amet, accumsan eget, condimentum et, nulla. Suspendisse potenti. In leo sem, condimentum at, laoreet vitae, suscipit vel, lectus. Ut ullamcorper lacus eu nunc dapibus vulputate. Proin porta erat vel ante. porttitor.</p>
+			</text>
+		</slide>
+		<slide>
+			<main_img>temp_image_3.jpg</main_img>
+			<thmb_img>temp_image_3_thmb.jpg</thmb_img>
+			<text>
+				<p>three Phasellus non lorem vel elit consectetuer egestas. Curabitur vitae sem sit amet nisi fermentum molestie. Morbi vel lacus. Vivamus massa. Aliquam accumsan tempus purus. Suspendisse molestie eros a massa. Proin at ante vel turpis bibendum convallis. Donec quis dolor. Integer eu nisi. Aliquam dapibus scelerisque justo. Fusce sem. Nulla sed mauris sit amet erat rutrum venenatis. Vestibulum mi. Nam ut orci.</p>
+				<p>Integer rhoncus tellus sit amet nibh. Maecenas pellentesque tincidunt elit. Ut sem lorem, commodo sit amet, accumsan eget, condimentum et, nulla. Suspendisse potenti. In leo sem, condimentum at, laoreet vitae, suscipit vel, lectus. Ut ullamcorper lacus eu nunc dapibus vulputate. Proin porta erat vel ante. porttitor.</p>
+			</text>
+		</slide>
+		<slide>
+			<main_img>temp_image_4.jpg</main_img>
+			<thmb_img>temp_image_4_thmb.jpg</thmb_img>
+			<text>
+				<p>four Phasellus non lorem vel elit consectetuer egestas. Curabitur vitae sem sit amet nisi fermentum molestie. Morbi vel lacus. Vivamus massa. Aliquam accumsan tempus purus. Suspendisse molestie eros a massa. Proin at ante vel turpis bibendum convallis. Donec quis dolor. Integer eu nisi. Aliquam dapibus scelerisque justo. Fusce sem. Nulla sed mauris sit amet erat rutrum venenatis. Vestibulum mi. Nam ut orci.</p>
+				<p>Integer rhoncus tellus sit amet nibh. Maecenas pellentesque tincidunt elit. Ut sem lorem, commodo sit amet, accumsan eget, condimentum et, nulla. Suspendisse potenti. In leo sem, condimentum at, laoreet vitae, suscipit vel, lectus. Ut ullamcorper lacus eu nunc dapibus vulputate. Proin porta erat vel ante. porttitor.</p>
+			</text>
+		</slide>
+
+	</slides>
+</MAIN>

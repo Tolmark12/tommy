@@ -1,0 +1,135 @@
+<MAIN>
+	<slides mainImagePath="flash_loads/images" thumbImagePath="flash_loads/images" fullImagePath="flash_loads/images" mainMoviePath="http://www.helpexamples.com/flash/video/">
+		<slide>
+			<title>Some Magazine</title>
+			<date>November 2007</date>
+			<blurb>data for slide 2</blurb>
+			<link_mag  href="http://www.somemag.com" target="_self">Some Mag</link_mag>
+			<link_prod href="http://www.tommybahama.com/some/page.jsp">View this product</link_prod>
+			<media>
+				<main>editorial_2.jpg</main>
+				<thumb_img>thmb_editorial_2.jpg</thumb_img>
+				<fullsize>full_editorial_2.jpg</fullsize>
+			</media>
+		</slide>
+		<slide>
+			<title>Some Magazine</title>
+			<date>November 2007</date>
+			<blurb>data for slide 3</blurb>
+			<link_mag  href="http://www.somemag.com" target="_blank">Some Mag</link_mag>
+			<link_prod href="http://www.tommybahama.com/some/page.jsp">View this product</link_prod>
+			<media type="movie">
+				<main>caption_video.flv</main>
+				<thumb_img>thmb_editorial_3.jpg</thumb_img>
+			</media>
+		</slide>
+		<slide>
+			<title>Some Magazine</title>
+			<date>November 2007</date>
+			<blurb>data for slide 4</blurb>
+			<link_mag  href="http://www.somemag.com">Some Mag</link_mag>
+			<link_prod href="http://www.tommybahama.com/some/page.jsp">View this product</link_prod>
+			<media>
+				<main>editorial_4.jpg</main>
+				<thumb_img>thmb_editorial_4.jpg</thumb_img>
+				<fullsize>full_editorial_4.jpg</fullsize>
+			</media>
+		</slide>
+		<slide>
+			<title>Some Magazine</title>
+			<date>November 2007</date>
+			<blurb>data for slide 5</blurb>
+			<link_mag  href="http://www.somemag.com">Some Mag</link_mag>
+			<link_prod href="http://www.tommybahama.com/some/page.jsp">View this product</link_prod>
+			<media>
+				<main>editorial_6.jpg</main>
+				<thumb_img>thmb_editorial_6.jpg</thumb_img>
+				<fullsize>full_editorial_6.jpg</fullsize>
+			</media>
+		</slide>
+		<slide>
+			<title>Some Magazine</title>
+			<date>November 2007</date>
+			<blurb>data for slide 6</blurb>
+			<link_mag  href="http://www.somemag.com">Some Mag</link_mag>
+			<link_prod href="http://www.tommybahama.com/some/page.jsp">View this product</link_prod>
+			<media>
+				<main>editorial_1.jpg</main>
+				<thumb_img>thmb_editorial_1.jpg</thumb_img>
+				<fullsize>full_editorial_1.jpg</fullsize>
+			</media>
+		</slide>
+		<slide>
+			<title>Some Magazine</title>
+			<date>November 2007</date>
+			<blurb>data for slide 7</blurb>
+			<link_mag  href="http://www.somemag.com">Some Mag</link_mag>
+			<link_prod href="http://www.tommybahama.com/some/page.jsp">View this product</link_prod>
+			<media type="movie">
+				<main>caption_video.flv</main>
+				<thumb_img>thmb_editorial_2.jpg</thumb_img>
+				<fullsize>full_editorial_2.jpg</fullsize>
+			</media>
+		</slide>
+		<slide>
+			<title>Some Magazine</title>
+			<date>November 2007</date>
+			<blurb>data for slide 8</blurb>
+			<link_mag  href="http://www.somemag.com">Some Mag</link_mag>
+			<link_prod href="http://www.tommybahama.com/some/page.jsp">View this product</link_prod>
+			<media type="movie">
+				<main>caption_video.flv</main>
+				<thumb_img>thmb_editorial_3.jpg</thumb_img>
+				<fullsize>full_editorial_3.jpg</fullsize>
+			</media>
+		</slide>
+		<slide>
+			<title>Some Magazine</title>
+			<date>November 2007</date>
+			<blurb>data for slide 9</blurb>
+			<link_mag  href="http://www.somemag.com">Some Mag</link_mag>
+			<link_prod href="http://www.tommybahama.com/some/page.jsp">View this product</link_prod>
+			<media>
+				<main>editorial_4.jpg</main>
+				<thumb_img>thmb_editorial_4.jpg</thumb_img>
+				<fullsize>full_editorial_4.jpg</fullsize>
+			</media>
+		</slide>
+		<slide>
+			<title>Some Magazine</title>
+			<date>November 2007</date>
+			<blurb>data for slide 10</blurb>
+			<link_mag  href="http://www.somemag.com">Some Mag</link_mag>
+			<link_prod href="http://www.tommybahama.com/some/page.jsp">View this product</link_prod>
+			<media>
+				<main>editorial_6.jpg</main>
+				<thumb_img>thmb_editorial_6.jpg</thumb_img>
+				<fullsize>full_editorial_6.jpg</fullsize>
+			</media>
+		</slide>
+		<slide>
+			<title>Some Magazine</title>
+			<date>November 2007</date>
+			<blurb>data for slide 11</blurb>
+			<link_mag  href="http://www.somemag.com">Some Mag</link_mag>
+			<link_prod href="http://www.tommybahama.com/some/page.jsp">View this product</link_prod>
+			<media>
+				<main>editorial_6.jpg</main>
+				<thumb_img>thmb_editorial_6.jpg</thumb_img>
+				<fullsize>full_editorial_6.jpg</fullsize>
+			</media>
+		</slide>
+		<slide>
+			<title>Some Magazine</title>
+			<date>November 2007</date>
+			<blurb>data for slide 12</blurb>
+			<link_mag  href="http://www.somemag.com">Some Mag</link_mag>
+			<link_prod href="http://www.tommybahama.com/some/page.jsp">View this product</link_prod>
+			<media>
+				<main>editorial_6.jpg</main>
+				<thumb_img>thmb_editorial_6.jpg</thumb_img>
+				<fullsize>full_editorial_6.jpg</fullsize>
+			</media>
+		</slide>
+	</slides>
+</MAIN>

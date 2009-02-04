@@ -74,8 +74,8 @@ Available tags: <h1>, <a href>
 	</globals>
 	
 	<baubles>
-		<bauble id="pen" file="HOME_pen_clean.swf" x="340" y="53" hover_x="5" depth="-2" fade="hide" />
-     	<bauble id="bottom_nav" file="HOME_bottom_nav_light_08.swf" x="6" y="440" depth="2" fade="hide" clickable="false"   >
+		<bauble id="pen" file="HOME_pen_clean.swf" x="364" y="38" hover_x="5" depth="-2" fade="hide" />
+     	<bauble id="bottom_nav" file="HOME_bottom_nav_light_08.swf" x="30" y="425" depth="2" fade="hide" clickable="false"   >
 	 		<baubleContent>
 				<nav>
 					<link id="l1" text="Stores" href="http://www.tommybahama.com" subText="Home/Accessories/Rum" />
@@ -87,11 +87,14 @@ Available tags: <h1>, <a href>
 			</baubleContent>
 		</bauble>
 		
+		<!-- Rock -->
+		<bauble id="tree" file="HOME_tree_dec_08.swf" x="left" y="top" clickable="false" depth="5" fade="none" jsOnLoaded="showRocks"/>
+		
 		<!-- Book -->
-		<bauble id="book" file="HOME_book_dec_08.swf" x="0" y="0" clickable="false" depth="1" fade="hide" />
+		<bauble id="book" file="HOME_book_dec_08.swf" x="24" y="-15" clickable="false" depth="1" fade="hide" />
 		
 		<!-- Intro -->
-		<bauble id="logo" file="HOME_logo_and_music_nov.swf" x="center" y="200" depth="4" fade="fast" frames="animation" clickable="false" animationDoneCallBack="nov08Callback"/>
+		<bauble id="logo" file="HOME_logo_music_dec_08.swf" x="center" y="190" depth="4" fade="fast" frames="animation" clickable="false" animationDoneCallBack="nov08Callback"/>
 		
 	</baubles>
 </main>

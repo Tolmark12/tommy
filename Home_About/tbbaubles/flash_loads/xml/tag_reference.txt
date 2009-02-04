@@ -1,0 +1,62 @@
+############ Parameters availables for Baubles ############
+file (required):                -  swf, jpg, gif, or png
+alpha							-  The transparency
+x, y, rot: 	                    -  x position, y position, rotation, also accepts: right, left, top bottom.
+								   Micro adjust position with "*" ex: right*150 -or- top*-200
+scale							-  The scale 
+hover_x, hover_y, hover_rot:    -  x position, y position, rotation (for hover)
+hover_alpha						-  The transparency (for hover)
+hover_scale						-  The scale (for hover)
+depth:                          -  flash z-index, 1 is at top, -1 is behind stage content, -2 is behind -1
+maskMc:                         -  Must register mc in host swf ( registerBaubleMasks() )
+frames:							- roll, true. Use roll when moving though frames on mouse event
+framesFinishCallBack			- A function that can be set in ClickHandler.as, called run out of frames
+loadedCallBack:					- A function that can be set in ClickHandler.as, called when loaded
+fadedCallBack:					- A function that can be set in ClickHandler.as, called when faded in
+clickable:						- set as 'false' Whether the bauble should be "live"
+fade:							- speed of fade in- fast, slow, veryslow, none, hide
+javascript:						- The name of a javascript to call, todo: add parameters var
+link:							- External page to visit (http://www.page.com)
+linkWindow:						- Default is _self (_blank, etc)
+clickable:						- Set to "false" to disable clicking
+
+############ Globals ############
+h:								- Flash movie Height
+w:								- Flash movie Width
+imageBoxWidth:					- The width of the mask to draw over the photos
+imageBoxHeight:					- The height of the mask
+imageBoxX: 						- The X position of the mask
+imageBoxY:						- The Y position  of the mask
+mp3:							- an mp3 fild to load
+
+All of the media paths are set in the swf file. 
+However, they may be passed in as flash vars:
+								- xmlPath
+								- imagePath
+								- swfPath
+								- mp3Path
+
+############ Images ############-
+277 wide x 316 tall
+Accepts a comma delimited list of files (jpg,png,gif,swf). 
+Accepts a "*" delimited motion parameter
+ex: <images list="image1.jpg,image2.jpg*bt" />
+  
+  Motion types -
+  bt: bottom to top
+  tb: top to bottom
+  lr: left to right
+  rl: right to left
+
+Transition parameters (all optional):
+  delay				: # of seconds before slideshow starts
+  displayTime		: # of seconds to show slide
+  transitionSpeed	: # of seconds for transition to last
+
+ex: <imagesLeft delay="3" displayTime="6" transitionSpeed="1" [...] />
+
+############ HTML Text ############
+Available tags: <h1>, <a href>
+
+
+!!!!!!!!!! javascript="launchRadio" !!!!!!!!!!

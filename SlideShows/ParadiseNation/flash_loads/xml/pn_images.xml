@@ -1,0 +1,49 @@
+<!--
+
+## Image size: 444 wide x 334 tall
+
+-->
+
+<main>
+	<!-- Global Vars -->
+	<globals>
+		<v id="transitionSpeed">1.5</v>		<!-- Length of transition in seconds -->
+		<v id="displayTime">3.3</v> 		<!-- Number of seconds to show each image after transition has finished -->
+		<v id="defaultText" type="html"> 	<!-- This is the text displayed if the photo doesn't have custom text -->
+			<p>This is the defaut text shown when the individual photo now doesn't have a custom text meassage. Set it in the globals/defaultText node of pn_images.xml</p>
+		</v>
+	</globals>
+	
+	<!-- Photos List -->
+	<photos>
+		<photo id="01" file="01.jpg">
+			<v id="imageText" type="html">
+				<p>01 This to show how to add custom text per photo <a href="http://www.tommybahama.com">With a link</a>.</p>
+			</v>
+		</photo>
+		<photo id="02" file="02.jpg">
+			<v id="imageText" type="html">
+				<p>02 Another example <a href="http://www.tommybahama.com">With a link</a>.</p>
+			</v>
+		</photo>
+		<photo id="03" file="03.jpg">
+			<v id="imageText" type="html">
+				<p>03 This is a third example <a href="http://www.tommybahama.com">With a link</a>.</p>
+			</v>
+		</photo>
+		<photo id="04" file="04.jpg"></photo>
+		<photo id="05" file="05.jpg"></photo>
+		<photo id="06" file="06.jpg"></photo>
+		<photo id="07" file="07.jpg"></photo>
+		<photo id="08" file="08.jpg"></photo>
+		<photo id="09" file="09.jpg"></photo>
+		<photo id="10" file="10.jpg"></photo>
+		<photo id="11" file="11.jpg"></photo>
+		<photo id="12" file="12.jpg"></photo>
+		<photo id="13" file="13.jpg"></photo>
+		<photo id="14" file="14.jpg"></photo>
+		<photo id="15" file="15.jpg"></photo>
+		<photo id="16" file="16.jpg"></photo>
+		<photo id="17" file="17.jpg"></photo>
+	</photos>
+</main>
