@@ -8,8 +8,10 @@ import SuperSlides;
 
 public class AppFacade extends Facade implements IFacade
 {
-	public static const STARTUP:String = "startup";
-
+	public static const STARTUP:String 				= "startup";
+	public static const JSON_LOADED:String 			= "json_loaded";
+	public static const DISPLAY_NEW_SLIDE:String 	= "display_new_slide";
+	
 	public function AppFacade( key:String ):void
 	{
 		super(key);	
@@ -32,6 +34,7 @@ public class AppFacade extends Facade implements IFacade
 	{
 		super.initializeController();			
 		registerCommand( STARTUP, Startup );
+		registerCommand( JSON_LOADED, JsonLoaded );
 	}
 
 }

@@ -1,0 +1,19 @@
+Chris Feedback - Thu Feb  5 11:39:18 CST 2009
+---------------------------------------------
+√ Rollover state for on rollover
+√ Rollover state for 
+√ Hide second line of text if blank
+
+√ Get rid of the zoom out arrows
+√ Active thumbnail 100% opaque
+√ Rollover add alpha
+√ Left align the thumbnails
+√ bottom of thumbnail should be a 575 px
+√ Left align at nav 68px
+
+
+Chris Feedback - Thu Feb  5 14:09:21 CST 2009
+---------------------------------------------
+√ Make the thumbnails 30 x 30
+√ Square stay, text link goes away. 
+√ Hidden 100% button

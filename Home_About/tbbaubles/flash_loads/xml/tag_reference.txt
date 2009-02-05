@@ -20,6 +20,12 @@ link:							- External page to visit (http://www.page.com)
 linkWindow:						- Default is _self (_blank, etc)
 clickable:						- Set to "false" to disable clicking
 
+############ Thumbnails #########
+
+############ Text Links ########
+
+
+
 ############ Globals ############
 h:								- Flash movie Height
 w:								- Flash movie Width

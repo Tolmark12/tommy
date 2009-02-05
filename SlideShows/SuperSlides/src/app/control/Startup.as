@@ -10,12 +10,20 @@ public class Startup extends SimpleCommand implements ICommand
 {
 
 	override public function execute( note:INotification ):void
-	{		
-		//facade.registerProxy		( new SomeProxy() );
+	{
+		// Proxies
+		var externalDataProxy:ExternalDataProxy 	= new ExternalDataProxy();
+		var slidesProxy:SlidesProxy             	= new SlidesProxy();
+		externalDataProxy.loadJson();
+
+		
+		// Register Proxies
+		facade.registerProxy		( externalDataProxy );
+		facade.registerProxy		( slidesProxy );
+		
+		// Register Mediators
 		//facade.registerMediator	( new SomeMediator() );
 		
-		//var someProxy:SomeProxy = facade.retrieveProxy( SomeProxy.NAME ) as SomeProxy;
-		//var someMediator:SomeMediator = facade.retrieveMediator( SomeMediator.NAME ) as SomeMediator;
 	}
 }
 }
