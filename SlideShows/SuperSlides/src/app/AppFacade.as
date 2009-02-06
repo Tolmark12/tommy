@@ -10,6 +10,9 @@ public class AppFacade extends Facade implements IFacade
 {
 	public static const STARTUP:String 				= "startup";
 	public static const JSON_LOADED:String 			= "json_loaded";
+	
+	// Slides
+	public static const INIT_SLIDES:String 			= "init_slides";
 	public static const DISPLAY_NEW_SLIDE:String 	= "display_new_slide";
 	
 	public function AppFacade( key:String ):void

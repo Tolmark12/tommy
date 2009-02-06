@@ -5,19 +5,19 @@
 },
 "slides":[
 	{
-		"slot_a" : { "src" : "http://testvipd2.scene7.com/is/image/TommyBahama/MoreColors?$layer_0_src=T1490_005_main&$cat$", "link" : "http://www.tommybahama.com" },
+		"slot_a" : { "src" : "http://testvipd2.scene7.com/is/image/TommyBahama/MoreColors?$layer_0_src=T1490_005_main&$cat$", "href" : "http://www.tommybahama.com" },
 		"slot_b" : { "text" : "Some sort of text will go here"}
 	},
 	{
-		"slot_a" : { "src" : "http://testvipd2.scene7.com/is/image/TommyBahama/MoreColors?$layer_0_src=T32560_4379_main&$cat$", "link" : "http://www.tommybahama.com" },
+		"slot_a" : { "src" : "http://testvipd2.scene7.com/is/image/TommyBahama/MoreColors?$layer_0_src=T32560_4379_main&$cat$", "href" : "http://www.tommybahama.com" },
 		"slot_b" : { "text" : "Some sort of text will go here"}
 	},
 	{
-		"slot_a" : { "src" : "http://testvipd2.scene7.com/is/image/TommyBahama/MoreColors?$layer_0_src=T32362_4432_main&$cat$", "link" : "http://www.tommybahama.com" },
+		"slot_a" : { "src" : "http://testvipd2.scene7.com/is/image/TommyBahama/MoreColors?$layer_0_src=T32362_4432_main&$cat$", "href" : "http://www.tommybahama.com" },
 		"slot_b" : { "text" : "Some sort of text will go here"}
 	},
 	{
-		"slot_a" : { "src" : "http://testvipd2.scene7.com/is/image/TommyBahama/MoreColors?$layer_0_src=TR309_3427_main&$cat$", "link" : "http://www.tommybahama.com" },
+		"slot_a" : { "src" : "http://testvipd2.scene7.com/is/image/TommyBahama/MoreColors?$layer_0_src=TR309_3427_main&$cat$", "href" : "http://www.tommybahama.com" },
 		"slot_b" : { "text" : "Some sort of text will go here"}
 	}
 ]

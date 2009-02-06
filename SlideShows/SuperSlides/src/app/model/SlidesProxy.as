@@ -4,59 +4,75 @@ import org.puremvc.as3.multicore.interfaces.IProxy;
 import org.puremvc.as3.multicore.patterns.proxy.Proxy;
 import org.puremvc.as3.multicore.patterns.observer.Notification;
 import app.AppFacade;
-import app.model.vo.SlideVO;
+import app.model.vo.*;
 
 public class SlidesProxy extends Proxy implements IProxy
 {
 	public static const NAME:String = "slides_proxy";
 	private var _currentSlideIndex:uint;
 	private var _totalSlides:uint;
-	private var _slideList:Array;
-	private var _xmlData:XML;
+	private var _slideList:Array = new Array();
 	
 	public function SlidesProxy(  ):void
 	{
 		super( NAME );
 	}	
 	
+	
+	// ______________________________________________________________ Make
 	/** 
 	*	Parse the json object, creating all the slide value objects
 	*	@param		The json object
 	*/
-	public function parseJson ( $jsonObj:Object ):void
+	public function parseJson ( $json:Object ):void
 	{
-		trace( $jsonObj.template.slot_a.x );
+		// Loop through each of the slides, and create a SlideVO
+		var count:Number = 0;
+		var len:uint = $json.slides.length;
+		for ( var i:uint=0; i<len; i++ ) 
+		{
+			// Create SlideVO
+			var slide:SlideVO = new SlideVO();
+			slide.slideIndex = i;
+			slide.slots = new Object();
+			
+			// Now create the right kind of slotVO for each slot
+			for( var j:String in $json.slides[i] )
+			{
+				// Determine the type of slot by checking the template
+				switch ( $json.template[j].kind  )
+				{
+					case "image" :
+						var slotImageVo:SlotImageVO = new SlotImageVO();
+						slotImageVo.slotId 	= j;
+						slotImageVo.src 	= $json.slides[i][j].src;
+						slotImageVo.href 	= $json.slides[i][j].href;
+						slide.slots[j]		= slotImageVo;
+					break;
+					
+					case "text" :
+						var slotTextVo:SlotTextVO = new SlotTextVO();
+						slotTextVo.slotId 	= j;
+						slotTextVo.text 	= $json.slides[i][j].text;
+						slide.slots[j]		= slotTextVo;
+					break;
+				}
+			}
+			_slideList.push(slide);
+		}
+		
+		// Initialize model
+		_totalSlides = _slideList.length;
+		_currentSlideIndex = 0;
+		
+		// Send observers a list of slides
+		sendNotification( AppFacade.INIT_SLIDES, _slideList );
+		// load the first slide
+		sendNotification( AppFacade.DISPLAY_NEW_SLIDE, this.currentSlide );
 	}
 	
-	/** 
-	*	Build the SlideVOs from the xml
-	*/
-	public function createSlidesFromXml ():void
-	{		
-//		_slideList = new Array();
-//		var count:uint = 0;
-//		
-//		for each( var node:XML in _xmlData.slides.slide)
-//		{
-//			var slide:SlideVO 	 = new SlideVO();
-//			slide.slideIndex	 = count;
-//			slide.slideId		 = "slide" + count++;
-//			slide.largeImagePath = _xmlData.slides.@imagePath + String(node.main_img);
-//			slide.thumbnailPath  = _xmlData.slides.@imagePath + String(node.thmb_img);
-//			slide.description	 = node.text.elements("*").toXMLString()
-//						
-//			_slideList.push(slide);
-//		}
-//		
-//		_totalSlides = _slideList.length;
-//		_currentSlideIndex = 0;
-//		
-//		// Send observers a list of slides
-//		sendNotification( AppFacade.INIT_SLIDES, _slideList );
-//		// load the first slide
-//		sendNotification( AppFacade.DISPLAY_NEW_SLIDE, this.currentSlide );
-	}
 	
+	// ______________________________________________________________ Slide Changing
 	/** 
 	*	Incrament the slide index
 	*	@param		The incrament amount. This can be a positive OR a negative number.
@@ -73,8 +89,7 @@ public class SlidesProxy extends Proxy implements IProxy
 		
 		// Only send broadcast if the new slide 
 		// is different than the current slide
-		if( _currentSlideIndex != newIndex ) 
-		{
+		if( _currentSlideIndex != newIndex ) {
 			_currentSlideIndex = newIndex;
 			sendNotification( AppFacade.DISPLAY_NEW_SLIDE, this.currentSlide );
 		}
@@ -93,6 +108,7 @@ public class SlidesProxy extends Proxy implements IProxy
 	}
 	
 	// ______________________________________________________________ Getters and setters
+	
 	public function get currentSlideIndex 	(  ):uint{ return _currentSlideIndex; 	};
 	public function get totalSlides			(  ):uint{ return _totalSlides; 		};
 	public function get currentSlide 		(  ):SlideVO{ return _slideList[ _currentSlideIndex ]; };
