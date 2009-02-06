@@ -12,6 +12,8 @@ public class AppFacade extends Facade implements IFacade
 	public static const JSON_LOADED:String 			= "json_loaded";
 	
 	// Slides
+	public static const INIT_SLOTS:String 			= "init_slots";
+	public static const POPULATE_SLOTS:String 		= "populate_slots";
 	public static const INIT_SLIDES:String 			= "init_slides";
 	public static const DISPLAY_NEW_SLIDE:String 	= "display_new_slide";
 	

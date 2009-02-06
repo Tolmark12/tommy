@@ -1,9 +1,15 @@
 {
 "template":{
-	"slot_a":{ "x" : 0, "y" : 0, "kind" : "image" },
-	"slot_b":{ "x" : 0, "y" : 0, "kind" : "text" }
+	"slot_a" : { "x" : 0, "y" : 0, "kind" : "image" },
+	"slot_b" : { "x" : 0, "y" : 0, "kind" : "text" },
+	"slot_c" : { "x" : 100, "y" : 300, "kind" : "image" } 
 },
-"slides":[
+"staticContent" : 
+{
+	"slot_c" : { "src" : "http://testvipd2.scene7.com/is/image/TommyBahama/MoreColors?$layer_0_src=T1490_005_main&$cat$", "href" : "http://www.tommybahama.com" }
+},
+"slides":
+[
 	{
 		"slot_a" : { "src" : "http://testvipd2.scene7.com/is/image/TommyBahama/MoreColors?$layer_0_src=T1490_005_main&$cat$", "href" : "http://www.tommybahama.com" },
 		"slot_b" : { "text" : "Some sort of text will go here"}

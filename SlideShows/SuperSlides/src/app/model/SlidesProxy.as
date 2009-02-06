@@ -34,42 +34,69 @@ public class SlidesProxy extends Proxy implements IProxy
 			// Create SlideVO
 			var slide:SlideVO = new SlideVO();
 			slide.slideIndex = i;
-			slide.slots = new Object();
-			
-			// Now create the right kind of slotVO for each slot
-			for( var j:String in $json.slides[i] )
-			{
-				// Determine the type of slot by checking the 
-				// template slot with this same name
-				switch ( $json.template[j].kind  )
-				{
-					case "image" :
-						var slotImageVo:SlotImageVO = new SlotImageVO();
-						slotImageVo.slotId 	= j;
-						slotImageVo.src 	= $json.slides[i][j].src;
-						slotImageVo.href 	= $json.slides[i][j].href;
-						slide.slots[j]		= slotImageVo;
-					break;
-					
-					case "text" :
-						var slotTextVo:SlotTextVO = new SlotTextVO();
-						slotTextVo.slotId 	= j;
-						slotTextVo.text 	= $json.slides[i][j].text;
-						slide.slots[j]		= slotTextVo;
-					break;
-				}
-			}
+			slide.slots = _createSlotDataVOs( $json.slides[i], $json.template )
 			_slideList.push(slide);
+		}
+		
+		var templateSlots:Array = new Array()
+		// Create Slots Template
+		for( var k:String in $json.template )
+		{
+			var slotTemplateVO  = new SlotTemplateVO();
+			slotTemplateVO.x    = $json.template[k].x;
+			slotTemplateVO.y    = $json.template[k].y;
+			slotTemplateVO.id   = k;
+			slotTemplateVO.kind = $json.template[k].kind;
+			templateSlots.push(slotTemplateVO);
 		}
 		
 		// Initialize model
 		_totalSlides = _slideList.length;
 		_currentSlideIndex = 0;
 		
+		var staticContent:Object = _createSlotDataVOs( $json.staticContent, $json.template)
+		
+		// Create the template slots
+		sendNotification( AppFacade.INIT_SLOTS, templateSlots );
+		// Populate the static content
+		sendNotification( AppFacade.POPULATE_SLOTS, staticContent );
 		// Send observers a list of slides
 		sendNotification( AppFacade.INIT_SLIDES, _slideList );
 		// load the first slide
 		sendNotification( AppFacade.DISPLAY_NEW_SLIDE, this.currentSlide );
+	}
+	
+	
+	private function _createSlotDataVOs ( $slotData:Object, $slotTemplate:Object ):Object
+	{
+		var slotObj:Object = new Object();
+		
+		// Now create the right kind of slotVO for each slot
+		for( var j:String in $slotData )
+		{
+			// Determine the type of slot by checking the 
+			// template slot with this same name
+			switch ( $slotTemplate[j].kind  )
+			{
+				case "image" :
+					var slotImageVo:SlotImageVO = new SlotImageVO();
+					slotImageVo.slotId 	= j;
+					slotImageVo.kind	= $slotTemplate[j].kind
+					slotImageVo.src 	= $slotData[j].src;
+					slotImageVo.href 	= $slotData[j].href;
+					slotObj[j]			= slotImageVo;
+				break;
+				
+				case "text" :
+					var slotTextVo:SlotTextVO = new SlotTextVO();
+					slotTextVo.kind		= $slotTemplate[j].kind
+					slotTextVo.slotId 	= j;
+					slotTextVo.text 	= $slotData[j].text;
+					slotObj[j]			= slotTextVo;
+				break;
+			}
+		}
+		return slotObj;
 	}
 	
 	

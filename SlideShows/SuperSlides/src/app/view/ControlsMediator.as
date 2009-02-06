@@ -34,7 +34,7 @@ public class ControlsMediator extends Mediator implements IMediator
 		switch ( note.getName() )
 		{
 			case AppFacade.INIT_SLIDES:
-				trace( "init slides from ControlsMediator.as" );
+				
 			break;
 		}
 	}

@@ -23,6 +23,7 @@ public class Startup extends SimpleCommand implements ICommand
 		
 		// Mediators creation
 		var controlsMediator:ControlsMediator		= new ControlsMediator( rootMc );
+		var contentMediator:ContentMediator			= new ContentMediator( rootMc );
 		
 		
 		// Register Proxies
@@ -31,7 +32,7 @@ public class Startup extends SimpleCommand implements ICommand
 		
 		// Register Mediators
 		facade.registerMediator	( controlsMediator );
-		
+		facade.registerMediator ( contentMediator );
 	}
 }
 }
