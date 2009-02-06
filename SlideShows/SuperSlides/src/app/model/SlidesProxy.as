@@ -22,7 +22,7 @@ public class SlidesProxy extends Proxy implements IProxy
 	// ______________________________________________________________ Make
 	/** 
 	*	Parse the json object, creating all the slide value objects
-	*	@param		The json object
+	*	@param		A json object
 	*/
 	public function parseJson ( $json:Object ):void
 	{
@@ -39,7 +39,8 @@ public class SlidesProxy extends Proxy implements IProxy
 			// Now create the right kind of slotVO for each slot
 			for( var j:String in $json.slides[i] )
 			{
-				// Determine the type of slot by checking the template
+				// Determine the type of slot by checking the 
+				// template slot with this same name
 				switch ( $json.template[j].kind  )
 				{
 					case "image" :
@@ -75,7 +76,7 @@ public class SlidesProxy extends Proxy implements IProxy
 	// ______________________________________________________________ Slide Changing
 	/** 
 	*	Incrament the slide index
-	*	@param		The incrament amount. This can be a positive OR a negative number.
+	*	@param		The incrament amount. This can be a positive -OR- a negative number.
 	*/
 	public function incramentSlideIndex ( $incrament:int ):void
 	{

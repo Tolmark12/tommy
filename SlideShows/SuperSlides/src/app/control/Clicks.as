@@ -11,8 +11,7 @@ public class Clicks extends SimpleCommand implements ICommand
 
 	override public function execute( note:INotification ):void
 	{		
-		//var someProxy:SomeProxy = facade.retrieveProxy( SomeProxy.NAME ) as SomeProxy;
-		//var someMediator:SomeMediator = facade.retrieveMediator( SomeMediator.NAME ) as SomeMediator;
+		var slidesProxy:SlidesProxy = facade.retrieveProxy( SlidesProxy.NAME ) as SlidesProxy;
 		
 		switch (note.getName() as String){
 			

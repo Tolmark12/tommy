@@ -12,14 +12,16 @@ public class Startup extends SimpleCommand implements ICommand
 
 	override public function execute( note:INotification ):void
 	{
+		// root
 		var rootMc:SuperSlides = note.getBody() as SuperSlides;
 		
-		// Proxies
+		
+		// Proxies creation
 		var externalDataProxy:ExternalDataProxy 	= new ExternalDataProxy();
 		var slidesProxy:SlidesProxy             	= new SlidesProxy();
 		externalDataProxy.loadJson();
 		
-		// Mediators
+		// Mediators creation
 		var controlsMediator:ControlsMediator		= new ControlsMediator( rootMc );
 		
 		
