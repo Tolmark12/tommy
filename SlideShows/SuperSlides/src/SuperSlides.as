@@ -8,11 +8,11 @@ import app.view.components.NavDrawer;
 public class SuperSlides extends Sprite
 {
 	// Items on the stage
-	public var navMc:NavDrawer;
+	public var navMc:NavDrawer_swc;
 	
 	public function SuperSlides():void
 	{
-		navMc = this.getChildByName( "navMc" ) as NavDrawer;
+		navMc = this.getChildByName( "navMc" ) as NavDrawer_swc;
 		_start();
 	}
 	

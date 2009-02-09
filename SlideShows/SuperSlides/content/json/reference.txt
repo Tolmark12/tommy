@@ -1,0 +1,95 @@
+The basic idea here is the creation of a template that defines what the content is, and where it goes, 
+then filling those slots at run time. The main elements are:
+
+1) The template - Defines what content goes where
+2) Static content - Defines the content that does not change per slide
+3) The Slides - Defines which content is loaded/changed per slide change
+4) Globals - Defines any other pertinent vars
+
+----------------------------------------------
+- GLOBALS
+----------------------------------------------
+	Expected params:
+	nav_y		- The y position of the navigation
+	
+	Optional params:
+	
+
+----------------------------------------------
+- TEMPLATE 
+----------------------------------------------
+Use the template to define content slots. A content 
+slot is a position where an image, or text will be 
+placed. 
+
+	Expected Params:
+	x		- The "x" position
+	y		- the "y" position
+	kind	- The type of content (image or text)
+	
+	Example:
+	"template":{
+		"slot_a" : { "x" : 0, "y" : 0, "kind" : "image" },
+		"slot_b" : { "x" : 0, "y" : 0, "kind" : "text" },
+		"slot_c" : { "x" : 100, "y" : 300, "kind" : "image" } 
+	}
+
+----------------------------------------------
+- STATIC CONTENT 
+----------------------------------------------
+
+Static content is content that is loaded initially, but 
+not changed per slide. 
+
+	Example:
+	"staticContent" : 
+	{
+		"slot_c" : { "src" : "http://www.site.com/some.jpg", "href" : "http://www.tommybahama.com" }
+	},
+
+
+----------------------------------------------
+- SLIDES  
+----------------------------------------------
+
+These define how the slots are filled per slide. 
+	
+	Example:
+	"slides":
+	[
+		{
+			"slot_a" : { "src" : "http://site.com/some.jpg", "href" : "http://www.tommybahama.com" },
+			"slot_b" : { "text" : "Some sort of text will go here"}
+		},
+		{
+			"slot_a" : { "src" : "http://site.com/some.jpg", "href" : "http://www.tommybahama.com" },
+			"slot_b" : { "text" : "Some sort of text will go here"}
+		},
+		(..etc..)
+	]
+	}
+
+
+----------------------------------------------
+- CONTENT TYPES 
+----------------------------------------------
+
+IMAGE:
+This is an external Image
+	
+	Expected Params:
+	src		- The path to the image
+	href	- The destination url when the image is clicked
+	
+	Example:
+	"slot_a" : { "src" : "http://site.com/some.jpg", "href" : "http://www.tommybahama.com" },
+
+
+TEXT:
+A block of text
+
+	Expected Params:
+	text	- The text that will be displayed
+	
+	Example:
+	"slot_b" : { "text" : "Some sort of text will go here"}

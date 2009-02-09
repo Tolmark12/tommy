@@ -9,6 +9,12 @@ public class Txt extends Slot
 	{
 		
 	}
+	
+	// Set the text
+	public function set text ( $text:String ):void
+	{
+		trace( $text );
+	}
 
 }
 

@@ -8,6 +8,8 @@ import SuperSlides;
 
 public class AppFacade extends Facade implements IFacade
 {
+	// Loading + Init
+	public static const SET_GLOBALS:String 			= "set_globals";
 	public static const STARTUP:String 				= "startup";
 	public static const JSON_LOADED:String 			= "json_loaded";
 	
@@ -15,7 +17,8 @@ public class AppFacade extends Facade implements IFacade
 	public static const INIT_SLOTS:String 			= "init_slots";
 	public static const POPULATE_SLOTS:String 		= "populate_slots";
 	public static const INIT_SLIDES:String 			= "init_slides";
-	public static const DISPLAY_NEW_SLIDE:String 	= "display_new_slide";
+	public static const NEXT_SLIDE:String 			= "next_slide";
+	public static const PREV_SLIDE:String 			= "prev_slide";
 	
 	public function AppFacade( key:String ):void
 	{
@@ -40,6 +43,8 @@ public class AppFacade extends Facade implements IFacade
 		super.initializeController();			
 		registerCommand( STARTUP, Startup );
 		registerCommand( JSON_LOADED, JsonLoaded );
+		registerCommand( PREV_SLIDE, Clicks );
+		registerCommand( NEXT_SLIDE, Clicks );
 	}
 
 }

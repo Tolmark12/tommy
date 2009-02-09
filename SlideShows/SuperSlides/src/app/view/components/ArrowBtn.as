@@ -8,7 +8,7 @@ public class ArrowBtn extends MovieClip
 {
 	public function ArrowBtn():void
 	{
-		
+		this.buttonMode = true;
 	}
 
 }

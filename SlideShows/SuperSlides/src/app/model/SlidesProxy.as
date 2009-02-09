@@ -63,7 +63,7 @@ public class SlidesProxy extends Proxy implements IProxy
 		// Send observers a list of slides
 		sendNotification( AppFacade.INIT_SLIDES, _slideList );
 		// load the first slide
-		sendNotification( AppFacade.DISPLAY_NEW_SLIDE, this.currentSlide );
+		sendNotification( AppFacade.POPULATE_SLOTS, currentSlide.slots  );
 	}
 	
 	
@@ -119,7 +119,7 @@ public class SlidesProxy extends Proxy implements IProxy
 		// is different than the current slide
 		if( _currentSlideIndex != newIndex ) {
 			_currentSlideIndex = newIndex;
-			sendNotification( AppFacade.DISPLAY_NEW_SLIDE, this.currentSlide );
+			sendNotification( AppFacade.POPULATE_SLOTS, currentSlide.slots  );
 		}
 	}
 	

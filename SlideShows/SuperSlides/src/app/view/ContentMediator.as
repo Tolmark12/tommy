@@ -88,16 +88,18 @@ public class ContentMediator extends Mediator implements IMediator
 		for( var i:String in $slots )
 		{
 			// 1) Determine what kind of slot we have 
-			// 2) Grab the slot with the same id 
-			// 3) Fill that slot with the new content 
+			// 2) Grab the slot component with the same id 
+			// 3) Fill that slot component with the new content 
 			switch ( $slots[i].kind ){
 				case "image" : 											// Image
 					var slotImageVo:SlotImageVO = $slots[i];
 					var img:Image = _slotObj[i] as Image;
-					img.loadImage( "content/images/test_image.jpg" );
+					img.loadImage( slotImageVo.src );
 				break;
 				case "text" : 											// Text
-					
+					var slotTextVo:SlotTextVO = $slots[i];
+					var txt:Txt = _slotObj[i] as Txt;
+					txt.text = slotTextVo.text;
 				break;
 			}
 		}

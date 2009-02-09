@@ -37,6 +37,13 @@ public class ExternalDataProxy extends Proxy implements IProxy
 	{
 		var loader:URLLoader = e.target as URLLoader;
 		var json:Object = JSON.decode( loader.data );
+		
+		// Set global vars
+		var globals:GlobalsVO = new GlobalsVO();
+		globals.navY = (json.globals.nav_y == null)? 0 : json.globals.nav_y ;
+		
+		sendNotification( AppFacade.SET_GLOBALS, globals );
+		
 		sendNotification( AppFacade.JSON_LOADED, json );
 	}
 }

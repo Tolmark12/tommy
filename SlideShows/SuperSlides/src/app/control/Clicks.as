@@ -5,6 +5,7 @@ import org.puremvc.as3.multicore.patterns.command.SimpleCommand;
 import app.view.*;
 import app.model.*;
 import app.model.vo.*;
+import app.AppFacade;
 
 public class Clicks extends SimpleCommand implements ICommand
 {
@@ -14,7 +15,12 @@ public class Clicks extends SimpleCommand implements ICommand
 		var slidesProxy:SlidesProxy = facade.retrieveProxy( SlidesProxy.NAME ) as SlidesProxy;
 		
 		switch (note.getName() as String){
-			
+			case AppFacade.NEXT_SLIDE :
+				slidesProxy.incramentSlideIndex(1);
+			break;
+			case AppFacade.PREV_SLIDE :
+				slidesProxy.incramentSlideIndex(-1);
+			break;
 		}
 	}
 }
