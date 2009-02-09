@@ -26,6 +26,7 @@ placed.
 	x		- The "x" position
 	y		- the "y" position
 	kind	- The type of content (image or text)
+	width	- ONLY used for a text slot. Determines the width of the text field
 	
 	Example:
 	"template":{

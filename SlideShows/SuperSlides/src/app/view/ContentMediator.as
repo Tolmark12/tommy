@@ -65,7 +65,7 @@ public class ContentMediator extends Mediator implements IMediator
 				break;
 				
 				case "text" :						// Text
-					var txt:Txt = new Txt();
+					var txt:Txt = new Txt(vo.width);
 					newSlot = txt;
 				break;
 			}
@@ -87,7 +87,7 @@ public class ContentMediator extends Mediator implements IMediator
 	{
 		for( var i:String in $slots )
 		{
-			// 1) Determine what kind of slot we have 
+			// 1) Determine what kind of slot we have (switch statement)
 			// 2) Grab the slot component with the same id 
 			// 3) Fill that slot component with the new content 
 			switch ( $slots[i].kind ){

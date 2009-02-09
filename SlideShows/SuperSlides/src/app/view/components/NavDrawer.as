@@ -17,6 +17,12 @@ public class NavDrawer extends MovieClip
 	private var _leftBtn:ArrowBtn_swc = new ArrowBtn_swc();
 	private var _rightBtn:ArrowBtn_swc = new ArrowBtn_swc();
 	
+	// Text
+	private var _text:Txt = new Txt(60);
+	
+	// Total slides
+	private var _totalSlides:Number;
+	
 	public function NavDrawer():void
 	{
 		
@@ -25,14 +31,21 @@ public class NavDrawer extends MovieClip
 	/** 
 	*	Initialize, create the buttons, set the right position. Etc. 
 	*/
-	public function init (  ):void
+	public function init ( $totalSlides:Number ):void
 	{
+		// Set Vars
+		_totalSlides = $totalSlides;
+		
 		// Positioning
-		_controlsMc.x = 30;
-		_controlsMc.y = -40;
-		_leftBtn.x = 10;
-		_rightBtn.x = 40;
+		_controlsMc.x    = 30;
+		_controlsMc.y    = -40;
+		_leftBtn.x       = 10;
+		_rightBtn.x      = 80;
 		_rightBtn.scaleX = -1;
+		_text.x          = 20;
+		_text.y          = -12;
+		_text.textSize	 = 20;	
+
 
 		// Events
 		_leftBtn.addEventListener( MouseEvent.CLICK, _onLeftClick, false,0,true );
@@ -42,6 +55,12 @@ public class NavDrawer extends MovieClip
 		this.addChild(_controlsMc);
 		_controlsMc.addChild(_leftBtn);
 		_controlsMc.addChild(_rightBtn);
+		_controlsMc.addChild(_text);
+	}
+	
+	public function changeSlide ( $slideIndex:Number ):void
+	{
+		_text.text = $slideIndex + " of " + _totalSlides;
 	}
 	
 	// ______________________________________________________________ Event handlers

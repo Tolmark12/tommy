@@ -4,7 +4,7 @@
 },
 "template":{
 	"slot_a" : { "x" : 20, "y" : 30, "kind" : "image" },
-	"slot_b" : { "x" : 0, "y" : 0, "kind" : "text" },
+	"slot_b" : { "x" : 40, "y" : 240, "kind" : "text", "width" : 200 },
 	"slot_c" : { "x" : 100, "y" : 300, "kind" : "image" } 
 },
 "staticContent" : 
@@ -19,7 +19,7 @@
 	},
 	{
 		"slot_a" : { "src" : "http://testvipd2.scene7.com/is/image/TommyBahama/MoreColors?$layer_0_src=T32560_4379_main&$cat$", "href" : "http://www.tommybahama.com" },
-		"slot_b" : { "text" : "Some sort of text will go here 'b'"}
+		"slot_b" : { "text" : "Some sort of text will go here 'b' and a <a href='http://www.delorum.com'>link of some sort</a></p>"}
 	},
 	{
 		"slot_a" : { "src" : "http://testvipd2.scene7.com/is/image/TommyBahama/MoreColors?$layer_0_src=T32362_4432_main&$cat$", "href" : "http://www.tommybahama.com" },

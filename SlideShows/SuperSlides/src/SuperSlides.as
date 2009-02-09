@@ -12,6 +12,7 @@ public class SuperSlides extends Sprite
 	
 	public function SuperSlides():void
 	{
+		stage.scaleMode = StageScaleMode.NO_SCALE;
 		navMc = this.getChildByName( "navMc" ) as NavDrawer_swc;
 		_start();
 	}

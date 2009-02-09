@@ -9,16 +9,17 @@ import SuperSlides;
 public class AppFacade extends Facade implements IFacade
 {
 	// Loading + Init
-	public static const SET_GLOBALS:String 			= "set_globals";
-	public static const STARTUP:String 				= "startup";
-	public static const JSON_LOADED:String 			= "json_loaded";
-	
-	// Slides
-	public static const INIT_SLOTS:String 			= "init_slots";
-	public static const POPULATE_SLOTS:String 		= "populate_slots";
-	public static const INIT_SLIDES:String 			= "init_slides";
-	public static const NEXT_SLIDE:String 			= "next_slide";
-	public static const PREV_SLIDE:String 			= "prev_slide";
+	public static const SET_GLOBALS:String 				= "set_globals";
+	public static const STARTUP:String 					= "startup";
+	public static const JSON_LOADED:String 				= "json_loaded";
+	                                                	
+	// Slides                                       	
+	public static const INIT_SLOTS:String 				= "init_slots";
+	public static const POPULATE_SLOTS:String 			= "populate_slots";
+	public static const CHANGE_SLIDE:String 			= "change_slide";
+	public static const INIT_SLIDES:String 				= "init_slides";
+	public static const NEXT_SLIDE:String 				= "next_slide";
+	public static const PREV_SLIDE:String 				= "prev_slide";
 	
 	public function AppFacade( key:String ):void
 	{

@@ -42,11 +42,12 @@ public class SlidesProxy extends Proxy implements IProxy
 		// Create Slots Template
 		for( var k:String in $json.template )
 		{
-			var slotTemplateVO  = new SlotTemplateVO();
-			slotTemplateVO.x    = $json.template[k].x;
-			slotTemplateVO.y    = $json.template[k].y;
-			slotTemplateVO.id   = k;
-			slotTemplateVO.kind = $json.template[k].kind;
+			var slotTemplateVO  	= new SlotTemplateVO();
+			slotTemplateVO.x    	= $json.template[k].x;
+			slotTemplateVO.y    	= $json.template[k].y;
+			slotTemplateVO.id   	= k;
+			slotTemplateVO.kind 	= $json.template[k].kind;
+			slotTemplateVO.width	= ($json.template[k].width == null)? 100 : $json.template[k].width ;
 			templateSlots.push(slotTemplateVO);
 		}
 		
@@ -64,6 +65,8 @@ public class SlidesProxy extends Proxy implements IProxy
 		sendNotification( AppFacade.INIT_SLIDES, _slideList );
 		// load the first slide
 		sendNotification( AppFacade.POPULATE_SLOTS, currentSlide.slots  );
+		sendNotification( AppFacade.CHANGE_SLIDE, _currentSlideIndex );
+		
 	}
 	
 	
@@ -120,6 +123,7 @@ public class SlidesProxy extends Proxy implements IProxy
 		if( _currentSlideIndex != newIndex ) {
 			_currentSlideIndex = newIndex;
 			sendNotification( AppFacade.POPULATE_SLOTS, currentSlide.slots  );
+			sendNotification( AppFacade.CHANGE_SLIDE, _currentSlideIndex );
 		}
 	}
 	
