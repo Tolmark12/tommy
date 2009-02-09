@@ -81,18 +81,22 @@ public class ContentMediator extends Mediator implements IMediator
 	
 	/** 
 	*	Populate slots with content
+	*	@param		A list of slot objects
 	*/
 	private function _populateSlots ( $slots:Object ):void
 	{
 		for( var i:String in $slots )
 		{
+			// 1) Determine what kind of slot we have 
+			// 2) Grab the slot with the same id 
+			// 3) Fill that slot with the new content 
 			switch ( $slots[i].kind ){
-				case "image" :
+				case "image" : 											// Image
 					var slotImageVo:SlotImageVO = $slots[i];
 					var img:Image = _slotObj[i] as Image;
 					img.loadImage( "content/images/test_image.jpg" );
 				break;
-				case "text" :
+				case "text" : 											// Text
 					
 				break;
 			}
