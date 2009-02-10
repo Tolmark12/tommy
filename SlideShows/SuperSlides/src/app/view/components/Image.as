@@ -6,6 +6,8 @@ import flash.events.*;
 import delorum.loading.ImageLoader;
 import delorum.images.Pixasso;
 import caurina.transitions.Tweener;
+import flash.net.navigateToURL;
+import flash.net.URLRequest;
 
 public class Image extends Slot
 {
@@ -13,18 +15,23 @@ public class Image extends Slot
 	private var _images:Object = new Object();
 	private var _isLoading:Boolean = false;
 	private var _ldr:ImageLoader;
+	private var _href:String;
 	
 	public function Image():void
 	{
 		super();
+		this.addEventListener( MouseEvent.CLICK, _onClick, false,0,true );
+		this.buttonMode = true;
 	}
 	
 	// ______________________________________________________________ Image Loading
 	/** 
 	*	Load the image
 	*/
-	public function loadImage ( $image:String ):void
+	public function loadImage ( $image:String, $href:String ):void
 	{
+		_href = $href;
+		
 		// TODO: Might be nice to not load images that are already loaded. 
 		// ie, cache the loaded bitmaps. 
 		
@@ -64,6 +71,10 @@ public class Image extends Slot
 		this.addChild(bitmap);
 	}
 	
+	private function _onClick ( e:Event ):void {
+		if( _href != null ) 
+			navigateToURL( new URLRequest(_href), "_self");
+	}
 }
 
 }
