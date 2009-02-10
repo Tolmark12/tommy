@@ -2,34 +2,36 @@
 "globals" : {
 	"nav_y" : 70,
 	"arrows_position" : { "x" : 0, "y" : 0 },
-	"css" : "p{ color:#796443; font-family:VTypewriterTelegram; font-size:17 } a{ text-decoration:underline;  } a:hover{ color:#00FF00; }"
+	"css" : "p{ color:#796443; font-family:VTypewriterTelegram; font-size:17 } a{ text-decoration:underline;  } a:hover{ color:#FF0000; }"
 },
 "template":{
-	"slot_a" : { "x" : 20, "y" : 30, "kind" : "image" },
+	"slot_a" : { "x" : 22, "y" : 25, "kind" : "image" },
 	"slot_b" : { "x" : 240, "y" : 60, "kind" : "text", "width" : 200, "inNavDrawer" : true },
-	"slot_c" : { "x" : 430, "y" : 515, "kind" : "image" },
-	"slot_d" : { "x" : 424, "y" : 30, "kind" : "image" },
-	"slot_e" : { "x" : 430, "y" : 400, "kind" : "text", "width" : 190 } 
+	"slot_c" : { "x" : 435, "y" : 515, "kind" : "image" },
+	"slot_d" : { "x" : 430, "y" : 25, "kind" : "image" },
+	"slot_e" : { "x" : 440, "y" : 400, "kind" : "text", "width" : 190 } 
 },
 "staticContent" : 
 {
 	"slot_c" : { "src" : "content/images/tommy_script_logo.png", "href" : "http://www.tommybahama.com" },
-	"slot_d" : { "src" : "content/images/slide_show1/static_1.jpg", "href" : "http://www.tommybahama.com" },
 	"slot_e" : { "text" : "Fun and stylish. Perfect for an afternoon at the beach.", "href" : "http://www.tommybahama.com" }
 },
 "slides":
 [
 	{
 		"slot_a" : { "src" : "content/images/slide_show1/slide_1.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_b" : { "text" : "White shorts, perfect for relaxing at the beachouse"}
+		"slot_b" : { "text" : "A perfect morning for relaxing at the beach house"},
+		"slot_d" : { "src" : "content/images/slide_show1/static_1.jpg", "href" : "http://www.tommybahama.com" }
 	},
 	{
 		"slot_a" : { "src" : "content/images/slide_show1/slide_2.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_b" : { "text" : "Some sort of text will go here 'b' and a <a href='http://www.delorum.com'>link of some sort</a></p>"}
+		"slot_b" : { "text" : "Beautiful evenings at the beach with <a href='http://www.tommybahama.com'>Tommy Bahama</a></p>"},
+		"slot_d" : { "src" : "content/images/slide_show1/static_2.jpg", "href" : "http://www.tommybahama.com" }
 	},
 	{
 		"slot_a" : { "src" : "content/images/slide_show1/slide_3.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_b" : { "text" : "Some sort of text will go here 'c'"}
+		"slot_b" : { "text" : "Some sort of text will go here 'c'"},
+		"slot_d" : { "src" : "content/images/slide_show1/static_3.jpg", "href" : "http://www.tommybahama.com" }
 	}
 ]
 }
