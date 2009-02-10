@@ -31,7 +31,7 @@
 	},
 	{
 		"slot_a" : { "src" : "content/images/slide_show1/left_3.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_b" : { "text" : "Left: <a href='http://www.tommybahama.com'>Rasta Shors</a>     Right: <a href='http://www.tommybahama.com'>Blue Sunset Neckerchief</a>"},
+		"slot_b" : { "text" : "Left: <a href='http://www.tommybahama.com'>Rasta Shorts</a>     Right: <a href='http://www.tommybahama.com'>Blue Sunset Neckerchief</a>"},
 		"slot_d" : { "src" : "content/images/slide_show1/right_3.jpg", "href" : "http://www.tommybahama.com" },
 		"slot_e" : { "text" : "Completely at ease perfect excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "href" : "http://www.tommybahama.com" }
 	}
