@@ -25,7 +25,7 @@ public class ExternalDataProxy extends Proxy implements IProxy
 	*/
 	public function loadJson ( $stage:Stage ):void
 	{
-		var jsonPath:String = ( $stage.loaderInfo.parameters.json != null )? $stage.loaderInfo.parameters.json : 'content/json/example_a.json' ;
+		var jsonPath:String = ( $stage.loaderInfo.parameters.json != null )? $stage.loaderInfo.parameters.json : 'content/json/slide_show1.json' ;
 		
 		var ldr:DataLoader = new DataLoader( jsonPath );
 		ldr.addEventListener( Event.COMPLETE, _onJsonLoad );

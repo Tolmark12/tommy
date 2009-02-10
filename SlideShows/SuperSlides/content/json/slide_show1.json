@@ -7,7 +7,7 @@
 "template":{
 	"slot_a" : { "x" : 20, "y" : 30, "kind" : "image" },
 	"slot_b" : { "x" : 240, "y" : 60, "kind" : "text", "width" : 200, "inNavDrawer" : true },
-	"slot_c" : { "x" : 100, "y" : 300, "kind" : "image" } 
+	"slot_c" : { "x" : 424, "y" : 300, "kind" : "image" } 
 },
 "staticContent" : 
 {
