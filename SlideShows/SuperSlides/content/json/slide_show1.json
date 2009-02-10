@@ -18,22 +18,22 @@
 "slides":
 [
 	{
-		"slot_a" : { "src" : "content/images/slide_show1/slide_1.jpg", "href" : "http://www.tommybahama.com" },
+		"slot_a" : { "src" : "content/images/slide_show1/left_1.jpg", "href" : "http://www.tommybahama.com" },
 		"slot_b" : { "text" : "Left: <a href='http://www.tommybahama.com'>White Beach Shorts</a>     Right: <a href='http://www.tommybahama.com'>Maui Cienna Swim</a>"},
-		"slot_d" : { "src" : "content/images/slide_show1/static_1.jpg", "href" : "http://www.tommybahama.com" },
+		"slot_d" : { "src" : "content/images/slide_show1/right_1.jpg", "href" : "http://www.tommybahama.com" },
 		"slot_e" : { "text" : "Laid-Back and Charismatic - Perfect for a stylish outdoor slifestyle that is cool and casual, yet sophisticated.", "href" : "http://www.tommybahama.com" }
 	},
 	{
-		"slot_a" : { "src" : "content/images/slide_show1/slide_2.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_b" : { "text" : "Left: Product link <a href='http://www.tommybahama.com'>here</a>     Right: Product link <a href='http://www.tommybahama.com'>here</a>"},
-		"slot_d" : { "src" : "content/images/slide_show1/static_2.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_e" : { "text" : "Unbeatable style and charm - Perfect for a stylish outdoor slifestyle that is cool and casual, yet sophisticated", "href" : "http://www.tommybahama.com" }
+		"slot_a" : { "src" : "content/images/slide_show1/left_2.jpg", "href" : "http://www.tommybahama.com" },
+		"slot_b" : { "text" : "Left: <a href='http://www.tommybahama.com'>Cucumber Polo</a>     Right: <a href='http://www.tommybahama.com'>Maui Cienna One Piece</a>"},
+		"slot_d" : { "src" : "content/images/slide_show1/right_2.jpg", "href" : "http://www.tommybahama.com" },
+		"slot_e" : { "text" : "Unbeatable style and charm - Lorem ipsum dolorum sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "href" : "http://www.tommybahama.com" }
 	},
 	{
-		"slot_a" : { "src" : "content/images/slide_show1/slide_3.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_b" : { "text" : "Left: Product link <a href='http://www.tommybahama.com'>here</a>     Right: Product link <a href='http://www.tommybahama.com'>here</a>"},
-		"slot_d" : { "src" : "content/images/slide_show1/static_3.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_e" : { "text" : "Completely at ease perfect for a stylish outdoor slifestyle that is cool and casual, yet sophisticated.", "href" : "http://www.tommybahama.com" }
+		"slot_a" : { "src" : "content/images/slide_show1/left_3.jpg", "href" : "http://www.tommybahama.com" },
+		"slot_b" : { "text" : "Left: <a href='http://www.tommybahama.com'>Rasta Shors</a>     Right: <a href='http://www.tommybahama.com'>Blue Sunset Neckerchief</a>"},
+		"slot_d" : { "src" : "content/images/slide_show1/right_3.jpg", "href" : "http://www.tommybahama.com" },
+		"slot_e" : { "text" : "Completely at ease perfect excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "href" : "http://www.tommybahama.com" }
 	}
 ]
 }
