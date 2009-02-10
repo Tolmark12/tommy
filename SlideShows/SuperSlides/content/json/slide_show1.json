@@ -21,7 +21,7 @@
 		"slot_a" : { "src" : "content/images/slide_show1/left_1.jpg", "href" : "http://www.tommybahama.com" },
 		"slot_b" : { "text" : "Left: <a href='http://www.tommybahama.com'>White Beach Shorts</a>     Right: <a href='http://www.tommybahama.com'>Maui Cienna Swim</a>"},
 		"slot_d" : { "src" : "content/images/slide_show1/right_1.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_e" : { "text" : "Laid-Back and Charismatic - Perfect for a stylish outdoor slifestyle that is cool and casual, yet sophisticated.", "href" : "http://www.tommybahama.com" }
+		"slot_e" : { "text" : "Laid-Back and Charismatic - Perfect for a stylish outdoor lifestyle that is cool and casual, yet sophisticated.", "href" : "http://www.tommybahama.com" }
 	},
 	{
 		"slot_a" : { "src" : "content/images/slide_show1/left_2.jpg", "href" : "http://www.tommybahama.com" },
