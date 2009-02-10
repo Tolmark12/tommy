@@ -19,7 +19,7 @@ public class Startup extends SimpleCommand implements ICommand
 		// Proxies creation
 		var externalDataProxy:ExternalDataProxy 	= new ExternalDataProxy();
 		var slidesProxy:SlidesProxy             	= new SlidesProxy();
-		externalDataProxy.loadJson();
+		externalDataProxy.loadJson( rootMc.stage );
 		
 		// Mediators creation
 		var controlsMediator:ControlsMediator		= new ControlsMediator( rootMc );

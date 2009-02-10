@@ -39,7 +39,10 @@ public class ControlsMediator extends Mediator implements IMediator
 		{
 			case AppFacade.SET_GLOBALS :
 				var globals:GlobalsVO = note.getBody() as GlobalsVO;
+				Txt.css = globals.css
 				_nav.y = _nav.y + globals.navY;
+				_nav.controls.x += globals.controlsX;
+				_nav.controls.y += globals.controlsY;
 			break;
 			case AppFacade.INIT_SLIDES:
 				_nav.init( (note.getBody() as Array).length );

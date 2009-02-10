@@ -9,6 +9,7 @@ import com.adobe.serialization.json.JSON;
 import flash.events.*;
 import flash.net.*;
 import delorum.loading.DataLoader;
+import flash.display.Stage;
 
 public class ExternalDataProxy extends Proxy implements IProxy
 {
@@ -22,9 +23,11 @@ public class ExternalDataProxy extends Proxy implements IProxy
 	/** 
 	*	Load the json instructional file
 	*/
-	public function loadJson (  ):void
+	public function loadJson ( $stage:Stage ):void
 	{
-		var ldr:DataLoader = new DataLoader( "content/json/slide_show1.json" );
+		var jsonPath:String = ( $stage.loaderInfo.parameters.json != null )? $stage.loaderInfo.parameters.json : 'content/json/example_a.json' ;
+		
+		var ldr:DataLoader = new DataLoader( jsonPath );
 		ldr.addEventListener( Event.COMPLETE, _onJsonLoad );
 		ldr.loadItem();
 	}
@@ -40,7 +43,10 @@ public class ExternalDataProxy extends Proxy implements IProxy
 		
 		// Set global vars
 		var globals:GlobalsVO = new GlobalsVO();
-		globals.navY = (json.globals.nav_y == null)? 0 : json.globals.nav_y ;
+		globals.navY 		= (json.globals.nav_y == null)? 0 : json.globals.nav_y ;
+		globals.css			= (json.globals.css == null)? "p{ color:#796443; font-family:VTypewriterTelegram; font-size:17 } a{ text-decoration:underline;  } a:hover{ color:#FF0000; }" : json.globals.css ;
+		globals.controlsX	= (json.globals.arrows_position.x == null)? 0 : json.globals.arrows_position.x ;
+		globals.controlsY	= (json.globals.arrows_position.y == null)? 0 : json.globals.arrows_position.y ;
 		
 		sendNotification( AppFacade.SET_GLOBALS, globals );
 		
