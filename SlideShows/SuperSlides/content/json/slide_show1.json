@@ -2,7 +2,7 @@
 "globals" : {
 	"nav_y" : 50,
 	"arrows_position" : { "x" : 0, "y" : 15 },
-	"css" : "p{ color:#796443; font-family:VTypewriterTelegram; font-size:17 } a{ text-decoration:underline;  } a:hover{ color:#FF0000; }"
+	"css" : "p{ color:#796443; font-family:VTypewriterTelegram; font-size:17 } a{ text-decoration:underline;  } a:hover{ color:#A41F25; }"
 },
 "template":{
 	"slot_a" : { "x" : 22, "y" : 25, "kind" : "image" },
@@ -19,21 +19,21 @@
 [
 	{
 		"slot_a" : { "src" : "content/images/slide_show1/slide_1.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_b" : { "text" : "Left: Product link <a href='http://www.tommybahama.com'>here</a>     Right: Product link <a href='http://www.tommybahama.com'>here</a>"},
+		"slot_b" : { "text" : "Left: <a href='http://www.tommybahama.com'>White Beach Shorts</a>     Right: <a href='http://www.tommybahama.com'>Maui Cienna Swim</a>"},
 		"slot_d" : { "src" : "content/images/slide_show1/static_1.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_e" : { "text" : "Fun and stylish. Perfect for an afternoon at the beach.", "href" : "http://www.tommybahama.com" }
+		"slot_e" : { "text" : "Laid-Back and Charismatic - Perfect for a stylish outdoor slifestyle that is cool and casual, yet sophisticated.", "href" : "http://www.tommybahama.com" }
 	},
 	{
 		"slot_a" : { "src" : "content/images/slide_show1/slide_2.jpg", "href" : "http://www.tommybahama.com" },
 		"slot_b" : { "text" : "Left: Product link <a href='http://www.tommybahama.com'>here</a>     Right: Product link <a href='http://www.tommybahama.com'>here</a>"},
 		"slot_d" : { "src" : "content/images/slide_show1/static_2.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_e" : { "text" : "Your evening will be one to remember.", "href" : "http://www.tommybahama.com" }
+		"slot_e" : { "text" : "Unbeatable style and charm - Perfect for a stylish outdoor slifestyle that is cool and casual, yet sophisticated", "href" : "http://www.tommybahama.com" }
 	},
 	{
 		"slot_a" : { "src" : "content/images/slide_show1/slide_3.jpg", "href" : "http://www.tommybahama.com" },
 		"slot_b" : { "text" : "Left: Product link <a href='http://www.tommybahama.com'>here</a>     Right: Product link <a href='http://www.tommybahama.com'>here</a>"},
 		"slot_d" : { "src" : "content/images/slide_show1/static_3.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_e" : { "text" : "Swimming in the ocean will never be more stylish.", "href" : "http://www.tommybahama.com" }
+		"slot_e" : { "text" : "Completely at ease perfect for a stylish outdoor slifestyle that is cool and casual, yet sophisticated.", "href" : "http://www.tommybahama.com" }
 	}
 ]
 }
