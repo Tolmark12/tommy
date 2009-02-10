@@ -7,6 +7,7 @@ import delorum.text.QuickText;
 public class Txt extends Slot
 {
 	private var _text:QuickText = new QuickText();
+	public static var css:String;
 	
 	public function Txt($width:Number):void
 	{
@@ -14,9 +15,7 @@ public class Txt extends Slot
 		_text.useBitmap = false;
 		_text.txtField.selectable = false;
 		this.addChild(_text);
-		_text.parseCss( "p{ color:#796443; font-family:VTypewriterTelegram; font-size:17 }", 
-						"a{ text-decoration:underline;  }", 
-						"a:hover{ color:#FF0000; }");
+		_text.parseCss( css );
 	}
 	
 	// Set the text

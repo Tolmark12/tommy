@@ -18,7 +18,7 @@ public class NavDrawer extends MovieClip
 	private var _rightBtn:ArrowBtn_swc = new ArrowBtn_swc();
 	
 	// Text
-	private var _text:Txt = new Txt(60);
+	private var _text:Txt;
 	
 	// Total slides
 	private var _totalSlides:Number;
@@ -34,11 +34,12 @@ public class NavDrawer extends MovieClip
 	public function init ( $totalSlides:Number ):void
 	{
 		// Set Vars
-		_totalSlides = $totalSlides;
+		_totalSlides 	 = $totalSlides;
+		_text 			 = new Txt(60);
 		
 		// Positioning
-		_controlsMc.x    = 30;
-		_controlsMc.y    = 80;
+		_controlsMc.x    += 30;
+		_controlsMc.y    += 80;
 		_leftBtn.x       = 10;
 		_rightBtn.x      = 80;
 		_rightBtn.scaleX = -1;
@@ -72,7 +73,8 @@ public class NavDrawer extends MovieClip
 	private function _onRightClick ( e:Event ):void{
 		this.dispatchEvent( new Event( PREV_SLIDE, true) );
 	}
-
+	
+	public function get controls ():Sprite { return _controlsMc; };
 }
 
 }

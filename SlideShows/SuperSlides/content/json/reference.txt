@@ -10,10 +10,11 @@ then filling those slots at run time. The main elements are:
 - GLOBALS
 ----------------------------------------------
 	Expected params:
-	nav_y		- The y position of the navigation
-	
+	nav_y				- Number - The y position of the navigation
+
 	Optional params:
-	
+	css					- String - (optional) the css used to style text
+	arrows_position		- Object - (optional) extra x and y positioning ex: { "x" : 10, "y" : 10 }
 
 ----------------------------------------------
 - TEMPLATE 
