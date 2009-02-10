@@ -101,7 +101,7 @@ public class ContentMediator extends Mediator implements IMediator
 				case "image" : 											// Image
 					var slotImageVo:SlotImageVO = $slots[i];
 					var img:Image = _slotObj[i] as Image;
-					img.loadImage( slotImageVo.src );
+					img.loadImage( slotImageVo.src, slotImageVo.href );
 				break;
 				case "text" : 											// Text
 					var slotTextVo:SlotTextVO = $slots[i];
