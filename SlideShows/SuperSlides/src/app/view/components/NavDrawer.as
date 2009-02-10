@@ -38,13 +38,13 @@ public class NavDrawer extends MovieClip
 		
 		// Positioning
 		_controlsMc.x    = 30;
-		_controlsMc.y    = -40;
+		_controlsMc.y    = 80;
 		_leftBtn.x       = 10;
 		_rightBtn.x      = 80;
 		_rightBtn.scaleX = -1;
 		_text.x          = 20;
-		_text.y          = -12;
-		_text.textSize	 = 20;	
+		_text.y          = -10;
+		_text.textSize	 = 20;
 
 
 		// Events

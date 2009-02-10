@@ -10,6 +10,9 @@ import caurina.transitions.Tweener;
 public class Image extends Slot
 {
 	private var _imageHolder:Sprite;
+	private var _images:Object = new Object();
+	private var _isLoading:Boolean = false;
+	private var _ldr:ImageLoader;
 	
 	public function Image():void
 	{
@@ -22,14 +25,25 @@ public class Image extends Slot
 	*/
 	public function loadImage ( $image:String ):void
 	{
+		// TODO: Might be nice to not load images that are already loaded. 
+		// ie, cache the loaded bitmaps. 
+		
+		if( _isLoading ) {
+			_ldr.cancelLoad();
+			_ldr.removeEventListener( Event.COMPLETE, _handleImageLoaded );
+		}
+		
+		_isLoading = true;
 		_imageHolder = new Sprite();
-		var ldr:ImageLoader = new ImageLoader( $image, _imageHolder );
-		ldr.addEventListener( Event.COMPLETE, _handleImageLoaded );
-		ldr.loadItem();
+		_ldr = new ImageLoader( $image, _imageHolder );
+		_ldr.addEventListener( Event.COMPLETE, _handleImageLoaded );
+		_ldr.loadItem();
 	}
 	
 	private function _handleImageLoaded ( e:Event ):void
 	{
+		_isLoading = false;
+		
 		// Draw the loaded image
 		var myBitmapData:BitmapData = new BitmapData(_imageHolder.width, _imageHolder.height, true, 0x000000 );
 		myBitmapData.draw( _imageHolder );

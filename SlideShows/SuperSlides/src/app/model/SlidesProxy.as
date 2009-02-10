@@ -42,12 +42,13 @@ public class SlidesProxy extends Proxy implements IProxy
 		// Create Slots Template
 		for( var k:String in $json.template )
 		{
-			var slotTemplateVO  	= new SlotTemplateVO();
-			slotTemplateVO.x    	= $json.template[k].x;
-			slotTemplateVO.y    	= $json.template[k].y;
-			slotTemplateVO.id   	= k;
-			slotTemplateVO.kind 	= $json.template[k].kind;
-			slotTemplateVO.width	= ($json.template[k].width == null)? 100 : $json.template[k].width ;
+			var slotTemplateVO  		= new SlotTemplateVO();
+			slotTemplateVO.x    		= $json.template[k].x;
+			slotTemplateVO.y    		= $json.template[k].y;
+			slotTemplateVO.id   		= k;
+			slotTemplateVO.kind 		= $json.template[k].kind;
+			slotTemplateVO.width		= ($json.template[k].width == null)? 100 : $json.template[k].width ;
+			slotTemplateVO.inNavDrawer	= ($json.template[k].inNavDrawer == null )? false : $json.template[k].inNavDrawer ;
 			templateSlots.push(slotTemplateVO);
 		}
 		

@@ -14,6 +14,7 @@ public class ContentMediator extends Mediator implements IMediator
 	public static const NAME:String = "content_mediator";
 	
 	private var _root:SuperSlides;
+	private var _nav:NavDrawer_swc;
 	private var _slotHolder:Sprite 	= new Sprite();
 	private var _slotObj:Object 	= new Object;
 
@@ -21,6 +22,7 @@ public class ContentMediator extends Mediator implements IMediator
 	{
 		super( NAME );
    		_root = $root;
+		_nav = _root.navMc;
 		_root.addChild(_slotHolder);
 	}
 	
@@ -75,7 +77,12 @@ public class ContentMediator extends Mediator implements IMediator
 			newSlot.x  = vo.x;
 			newSlot.y  = vo.y;
 			newSlot.id = vo.id;
-			_slotHolder.addChild(newSlot)
+			
+			// Add to the correct parent
+			if( vo.inNavDrawer ) 
+				_nav.addChild(newSlot);
+			else
+				_slotHolder.addChild(newSlot)
 		}
 	}
 	

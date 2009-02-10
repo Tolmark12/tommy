@@ -8,6 +8,7 @@ public class SlotTemplateVO
 	public var x:Number;
 	public var y:Number;
 	public var width:Number;
+	public var inNavDrawer:Boolean;
 }
 
 }

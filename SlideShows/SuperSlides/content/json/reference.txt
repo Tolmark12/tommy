@@ -23,15 +23,17 @@ slot is a position where an image, or text will be
 placed. 
 
 	Expected Params:
-	x		- The "x" position
-	y		- the "y" position
-	kind	- The type of content (image or text)
-	width	- ONLY used for a text slot. Determines the width of the text field
+	x				- Number  - The "x" position
+	y				- Number  - the "y" position
+	kind			- String  - The type of content (image or text)
+	width			- Number  - (optional) ONLY used for a text slot. Determines the width of the text field
+	inNavDrawer		- Boolean - (optional) defaults to false. Used to add an item to the nav drawer instead of the main display area
+								It's important, that the x and y are then relative to the nav Drawer...
 	
 	Example:
 	"template":{
 		"slot_a" : { "x" : 0, "y" : 0, "kind" : "image" },
-		"slot_b" : { "x" : 0, "y" : 0, "kind" : "text" },
+		"slot_b" : { "x" : 240, "y" : 60, "kind" : "text", "width" : 200, "inNavDrawer" : true },
 		"slot_c" : { "x" : 100, "y" : 300, "kind" : "image" } 
 	}
 
