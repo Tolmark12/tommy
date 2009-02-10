@@ -24,7 +24,7 @@ public class ExternalDataProxy extends Proxy implements IProxy
 	*/
 	public function loadJson (  ):void
 	{
-		var ldr:DataLoader = new DataLoader( "content/json/example_a.json" );
+		var ldr:DataLoader = new DataLoader( "content/json/slide_show1.json" );
 		ldr.addEventListener( Event.COMPLETE, _onJsonLoad );
 		ldr.loadItem();
 	}
