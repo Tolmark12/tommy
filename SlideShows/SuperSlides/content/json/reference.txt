@@ -15,6 +15,9 @@ then filling those slots at run time. The main elements are:
 	Optional params:
 	css					- String - (optional) the css used to style text
 	arrows_position		- Object - (optional) extra x and y positioning ex: { "x" : 10, "y" : 10 }
+	slide_show_speed	- Number - (optional) Number of seconds between auto play slides
+	slide_trans_speed	- Number - (optional) Number of seconds it takes slide to transition
+
 
 ----------------------------------------------
 - TEMPLATE 
