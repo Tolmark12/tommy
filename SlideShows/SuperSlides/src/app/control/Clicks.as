@@ -16,10 +16,14 @@ public class Clicks extends SimpleCommand implements ICommand
 		
 		switch (note.getName() as String){
 			case AppFacade.NEXT_SLIDE :
-				slidesProxy.incramentSlideIndex(1);
+				if( !note.getBody() as Boolean ) 
+					slidesProxy.stopAutoPlay();
+					
+				slidesProxy.incramentSlideIndex(1,note.getBody() as Boolean);
 			break;
 			case AppFacade.PREV_SLIDE :
 				slidesProxy.incramentSlideIndex(-1);
+				slidesProxy.stopAutoPlay();
 			break;
 		}
 	}

@@ -16,12 +16,12 @@ public class ControlsMediator extends Mediator implements IMediator
 	
 	// On the stage
 	private var _nav:NavDrawer_swc;
+	private var _timer:SlidesTimer;
 
 	public function ControlsMediator( $root:SuperSlides ):void
 	{
 		super( NAME );
 		_nav = $root.navMc;
-		init();
    	}
 	
 	// PureMVC: List notifications
@@ -29,7 +29,8 @@ public class ControlsMediator extends Mediator implements IMediator
 	{
 		return [ AppFacade.SET_GLOBALS,
 				 AppFacade.INIT_SLIDES, 
-				 AppFacade.CHANGE_SLIDE, ];
+				 AppFacade.CHANGE_SLIDE,
+				 AppFacade.STOP_AUTOPLAY, ];
 	}
 	
 	// PureMVC: Handle notifications
@@ -43,12 +44,19 @@ public class ControlsMediator extends Mediator implements IMediator
 				_nav.y = _nav.y + globals.navY;
 				_nav.controls.x += globals.controlsX;
 				_nav.controls.y += globals.controlsY;
+				_timer = new SlidesTimer( globals.slideShowSpeed );
+				Image.transitionSpeed = globals.slideTransSpeed
 			break;
 			case AppFacade.INIT_SLIDES:
+				_init();
+				_timer.startTimer();
 				_nav.init( (note.getBody() as Array).length );
 			break;
 			case AppFacade.CHANGE_SLIDE :
 				_nav.changeSlide( (note.getBody() as Number ) + 1  );
+			break;
+			case AppFacade.STOP_AUTOPLAY :
+				_timer.stopTimer();
 			break;
 		}
 	}
@@ -56,21 +64,26 @@ public class ControlsMediator extends Mediator implements IMediator
 	/** 
 	*	Initialize the app
 	*/
-	public function init (  ):void
+	private function _init (  ):void
 	{
 		// Listen for the next / previous slide events
 		_nav.addEventListener( NavDrawer.NEXT_SLIDE, _onNextSlide, false,0,true );
 		_nav.addEventListener( NavDrawer.PREV_SLIDE, _onPrevSlide, false,0,true );
+		_timer.addEventListener( SlidesTimer.TICK, _onTick, false,0,true );
 	}
 	
 	// ______________________________________________________________ Event Handlers
 	
 	private function _onNextSlide ( e:Event ):void {
-		sendNotification( AppFacade.PREV_SLIDE );
+		sendNotification( AppFacade.PREV_SLIDE, false );
 	}
 	
 	private function _onPrevSlide ( e:Event ):void {
-		sendNotification( AppFacade.NEXT_SLIDE );
+		sendNotification( AppFacade.NEXT_SLIDE, false );
+	}
+	
+	private function _onTick ( e:Event ):void{
+		sendNotification( AppFacade.NEXT_SLIDE, true );
 	}
 	
 }

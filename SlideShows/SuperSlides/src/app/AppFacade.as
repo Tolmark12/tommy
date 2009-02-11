@@ -20,6 +20,7 @@ public class AppFacade extends Facade implements IFacade
 	public static const INIT_SLIDES:String 				= "init_slides";
 	public static const NEXT_SLIDE:String 				= "next_slide";
 	public static const PREV_SLIDE:String 				= "prev_slide";
+	public static const STOP_AUTOPLAY:String 			= "stop_autoplay";
 	
 	public function AppFacade( key:String ):void
 	{

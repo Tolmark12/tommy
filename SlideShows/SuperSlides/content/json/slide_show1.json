@@ -1,15 +1,17 @@
 {
 "globals" : {
 	"nav_y" : 50,
+	"slide_show_speed" : 5,
+	"slide_trans_speed" : 2,
 	"arrows_position" : { "x" : 0, "y" : 15 },
 	"css" : "p{ color:#796443; font-family:VTypewriterTelegram; font-size:17 } a{ text-decoration:underline;  } a:hover{ color:#A41F25; }"
 },
 "template":{
-	"slot_a" : { "x" : 22, "y" : 25, "kind" : "image" },
-	"slot_b" : { "x" : 175, "y" : 84, "kind" : "text", "width" : 350, "inNavDrawer" : true },
-	"slot_c" : { "x" : 435, "y" : 515, "kind" : "image" },
-	"slot_d" : { "x" : 430, "y" : 25, "kind" : "image" },
-	"slot_e" : { "x" : 440, "y" : 400, "kind" : "text", "width" : 190 } 
+	"slot_a" : { "x" : 37, "y" : 35, "kind" : "image" },
+	"slot_b" : { "x" : 190, "y" : 94, "kind" : "text", "width" : 350, "inNavDrawer" : true },
+	"slot_c" : { "x" : 450, "y" : 525, "kind" : "image" },
+	"slot_d" : { "x" : 445, "y" : 35, "kind" : "image" },
+	"slot_e" : { "x" : 455, "y" : 410, "kind" : "text", "width" : 190 } 
 },
 "staticContent" : 
 {

@@ -12,6 +12,7 @@ public class SlidesProxy extends Proxy implements IProxy
 	private var _currentSlideIndex:uint;
 	private var _totalSlides:uint;
 	private var _slideList:Array = new Array();
+	private var _autoPlayIsActive:Boolean = true;
 	
 	public function SlidesProxy(  ):void
 	{
@@ -109,15 +110,22 @@ public class SlidesProxy extends Proxy implements IProxy
 	*	Incrament the slide index
 	*	@param		The incrament amount. This can be a positive -OR- a negative number.
 	*/
-	public function incramentSlideIndex ( $incrament:int ):void
+	public function incramentSlideIndex ( $incrament:int, $doLoop:Boolean=false ):void
 	{
 		var newIndex:int = _currentSlideIndex + $incrament;
 		
-		// Make sure the new index falls within the range of slides
-		if( newIndex > _totalSlides - 1 )		
-			newIndex = _totalSlides - 1;	// if new index is greater than the last slide, show last slide.
-		else if( newIndex < 0 )				
-			newIndex = 0;					// if the index is less than 0, show first slide.
+		if( !$doLoop ) {
+			// Make sure the new index falls within the range of slides
+			if( newIndex > _totalSlides - 1 )		
+				newIndex = _totalSlides - 1;	// if new index is greater than the last slide, show last slide.
+			else if( newIndex < 0 )				
+				newIndex = 0;					// if the index is less than 0, show first slide.
+		} else {
+			if( newIndex > _totalSlides - 1 )		
+				newIndex = 0;					// if new index is greater than the last slide, show first slide.
+			else if( newIndex < 0 )				
+				newIndex = _totalSlides - 1;	// if the index is less than 0, show last slide.
+		}
 		
 		// Only send broadcast if the new slide 
 		// is different than the current slide
@@ -138,6 +146,15 @@ public class SlidesProxy extends Proxy implements IProxy
 		var incramentDifference:int	= Math.abs( _currentSlideIndex - $newIndex ) * plusOrMinus;
 		
 		incramentSlideIndex( incramentDifference );
+	}
+	
+	public function stopAutoPlay (  ):void
+	{
+		if( _autoPlayIsActive ) 
+		{
+			_autoPlayIsActive = false;
+			sendNotification( AppFacade.STOP_AUTOPLAY );
+		}
 	}
 	
 	// ______________________________________________________________ Getters and setters

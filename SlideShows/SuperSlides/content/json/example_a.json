@@ -5,9 +5,9 @@
 	"css" : "p{ color:#796443; font-family:VTypewriterTelegram; font-size:17 } a{ text-decoration:underline;  } a:hover{ color:#FF0000; }"
 },
 "template":{
-	"slot_a" : { "x" : 20, "y" : 30, "kind" : "image" },
-	"slot_b" : { "x" : 240, "y" : 60, "kind" : "text", "width" : 200, "inNavDrawer" : true },
-	"slot_c" : { "x" : 100, "y" : 300, "kind" : "image" } 
+	"slot_a" : { "x" : 20+15, "y" : 30+10, "kind" : "image" },
+	"slot_b" : { "x" : 240+15, "y" : 60+10, "kind" : "text", "width" : 200, "inNavDrawer" : true },
+	"slot_c" : { "x" : 100+15, "y" : 300+10, "kind" : "image" } 
 },
 "staticContent" : 
 {
