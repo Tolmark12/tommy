@@ -13,6 +13,7 @@ import flash.geom.ColorTransform;
 
 public class Image extends Slot
 {
+	public static const IMAGE_LOADED:String = "image_loaded";
 	public static var transitionSpeed:Number;
 	
 	private var _imageHolder:Sprite;
@@ -41,10 +42,8 @@ public class Image extends Slot
 		if( _images[$image] == null ) 
 		{
 			_href = $href;
-		
-			// TODO: Might be nice to not load images that are already loaded. 
-			// ie, cache the loaded bitmaps. 
-		
+			
+			// Cancel the current load if it's not complete
 			if( _isLoading ) {
 				_ldr.cancelLoad();
 				_ldr.removeEventListener( Event.COMPLETE, _handleImageLoaded );
@@ -67,6 +66,7 @@ public class Image extends Slot
 	private function _handleImageLoaded ( e:Event ):void
 	{
 		_isLoading = false;
+		this.dispatchEvent( new Event(IMAGE_LOADED, true) );
 		
 		// Draw the loaded image
 		var myBitmapData:BitmapData = new BitmapData(_imageHolder.width, _imageHolder.height, true, 0x000000 );
@@ -75,7 +75,7 @@ public class Image extends Slot
 		// Apply effects
 		var pixasso:Pixasso = new Pixasso( myBitmapData );
 		pixasso.addBorderTexture( new BorderTexture_swc( 900, 8) );
-		pixasso.roundCorners(40);
+		pixasso.roundCorners(44);
 		
 		// delete the loaded image
 		_imageHolder = null;

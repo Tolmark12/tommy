@@ -30,7 +30,8 @@ public class ControlsMediator extends Mediator implements IMediator
 		return [ AppFacade.SET_GLOBALS,
 				 AppFacade.INIT_SLIDES, 
 				 AppFacade.CHANGE_SLIDE,
-				 AppFacade.STOP_AUTOPLAY, ];
+				 AppFacade.STOP_AUTOPLAY,
+				 AppFacade.SHOW_HIDDEH_ITEMS ];
 	}
 	
 	// PureMVC: Handle notifications
@@ -57,6 +58,9 @@ public class ControlsMediator extends Mediator implements IMediator
 			break;
 			case AppFacade.STOP_AUTOPLAY :
 				_timer.stopTimer();
+			break;
+			case AppFacade.SHOW_HIDDEH_ITEMS :
+				_nav.showControls();
 			break;
 		}
 	}

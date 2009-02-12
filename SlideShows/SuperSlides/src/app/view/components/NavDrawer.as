@@ -3,6 +3,7 @@ package app.view.components
 
 import flash.display.*;
 import flash.events.*;
+import caurina.transitions.Tweener;
 
 public class NavDrawer extends MovieClip
 {
@@ -25,7 +26,7 @@ public class NavDrawer extends MovieClip
 	
 	public function NavDrawer():void
 	{
-		
+		_controlsMc.alpha = 0;
 	}
 	
 	/** 
@@ -62,6 +63,11 @@ public class NavDrawer extends MovieClip
 	public function changeSlide ( $slideIndex:Number ):void
 	{
 		_text.text = $slideIndex + " of " + _totalSlides;
+	}
+	
+	public function showControls (  ):void
+	{
+		Tweener.addTween( _controlsMc, { alpha:1, time:2, transition:"EaseInOutQuint"} );
 	}
 	
 	// ______________________________________________________________ Event handlers

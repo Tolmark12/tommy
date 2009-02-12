@@ -50,6 +50,8 @@ public class SlidesProxy extends Proxy implements IProxy
 			slotTemplateVO.kind 		= $json.template[k].kind;
 			slotTemplateVO.width		= ($json.template[k].width == null)? 100 : $json.template[k].width ;
 			slotTemplateVO.inNavDrawer	= ($json.template[k].inNavDrawer == null )? false : $json.template[k].inNavDrawer ;
+			slotTemplateVO.isHidden		= ($json.template[k].initially_hidden == null)? false : $json.template[k].initially_hidden;
+			
 			templateSlots.push(slotTemplateVO);
 		}
 		
@@ -68,7 +70,6 @@ public class SlidesProxy extends Proxy implements IProxy
 		// load the first slide
 		sendNotification( AppFacade.POPULATE_SLOTS, currentSlide.slots  );
 		sendNotification( AppFacade.CHANGE_SLIDE, _currentSlideIndex );
-		
 	}
 	
 	
@@ -85,19 +86,19 @@ public class SlidesProxy extends Proxy implements IProxy
 			{
 				case "image" :
 					var slotImageVo:SlotImageVO = new SlotImageVO();
-					slotImageVo.slotId 	= j;
-					slotImageVo.kind	= $slotTemplate[j].kind
-					slotImageVo.src 	= $slotData[j].src;
-					slotImageVo.href 	= $slotData[j].href;
-					slotObj[j]			= slotImageVo;
+					slotImageVo.slotId 		= j;
+					slotImageVo.kind		= $slotTemplate[j].kind
+					slotImageVo.src 		= $slotData[j].src;
+					slotImageVo.href 		= $slotData[j].href;
+					slotObj[j]				= slotImageVo;
 				break;
 				
 				case "text" :
 					var slotTextVo:SlotTextVO = new SlotTextVO();
-					slotTextVo.kind		= $slotTemplate[j].kind
-					slotTextVo.slotId 	= j;
-					slotTextVo.text 	= $slotData[j].text;
-					slotObj[j]			= slotTextVo;
+					slotTextVo.kind			= $slotTemplate[j].kind
+					slotTextVo.slotId 		= j;
+					slotTextVo.text 		= $slotData[j].text;
+					slotObj[j]				= slotTextVo;
 				break;
 			}
 		}

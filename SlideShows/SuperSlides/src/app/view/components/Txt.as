@@ -16,6 +16,8 @@ public class Txt extends Slot
 		_text.txtField.selectable = false;
 		this.addChild(_text);
 		_text.parseCss( css );
+		//parent.isLoaded = true;
+		//parent.show();
 	}
 	
 	// Set the text

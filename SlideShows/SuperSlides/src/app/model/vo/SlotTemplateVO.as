@@ -9,6 +9,8 @@ public class SlotTemplateVO
 	public var y:Number;
 	public var width:Number;
 	public var inNavDrawer:Boolean;
+	public var isHidden:Boolean;
+	
 }
 
 }

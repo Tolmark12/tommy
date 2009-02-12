@@ -8,10 +8,10 @@
 },
 "template":{
 	"slot_a" : { "x" : 37, "y" : 35, "kind" : "image" },
-	"slot_b" : { "x" : 190, "y" : 94, "kind" : "text", "width" : 350, "inNavDrawer" : true },
-	"slot_c" : { "x" : 450, "y" : 525, "kind" : "image" },
+	"slot_b" : { "x" : 185, "y" : 84, "kind" : "text", "width" : 350, "inNavDrawer" : true, "initially_hidden" : true },
+	"slot_c" : { "x" : 450, "y" : 525, "kind" : "image", "initially_hidden" : true},
 	"slot_d" : { "x" : 445, "y" : 35, "kind" : "image" },
-	"slot_e" : { "x" : 455, "y" : 410, "kind" : "text", "width" : 190 } 
+	"slot_e" : { "x" : 455, "y" : 410, "kind" : "text", "width" : 190, "initially_hidden" : true } 
 },
 "staticContent" : 
 {
