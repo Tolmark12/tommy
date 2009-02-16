@@ -10,58 +10,60 @@ For xml tag reference: tag_reference.txt
 	<globals h="700" w="820" ></globals>
 	
 	<baubles>
-		<!-- Blank Background Button ----------------->
-		<bauble id="blank" file="blank_button.swf" x="left" y="0" width="100%" height="100%" alpha="0" hover_alpha="0" useHandCursor="false" link="/some/page.jsp" />
 		
 		<!-- Hot Points ------------------------------>
-		<bauble id="hot_point_1" file="HOME_hot_point.swf" x="100" y="100" fade="hide" link="/some/page.jsp" fadedCallBack="showHeaderElements">
-			<baubleContent>
+		<bauble id="hot_point_1" file="HOME_hot_point.swf" x="100" y="100" link="/some/page.jsp" fadedCallBack="showHeaderElements">
+			<baubleContent fadeDelay="3">
 				<box color="E3742A" colorOver="FBC97B"/>
-				<titleTxt color="E3742A" text="Bangladesh Satin Top" colorOver="A41F25"/>
+				<titleTxt color="E3742A" text="Bangladesh Satin Top 1" colorOver="A41F25"/>
 				<subTxt color="138D9C" text="I'm just happy to be here" colorOver="78A6B2" />
 			</baubleContent>
 		</bauble>
-		
-		<bauble id="hot_point_2" file="HOME_hot_point.swf" x="154" y="200" fade="hide" link="/some/page.jsp">
-			<baubleContent>
-				<box align="left"/>
-				<titleTxt text="Bangladesh Satin Top" fontStyle="2" />
-				<subTxt text="I'm just happy to be here" />
-			</baubleContent>
-		</bauble>
-		
-		<bauble id="hot_point_3" file="HOME_hot_point.swf" x="200" y="300" fade="hide" link="/some/page.jsp">
-			<baubleContent>
+		                                                                   
+		<bauble id="hot_point_2" file="HOME_hot_point.swf" x="154" y="200" link="/some/page.jsp" >
+			<baubleContent fadeDelay="3">                                                
+				<box align="left"/>                                        
+				<titleTxt text="Bangladesh Satin Top 2"  />     
+				<subTxt text="I'm just happy to be here" />                
+			</baubleContent>                                               
+		</bauble>                                                          
+		                                                                   
+		<bauble id="hot_point_3" file="HOME_hot_point.swf" x="200" y="300" link="/some/page.jsp">
+			<baubleContent fadeDelay="3">
 				<box />
-				<titleTxt text="Bangladesh Satin Top" />
+				<titleTxt text="Bangladesh Satin Top 3" />
 				<subTxt text="I'm just happy to be here" />
 			</baubleContent>
 		</bauble>
-		
+
 		<!-- Thumbnails  ----------------------------->
-		<bauble id="thumb_1" file="HOME_thumbnail.swf" x="68" y="520" frames="roll" fade="hide" link="/some/page.jsp" >
-			<baubleContent>
-				<info image="test1.jpg" active="true" />
-			</baubleContent>
-		</bauble>
-		<bauble id="thumb_2" file="HOME_thumbnail.swf" x="108" y="520" frames="roll" fade="hide" link="/some/page.jsp" >
-			<baubleContent>
-				<info image="test2.jpg"/>
-			</baubleContent>
-		</bauble>
-		<bauble id="thumb_3" file="HOME_thumbnail.swf" x="148" y="520" frames="roll" fade="hide" link="/some/page.jsp" >
-			<baubleContent>
-				<info image="test3.jpg"/>
-			</baubleContent>
-		</bauble>
-		<bauble id="thumb_4" file="HOME_thumbnail.swf" x="188" y="520" frames="roll" fade="hide" link="/some/page.jsp" >
+		<bauble id="thumb_1" file="HOME_thumbnail.swf" x="68" y="520" frames="roll"   link="/some/page.jsp" >
+			<baubleContent>                                                          
+				<info image="test1.jpg" active="true" />                             
+			</baubleContent>                                                         
+		</bauble>                                                                    
+		<bauble id="thumb_2" file="HOME_thumbnail.swf" x="108" y="520" frames="roll"  link="/some/page.jsp" >
+			<baubleContent>                                                          
+				<info image="test2.jpg"/>                                            
+			</baubleContent>                                                         
+		</bauble>                                                                    
+		<bauble id="thumb_3" file="HOME_thumbnail.swf" x="148" y="520" frames="roll"  link="/some/page.jsp" >
+			<baubleContent>                                                          
+				<info image="test3.jpg"/>                                            
+			</baubleContent>                                                         
+		</bauble>                                                                    
+		<bauble id="thumb_4" file="HOME_thumbnail.swf" x="188" y="520" frames="roll"  link="/some/page.jsp" >
 			<baubleContent>
 				<info image="test4.jpg"/>
 			</baubleContent>
 		</bauble>
+				
+		<!-- Blank Background Button ----------------->
+		<bauble id="blank" file="blank_button.swf" x="left" y="0" width="100%" height="100%" alpha="0" hover_alpha="0" depth="1" useHandCursor="false" link="/some/page.jsp" />
+
 		
-		<!-- Logo  ----------------------------------->
-		<bauble id="logo" file="HOME_logo_09.swf" x="center" y="190" fade="fast" frames="animation" clickable="false" animationDoneCallBack="showAllHiddenElements,showHeaderElements"/>
+		<!-- Logo  -----------------------------------
+		<bauble id="logo" file="HOME_logo_09.swf" x="center" y="190" fade="fast" frames="animation" clickable="false" animationDoneCallBack="showAllHiddenElements,showHeaderElements"/ >
 
 		
 	</baubles>

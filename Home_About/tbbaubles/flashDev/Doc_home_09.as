@@ -31,7 +31,7 @@ class Doc_home_09 extends Doc_BASE
 		rootMc.photoFrameLeft.maskMc._rotation 	= -4.5;
 		
 
-		var altBaubleMc:MovieClip = rootMc.createEmptyMovieClip( 'altBaubleMc', 5013 );
+		var altBaubleMc:MovieClip = rootMc.createEmptyMovieClip( 'altBaubleMc', 5008 );
 		
 		// Control for managing the text and the images
 		contentConRight = new Content2( rootMc.photoFrameRight, rootMc.textMc, PathFinder.getImagePath() );
