@@ -19,7 +19,7 @@
 			<main_img>temp_image_2.jpg</main_img>
 			<thmb_img>temp_image_2_thmb.jpg</thmb_img>
 			<text>
-				<h1>This is a header</h1><br/><p>Two Phasellus non lorem vel elit <a href="http://www.somesite.com">consectetuer egestas</a>. Curabitur vitae sem sit amet nisi fermentum molestie. Morbi vel lacus. Vivamus massa. Aliquam accumsan tempus purus. Suspendisse molestie eros a massa. Proin at ante vel turpis bibendum convallis. Donec quis dolor. Integer eu nisi. Aliquam dapibus scelerisque justo. Fusce sem. Nulla sed mauris sit amet erat rutrum venenatis.</p><br/>
+				<h1>This is a header</h1><br/><p>Two Phasellus non lorem vel elit <a href="http://www.somesite.com">consectetuer egestas®</a>. Curabitur vitae sem sit amet nisi fermentum molestie. Morbi vel lacus. Vivamus massa. Aliquam accumsan tempus purus. Suspendisse molestie eros a massa. Proin at ante vel turpis bibendum convallis. Donec quis dolor. Integer eu nisi. Aliquam dapibus scelerisque justo. Fusce sem. Nulla sed mauris sit amet erat rutrum venenatis.</p><br/>
 				<p>Integer rhoncus tellus sit amet nibh. Maecenas pellentesque tincidunt elit. Ut sem lorem, commodo sit amet, accumsan eget, condimentum et, nulla. Suspendisse potenti. In leo sem, condimentum at, laoreet vitae, suscipit vel, lectus. Ut ullamcorper lacus eu nunc dapibus vulputate. Proin porta erat vel ante. porttitor.</p>
 			</text>
 		</slide>

@@ -11,19 +11,19 @@ class bauble_code.HomeHotPoint
 	private var _subTxt:MovieClip;
 	private var _box:MovieClip;
 	
-	// Colors
+	// Colors (0xFFAA33)
 	private var _boxUp:Number;
 	private var _boxOver:Number;
-
 	private var _titleUp:Number;
 	private var _titleOver:Number;
-	
 	private var _subUp:Number;
 	private var _subOver:Number;
-	
 	private var _tntBox:Color;
 	private var _tntTitle:Color;
 	private var _tntSub:Color;
+	
+	// Fade delay
+	private var _fadeDelay:Number;
 	
 	public function HomeHotPoint( $xml:Object, $root:MovieClip )
 	{
@@ -46,6 +46,9 @@ class bauble_code.HomeHotPoint
 		_tntBox		= new Color( _box );
 		_tntTitle	= new Color( _mainTxt );
 		_tntSub		= new Color( _subTxt );
+		
+		// Fade delay
+		_fadeDelay 	= ($xml.fadeDelay == undefined)? 0 : Number($xml.fadeDelay) ;
 		
 		// Set the colors if they exist
 		// UP
@@ -104,25 +107,33 @@ class bauble_code.HomeHotPoint
 	*/
 	public function _toggleTextVisibility ( $showText:Boolean ):Void
 	{
+		Tweener.removeTweens( _box );
+		Tweener.removeTweens( _mainTxt ); 
+		Tweener.removeTweens( _subTxt );
+		
 		if( $showText ) 
 		{
 			_mainTxt._visible = true;
 			_subTxt._visible = true;
-			Tweener.addTween( _box, {_alpha:100, time:0, transition:"linear" } );
+			Tweener.addTween( _box,     {_alpha:100, time:0, transition:"linear" } );
 			Tweener.addTween( _mainTxt, {_alpha:100, time:0, transition:"linear" } );
-			Tweener.addTween( _subTxt, {_alpha:100, time:0, transition:"linear" } );
+			Tweener.addTween( _subTxt,  {_alpha:100, time:0, transition:"linear" } );
 		}
 		else
 		{
-			_mainTxt._visible = false;
-			_subTxt._visible = false;
-			Tweener.addTween( _box, {_alpha:50, time:0, transition:"linear" } );
-			Tweener.addTween( _mainTxt, {_alpha:0, time:0, transition:"linear" }  );
-			Tweener.addTween( _subTxt, {_alpha:0, time:0, transition:"linear" } );
+			Tweener.addTween( _box, {_alpha:50, time:1,    delay:_fadeDelay, transition:"linear", onComplete:Delegate.create(this, visibleFalse) } );
+			Tweener.addTween( _mainTxt, {_alpha:0, time:1, delay:_fadeDelay, transition:"linear" }  );
+			Tweener.addTween( _subTxt, {_alpha:0, time:1,  delay:_fadeDelay, transition:"linear" } );
 		}
 	}
 	
 	// ______________________________________________________________ Event Handlers
+
+	public function visibleFalse (  ):Void
+	{
+		_mainTxt._visible = false;
+		_subTxt._visible = false;
+	}
 	
 	public function onRollOver (  ):Void
 	{
@@ -136,11 +147,10 @@ class bauble_code.HomeHotPoint
 		_toggleTextVisibility(false);
 	}
 	
+	// Called by external sources
 	public function onFadedIn (  ):Void
 	{
-		Tweener.addTween( _box, {_alpha:50, time:3, transition:"linear" } );
-		Tweener.addTween( _mainTxt, {_alpha:0, time:3, transition:"linear", onComplete:Delegate.create(this, _toggleTextVisibility) } );
-		Tweener.addTween( _subTxt, {_alpha:0, time:3, transition:"linear"} );
+		_toggleTextVisibility(false);
 	}
 	
 }

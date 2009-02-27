@@ -27,12 +27,16 @@ slot is a position where an image, or text will be
 placed. 
 
 	Expected Params:
-	x				- Number  - The "x" position
-	y				- Number  - the "y" position
-	kind			- String  - The type of content (image or text)
-	width			- Number  - (optional) ONLY used for a text slot. Determines the width of the text field
-	inNavDrawer		- Boolean - (optional) defaults to false. Used to add an item to the nav drawer instead of the main display area
-								It's important, that the x and y are then relative to the nav Drawer...
+	x					- Number  - The "x" position
+	y					- Number  - the "y" position
+	kind				- String  - The type of content (image or text)
+	
+	Optional params:
+	width				- Number  - (optional) ONLY used for a text slot. Determines the width of the text field
+	inNavDrawer			- Boolean - (optional) defaults to false. Used to add an item to the nav drawer instead of the main display area
+									It's important, that the x and y are then relative to the nav Drawer...
+	initially_hidden	- Boolean - (optional) defaults to false. Use this to hide an element until an element not marked as initially
+									hidden has loaded
 	
 	Example:
 	"template":{
@@ -82,6 +86,7 @@ These define how the slots are filled per slide.
 ----------------------------------------------
 
 IMAGE:
+________________________
 This is an external Image
 	
 	Expected Params:
@@ -93,6 +98,7 @@ This is an external Image
 
 
 TEXT:
+________________________
 A block of text
 
 	Expected Params:
