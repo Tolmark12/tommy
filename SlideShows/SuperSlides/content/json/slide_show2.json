@@ -1,31 +1,41 @@
 {
 "globals" : {
-	"nav_y" : 50,
+	"nav_y" : 45,
 	"slide_show_speed" : 5,
 	"slide_trans_speed" : 2,
-	"arrows_position" : { "x" : 0, "y" : 15 },
+	"arrows_position" : { "x" : -5, "y" : 18 },
 	"css" : "p{ color:#796443; font-family:VTypewriterTelegram; font-size:17 } a{ text-decoration:underline;  } a:hover{ color:#A41F25; }"
 },
 "template":{
 	"slot_a" : { "x" : 37, "y" : 35, "kind" : "image" },
-	"slot_b" : { "x" : 185, "y" : 84, "kind" : "text", "width" : 350, "inNavDrawer" : true, "initially_hidden" : true }
+	"slot_b" : { "x" : 37, "y" : 393, "kind" : "image" },
+	"slot_c" : { "x" : 455, "y" : 410, "kind" : "text", "width" : 190, "initially_hidden" : true },
+	"slot_d" : { "x" : 185, "y" : 84, "kind" : "text", "width" : 350, "inNavDrawer" : true, "initially_hidden" : true },
+	"slot_e" : { "x" : 450, "y" : 525, "kind" : "image", "initially_hidden" : true}	
 },
 "staticContent" : 
 {
+	"slot_e" : { "src" : "content/images/tommy_script_logo.png", "href" : "http://www.tommybahama.com" }
 },
 "slides":
 [
 	{
-		"slot_a" : { "src" : "content/images/bigSlide1.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_b" : { "text" : "Top: <a href='http://www.tommybahama.com'>Striped Collar Shirt</a>     Bottom: <a href='http://www.tommybahama.com'>White Beach Shorts</a>"}
+		"slot_a" : { "src" : "content/images/slide_show2/topSlide1.jpg", "href" : "http://www.tommybahama.com" },
+		"slot_b" : { "src" : "content/images/slide_show2/bottomSlide1.jpg", "href" : "http://www.tommybahama.com" },
+		"slot_c" : { "text" : "Laid-Back and Charismatic - Perfect for a stylish outdoor lifestyle that is cool and casual, yet sophisticated.", "href" : "http://www.tommybahama.com" },
+		"slot_d" : { "text" : "Left: <a href='http://www.tommybahama.com'>White Beach Shorts</a>     Right: <a href='http://www.tommybahama.com'>Maui Cienna Swim</a>"}
 	},
 	{
-		"slot_a" : { "src" : "content/images/bigSlide2.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_b" : { "text" : "Pictured: <a href='http://www.tommybahama.com'>Mardi Gras Polo</a>"}
+		"slot_a" : { "src" : "content/images/slide_show2/topSlide2.jpg", "href" : "http://www.tommybahama.com" },
+		"slot_b" : { "src" : "content/images/slide_show2/bottomSlide2.jpg", "href" : "http://www.tommybahama.com" },
+		"slot_c" : { "text" : "Laid-Back and Charismatic - Perfect for a stylish outdoor lifestyle that is cool and casual, yet sophisticated.", "href" : "http://www.tommybahama.com" },
+		"slot_d" : { "text" : "Left: <a href='http://www.tommybahama.com'>White Beach Shorts</a>     Right: <a href='http://www.tommybahama.com'>Maui Cienna Swim</a>"}
 	},
 	{
-		"slot_a" : { "src" : "content/images/bigSlide3.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_b" : { "text" : "Pictured: <a href='http://www.tommybahama.com'>Mardi Gras Polo</a>"}
+		"slot_a" : { "src" : "content/images/slide_show2/topSlide3.jpg", "href" : "http://www.tommybahama.com" },
+		"slot_b" : { "src" : "content/images/slide_show2/bottomSlide3.jpg", "href" : "http://www.tommybahama.com" },
+		"slot_c" : { "text" : "Laid-Back and Charismatic - Perfect for a stylish outdoor lifestyle that is cool and casual, yet sophisticated.", "href" : "http://www.tommybahama.com" },
+		"slot_d" : { "text" : "Left: <a href='http://www.tommybahama.com'>White Beach Shorts</a>     Right: <a href='http://www.tommybahama.com'>Maui Cienna Swim</a>"}
 	}
 ]
 }
