@@ -1,0 +1,49 @@
+09_home.swf Movie Report
+-------------------------
+
+Frame #    Frame Bytes    Total Bytes    Scene
+-------    -----------    -----------    ----------------
+      1          25476          25476    Scene 1 (AS 2.0 Classes Export Frame)
+
+Scene                        Shape Bytes    Text Bytes    ActionScript Bytes
+-------------------------    -----------    ----------    ------------------
+Scene 1                                0             0                   169
+
+Symbol                       Shape Bytes    Text Bytes    ActionScript Bytes
+-------------------------    -----------    ----------    ------------------
+Bottom Nav Mask                       37             0                     0
+mask in photo                          0             0                     0
+frame in photo                         0             0                     0
+clippie                                0             0                     0
+Symbol 3                               0             0                     0
+valentine_mask                         0             0                     0
+mask23                                 0             0                     0
+mask4                                  0             0                     0
+mask                                   0             0                     0
+Symbol 2                               0             0                     0
+textMc                                 0             0                     0
+lineMc                                 0             0                     0
+brick                                  0             0                     0
+txtBtn                                 0             0                     0
+staticBook                             0             0                     0
+Symbol 1                               0             0                     0
+bookMc                                 0             0                     0
+news_mask                              0             0                     0
+coaster_mask                           0             0                     0
+stamps_mask                            0             0                     0
+tb_mask                                0             0                     0
+sunglass_mask                          0             0                     0
+baubleMc                               0             0                     0
+paper                                  0             0                     0
+holderMc                               0             0                     0
+photoHolder -- WAS LINKED photoHolder contentArea.PhotoBox     0             0                     0
+mainHolder                             0             0                     0
+
+ActionScript Bytes    Location
+------------------    --------
+               169    Scene 1:FlashAICB:1
+             25214    ActionScript 2.0 Classes
+
+
+
+

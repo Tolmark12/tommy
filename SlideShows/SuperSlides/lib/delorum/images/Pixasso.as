@@ -316,8 +316,9 @@ public class Pixasso extends EventDispatcher
 	
 	/// ADD A BORDER
 	/** 
-	*	Create a border mask based on a long transparent bitmap data
-	*	@param		Bitmap data that has a border texture. 
+	*	Create a border mask based on a long transparent bitmap data. The border width will cut into the 
+	*	image. It's width will be equal to the height of the border texture image. 
+	*	@param		Bitmap data of the border texture. Black will be opaque, white transparent. 
 	*/
 	public function addBorderTexture ( $border:BitmapData ):void
 	{

@@ -59,7 +59,7 @@ For xml tag reference: tag_reference.txt
 		</bauble>
 				
 		<!-- Blank Background Button ----------------->
-		<bauble id="blank" file="blank_button.swf" x="left" y="0" width="100%" height="100%" alpha="0" hover_alpha="0" depth="1" useHandCursor="false" link="/some/page.jsp" />
+		<bauble id="blank" file="blank_button.swf" x="left" y="0" width="100%" height="100%" alpha="0" hover_alpha="0" depth="-1" useHandCursor="false" link="/some/page.jsp" />
 
 		
 		<!-- Logo  -----------------------------------
