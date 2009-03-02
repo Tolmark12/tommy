@@ -8,7 +8,8 @@
 },
 "template":{
 	"slot_a" : { "x" : 37, "y" : 35, "kind" : "image" },
-	"slot_b" : { "x" : 185, "y" : 84, "kind" : "text", "width" : 350, "inNavDrawer" : true, "initially_hidden" : true }
+	"slot_b" : { "x" : 185, "y" : 42, "kind" : "text", "width" : 350, "inNavDrawer" : true, "initially_hidden" : true },
+	"slot_c" : { "x" : 185, "y" : 84, "kind" : "text", "width" : 350, "inNavDrawer" : true, "initially_hidden" : true }
 },
 "staticContent" : 
 {
@@ -18,15 +19,18 @@
 [
 	{
 		"slot_a" : { "src" : "content/images/slide_show0/bigSlide1.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_b" : { "text" : "Top: <a href='http://www.tommybahama.com'>Striped Collar Shirt</a>     Bottom: <a href='http://www.tommybahama.com'>White Beach Shorts</a>"}
+		"slot_b" : { "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit, libero"},
+		"slot_c" : { "text" : "Top: <a href='http://www.tommybahama.com'>Striped Collar Shirt</a>     Bottom: <a href='http://www.tommybahama.com'>White Beach Shorts</a>"}
 	},
 	{
 		"slot_a" : { "src" : "content/images/slide_show0/bigSlide2.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_b" : { "text" : "Pictured: <a href='http://www.tommybahama.com'>Mardi Gras Polo</a>"}
+		"slot_b" : { "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit, libero"},
+		"slot_c" : { "text" : "Top: <a href='http://www.tommybahama.com'>Striped Collar Shirt</a>     Bottom: <a href='http://www.tommybahama.com'>White Beach Shorts</a>"}
 	},
 	{
 		"slot_a" : { "src" : "content/images/slide_show0/bigSlide3.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_b" : { "text" : "Pictured: <a href='http://www.tommybahama.com'>Mardi Gras Polo</a>"}
+		"slot_b" : { "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit, libero"},
+		"slot_c" : { "text" : "Top: <a href='http://www.tommybahama.com'>Striped Collar Shirt</a>     Bottom: <a href='http://www.tommybahama.com'>White Beach Shorts</a>"}
 	}
 ]
 }

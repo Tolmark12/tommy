@@ -25,12 +25,12 @@
 	{
 		"slot_a" : { "src" : "content/images/slide_show4/leftSlide2.jpg", "href" : "http://www.tommybahama.com" },
 		"slot_b" : { "src" : "content/images/slide_show4/rightSlide2.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_c" : { "text" : "Pictured: <a href='http://www.tommybahama.com'>Mardi Gras Polo</a>"}
+		"slot_c" : { "text" : "Top: <a href='http://www.tommybahama.com'>Striped Collar Shirt</a>     Bottom: <a href='http://www.tommybahama.com'>White Beach Shorts</a>"}
 	},
 	{
 		"slot_a" : { "src" : "content/images/slide_show4/leftSlide3.jpg", "href" : "http://www.tommybahama.com" },
 		"slot_b" : { "src" : "content/images/slide_show4/rightSlide3.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_c" : { "text" : "Pictured: <a href='http://www.tommybahama.com'>Mardi Gras Polo</a>"}
+		"slot_c" : { "text" : "Top: <a href='http://www.tommybahama.com'>Striped Collar Shirt</a>     Bottom: <a href='http://www.tommybahama.com'>White Beach Shorts</a>"}
 	}
 ]
 }

@@ -10,7 +10,8 @@
 	"slot_a" : { "x" : 37, "y" : 35, "kind" : "image" },
 	"slot_b" : { "x" : 37, "y" : 393, "kind" : "image" },
 	"slot_c" : { "x" : 342, "y" : 393, "kind" : "image" },
-	"slot_d" : { "x" : 185, "y" : 84, "kind" : "text", "width" : 350, "inNavDrawer" : true, "initially_hidden" : true }
+	"slot_d" : { "x" : 185, "y" : 42, "kind" : "text", "width" : 350, "inNavDrawer" : true, "initially_hidden" : true },
+	"slot_e" : { "x" : 185, "y" : 84, "kind" : "text", "width" : 350, "inNavDrawer" : true, "initially_hidden" : true }
 },
 "staticContent" : 
 {
@@ -22,19 +23,22 @@
 		"slot_a" : { "src" : "content/images/slide_show3/topSlide1.jpg", "href" : "http://www.tommybahama.com" },
 		"slot_b" : { "src" : "content/images/slide_show3/bottomLeftSlide1.jpg", "href" : "http://www.tommybahama.com" },
 		"slot_c" : { "src" : "content/images/slide_show3/bottomRightSlide1.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_d" : { "text" : "Top: <a href='http://www.tommybahama.com'>Striped Collar Shirt</a>     Bottom: <a href='http://www.tommybahama.com'>White Beach Shorts</a>"}
+		"slot_d" : { "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit, libero"},
+		"slot_e" : { "text" : "Top: <a href='http://www.tommybahama.com'>Striped Collar Shirt</a>     Bottom: <a href='http://www.tommybahama.com'>White Beach Shorts</a>"}
 	},
 	{
 		"slot_a" : { "src" : "content/images/slide_show3/topSlide2.jpg", "href" : "http://www.tommybahama.com" },
 		"slot_b" : { "src" : "content/images/slide_show3/bottomLeftSlide2.jpg", "href" : "http://www.tommybahama.com" },
 		"slot_c" : { "src" : "content/images/slide_show3/bottomRightSlide2.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_d" : { "text" : "Top: <a href='http://www.tommybahama.com'>Striped Collar Shirt</a>     Bottom: <a href='http://www.tommybahama.com'>White Beach Shorts</a>"}
+		"slot_d" : { "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit, libero"},
+		"slot_e" : { "text" : "Top: <a href='http://www.tommybahama.com'>Striped Collar Shirt</a>     Bottom: <a href='http://www.tommybahama.com'>White Beach Shorts</a>"}
 	},
 	{
 		"slot_a" : { "src" : "content/images/slide_show3/topSlide3.jpg", "href" : "http://www.tommybahama.com" },
 		"slot_b" : { "src" : "content/images/slide_show3/bottomLeftSlide3.jpg", "href" : "http://www.tommybahama.com" },
 		"slot_c" : { "src" : "content/images/slide_show3/bottomRightSlide3.jpg", "href" : "http://www.tommybahama.com" },
-		"slot_d" : { "text" : "Top: <a href='http://www.tommybahama.com'>Striped Collar Shirt</a>     Bottom: <a href='http://www.tommybahama.com'>White Beach Shorts</a>"}
+		"slot_d" : { "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit, libero"},
+		"slot_e" : { "text" : "Top: <a href='http://www.tommybahama.com'>Striped Collar Shirt</a>     Bottom: <a href='http://www.tommybahama.com'>White Beach Shorts</a>"}
 	}
 ]
 }
