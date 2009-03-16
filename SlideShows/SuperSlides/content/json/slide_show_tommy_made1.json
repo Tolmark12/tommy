@@ -1,0 +1,35 @@
+{
+"globals" : {
+	"nav_y" : 50,
+	"slide_show_speed" : 5,
+	"slide_trans_speed" : 2,
+	"arrows_position" : { "x" : 0, "y" : 15 },
+	"css" : "p{ color:#796443; font-family:VTypewriterTelegram; font-size:17 } a{ text-decoration:underline;  } a:hover{ color:#A41F25; }"
+},
+"template":{
+	"slot_a" : { "x" : 37, "y" : 35, "kind" : "image" },
+	"slot_b" : { "x" : 185, "y" : 84, "kind" : "text", "width" : 350, "inNavDrawer" : true, "initially_hidden" : true }
+},
+"staticContent" : 
+{
+},
+"slides":
+[
+	{
+		"slot_a" : { "src" : "http://savedarryl.com/media/TB001/images/static/slideshows/denim/DENIM_FIT_GUIDE_Classic.jpg", "href" : "http://www.tommybahama.com" },
+		"slot_b" : { "text" : "Top: <a href='http://www.tommybahama.com'>Striped Collar Shirt</a>     Bottom: <a href='http://www.tommybahama.com'>White Beach Shorts</a>"}
+	},
+	{
+		"slot_a" : { "src" : "http://savedarryl.com/media/TB001/images/static/slideshows/denim/DENIM_FIT_GUIDE_Easy.jpg", "href" : "http://www.tommybahama.com" },
+		"slot_b" : { "text" : "Pictured: <a href='http://www.tommybahama.com'>Mardi Gras Polo</a>"}
+	},
+	{
+		"slot_a" : { "src" : "http://savedarryl.com/media/TB001/images/static/slideshows/denim/DENIM_FIT_GUIDE_Straight.jpg", "href" : "http://www.tommybahama.com" },
+		"slot_b" : { "text" : "Pictured: <a href='http://www.tommybahama.com'>Mardi Gras Polo</a>"}
+	},	{
+		"slot_a" : { "src" : "http://savedarryl.com/media/TB001/images/static/slideshows/denim/DENIM_FIT_GUIDE_Standard.jpg", "href" : "http://www.tommybahama.com" },
+		"slot_b" : { "text" : "Pictured: <a href='http://www.tommybahama.com'>Mardi Gras Polo</a>"}
+	}
+]
+}
+

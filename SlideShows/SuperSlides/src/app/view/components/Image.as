@@ -53,6 +53,7 @@ public class Image extends Slot
 			_isLoading = true;
 			_imageHolder = new Sprite();
 			_ldr = new ImageLoader( $image, _imageHolder );
+			_ldr.checkCrossDomainXml = true;
 			_ldr.addEventListener( Event.COMPLETE, _handleImageLoaded );
 			_ldr.loadItem();	
 		}else{

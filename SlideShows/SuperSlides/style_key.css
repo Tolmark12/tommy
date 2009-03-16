@@ -1,0 +1,42 @@
+/* @override http://www.delorum.com/client/tommy/slides/style_key.css */
+
+html, body, #flash_wrapper { 
+	background:#454240;
+}
+body { 
+	
+	height: 10px; 
+	margin:0; 
+	padding:0;
+	font: 11px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+ul{
+	list-style-type: square;
+	opacity: 1;
+}
+
+li{
+	color: #9f9f9f;
+}
+
+ul li{
+	color: #000;
+}
+ul{
+	margin: 7px;
+	margin-bottom: 10px;
+	margin-left: 0;
+	padding-left: 7px;
+}
+a.visited{
+	color: 	#9f9f9f;
+}
+
+a{
+	color: 	#9f9f9f;
+}
+
+li.bright a{
+	color: #FFF;
+}
