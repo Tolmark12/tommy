@@ -19,7 +19,7 @@ $_GET['id'] = ($_GET['id'])? $_GET['id'] : "0" ;
         <script type="text/javascript" src="js/swfaddress/swfaddress.js"></script>
         <script type="text/javascript">
             /* <![CDATA[ */
-                flashVars   = { json:"content/json/slide_show<?= $_GET['id'] ?>.json" }; // <- Set the json location here
+                flashVars   = { file:"content/json/slide_show<?= $_GET['id'] ?>.json" }; // <- Set the json location here
                 flashParams = { bgcolor: "#FBF7F0" };
                 swfobject.embedSWF( 'SuperSlides.swf', 'flash_div', '685', '683', '9.0.45', 
                                     'js/swfobject/expressinstall.swf', flashVars, flashParams, {id: 'slideshow'}  );

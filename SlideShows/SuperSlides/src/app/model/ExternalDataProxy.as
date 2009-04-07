@@ -25,13 +25,15 @@ public class ExternalDataProxy extends Proxy implements IProxy
 	*/
 	public function loadData ( $stage:Stage ):void
 	{
-		var path:String = ( $stage.loaderInfo.parameters.json != null )? $stage.loaderInfo.parameters.json : 'content/json/slide_show0.json' ;
+		var path:String = ( $stage.loaderInfo.parameters.file != null )? $stage.loaderInfo.parameters.file : 'content/json/slide_show0.json' ;
 		var ldr:DataLoader = new DataLoader( path );
 		
+		// Find out what kind of file we're loading
 		var typeAr:Array = path.split(".");
+		var ext:String = typeAr[typeAr.length-1];
 		
 		// If we're loading json...
-		if(typeAr[typeAr.length-1] == "json")
+		if(ext == "json" || ext == "jsn")
 			ldr.addEventListener( Event.COMPLETE, _onJsonLoad );
 		// else we're loading xml...
 		else
