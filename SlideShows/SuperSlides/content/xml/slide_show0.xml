@@ -1,0 +1,43 @@
+<MAIN>
+	<globals nav_y="85" slide_show_speed="5" slide_trans_speed="2">	
+		<arrows_position x="-5" y="-18"></arrows_position>
+		<css>
+			p{ color:#796443; font-family:VTypewriterTelegram; font-size:17 } a{ text-decoration:underline;  } a:hover{ color:#A41F25; }
+		</css>
+	</globals>
+	<template>
+		<slot_a  kind="image" x="37"  y="35"  />
+		<slot_b  kind="text"  x="185" y="42" width="350" inNavDrawer="true" initially_hidden="true" />
+		<slot_c  kind="text"  x="185" y="84" width="350" inNavDrawer="true" initially_hidden="true" />
+	</template>
+	<staticContent>
+	</staticContent>
+	<slides>
+		<slide>
+			<slot_a src="content/images/slide_show0/bigSlide1.jpg" href="http://www.tommybahama.com" />
+			<slot_b>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit, libero</p>
+			</slot_b>
+			<slot_c><p>Top:&#160;<a href="http://www.tommybahama.com">Striped Collar Shirt</a>&#160;&#160;&#160;&#160;&#160;Bottom:&#160;<a href="http://www.tommybahama.com">White Beach Shorts</a></p></slot_c>
+		</slide>
+		<slide>
+			<slot_a src="content/images/slide_show0/bigSlide2.jpg" href="http://www.tommybahama.com" />
+			<slot_b>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit, libero</p>
+			</slot_b>
+			<slot_c>
+				<p>Top:&#160;<a href="http://www.tommybahama.com">Striped Collar Shirt</a>&#160;&#160;&#160;&#160;&#160;Bottom:&#160;<a href="http://www.tommybahama.com">White Beach Shorts</a></p>
+			</slot_c>
+		</slide>
+		<slide>
+			<slot_a src="content/images/slide_show0/bigSlide3.jpg" href="http://www.tommybahama.com" />
+			<slot_b>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit, libero</p>
+			</slot_b>
+			<slot_c>
+				<p>Top:&#160;<a href="http://www.tommybahama.com">Striped Collar Shirt</a>&#160;&#160;&#160;&#160;&#160;Bottom:&#160;<a href="http://www.tommybahama.com">White Beach Shorts</a></p>
+			</slot_c>
+		</slide>
+	</slides>
+</MAIN>
+

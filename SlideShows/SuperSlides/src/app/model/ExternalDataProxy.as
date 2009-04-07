@@ -23,12 +23,20 @@ public class ExternalDataProxy extends Proxy implements IProxy
 	/** 
 	*	Load the json instructional file
 	*/
-	public function loadJson ( $stage:Stage ):void
+	public function loadData ( $stage:Stage ):void
 	{
-		var jsonPath:String = ( $stage.loaderInfo.parameters.json != null )? $stage.loaderInfo.parameters.json : 'content/json/slide_show1.json' ;
+		var path:String = ( $stage.loaderInfo.parameters.json != null )? $stage.loaderInfo.parameters.json : 'content/xml/slide_show0.xml' ;
+		var ldr:DataLoader = new DataLoader( path );
 		
-		var ldr:DataLoader = new DataLoader( jsonPath );
-		ldr.addEventListener( Event.COMPLETE, _onJsonLoad );
+		var typeAr:Array = path.split(".");
+		
+		// If we're loading json...
+		if(typeAr[1] == "json")
+			ldr.addEventListener( Event.COMPLETE, _onJsonLoad );
+		// else we're loading xml...
+		else
+			ldr.addEventListener( Event.COMPLETE, _onXmlLoad  ); 
+		
 		ldr.loadItem();
 	}
 	
@@ -51,8 +59,27 @@ public class ExternalDataProxy extends Proxy implements IProxy
 		globals.slideTransSpeed	= (json.globals.slide_trans_speed == null)? 1 : json.globals.slide_trans_speed ;
 		
 		sendNotification( AppFacade.SET_GLOBALS, globals );
-		
 		sendNotification( AppFacade.JSON_LOADED, json );
+	}
+	
+	/** 
+	*	Parse the xml and send the notifications
+	*	@param		event
+	*/
+	private function _onXmlLoad ( e:Event ):void
+	{
+		var xml:XML = new XML( e.target.data );
+		// Set global vars
+		var globals:GlobalsVO = new GlobalsVO();
+		globals.navY 			= (xml.globals.@nav_y == null)? 0 : xml.globals.@nav_y ;
+		globals.css				= (xml.globals.css == null)? "p{ color:#796443; font-family:VTypewriterTelegram; font-size:17 } a{ text-decoration:underline;  } a:hover{ color:#FF0000; }" : xml.globals.css ;
+		globals.controlsX		= (xml.globals.arrows_position.@x == null)? 0 : xml.globals.arrows_position.@x ;
+		globals.controlsY		= (xml.globals.arrows_position.@y == null)? 0 : xml.globals.arrows_position.@y ;
+		globals.slideShowSpeed	= (xml.globals.@slide_show_speed == null)? 3 : xml.globals.@slide_show_speed ;
+		globals.slideTransSpeed	= (xml.globals.@slide_trans_speed == null)? 1 : xml.globals.@slide_trans_speed ;
+	
+		sendNotification( AppFacade.SET_GLOBALS, globals );
+		sendNotification( AppFacade.XML_LOADED, xml );
 	}
 }
 }
