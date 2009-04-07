@@ -70,8 +70,8 @@ public class XMLParser extends Parser
 					slotTextVo.slotId 			= itemId;
 					slotTextVo.kind				= template.@kind;
 					slotTextVo.text 			= item.p.children().toXMLString();
-					slotTextVo.text 			= slotTextVo.text.replace(/\n/g, "");
-					slotTextVo.text 			= slotTextVo.text.replace(/\s/g, " ");
+					slotTextVo.text 			= slotTextVo.text.replace(/\n/g, "");	// Remove hard returns
+					slotTextVo.text 			= slotTextVo.text.replace(/\s/g, " ");	// Quirk with xml, replace spaces with real spaces
 					slotObj[itemId]				= slotTextVo;
 				break;
 			}
