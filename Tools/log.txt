@@ -1,0 +1,30 @@
+::: ADDED ::::
+
+::: MOVED :::
+
+::: DELETED :::
+
+ITEM::
+27-Aug) I think that now that I am using the Item object, that some of the if functionality is broken...
+28-Aug) Actually, the functionality is fine, it just need real xml data loaded into it. 
+
+TODO:
+
+1) Build logic for clicking next buttons to view...
+2) Build drag-bar for changing size of cards
+3) finish dropDown
+
+*It would be nice to make the card class more robust
+* I'd like to create a business class that draws a jaggedy "paper" bg
+
+DATABASE INTEGRATION:
+In what way should the product be requested. I'd like to make this sort of a call:
+
+-   getTops( 'brand' );
+
+
+// What options are available per product type?
+-   getProductDetails( 'productId' )
+
+return: sizing, colors, price, what else?
+// How are the colors handled? seperate products with their own sizing options?

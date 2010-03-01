@@ -1,0 +1,40 @@
+<main>
+	<product>
+		<v id="title">Tommy's Own Shirt - F</v>
+		<v id="productId">id_f</v>
+		<v id="scene7id">TW30696_1077_main</v>
+		<v id="Price">75</v>
+		<v id="description" type="html">
+			<div>This is where a detailed description goes <a href="http://www.tommybahama.com/">Test Link</a></div>
+		</v>
+
+		<attributes>
+			<atb id="Colors" dispName="Colors:">
+				<options>
+					<opt id="T31732_646_main"   value="Burgundy" />
+					<opt id="T31769_195_main"   value="Blue"	   />
+					<opt id="sT31700_954_main"  value="Purple"   />
+					<opt id="sT31744_927_main"  value="Orange"   />
+					<opt id="T31807_193_main"   value="Green"    />
+					<opt id="TW30696_1077_main" value="Yellow"   />
+					<opt id="T31713_3613_main"  value="Greuy"    />
+				</options>
+			</atb> 
+			<atb id="Size" dispName="Size:">
+				<options>
+					<opt id="Large"  value="Large"  />
+					<opt id="Medium" value="Medium"  />
+					<opt id="Small"	 value="Small"  />
+				</options>
+			</atb>
+			<atb id="Quantity" dispName="Qty.">
+				<options>
+					<opt id="2" value="2" />
+					<opt id="3" value="3" />
+					<opt id="4" value="4" />
+					<opt id="5" value="5" />
+				</options>
+			</atb>
+		</attributes>
+	</product>
+</main>

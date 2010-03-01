@@ -1,0 +1,3 @@
+Considering creating a class called: product.ProductSet.as
+
+This way, it would manage the loading a a set of products, and parsing out the xml correctly??

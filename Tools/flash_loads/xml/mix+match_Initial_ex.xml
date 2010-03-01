@@ -1,0 +1,102 @@
+<Main>
+	<items>
+		<tops>
+			<Category id="Shirts">
+				<item id="id_a" file="T31732_646_main"   />
+				<item id="id_b" file="T31769_195_main"   />
+				<item id="id_c" file="T31700_954_main"   />
+				<item id="id_d" file="T31744_927_main"   />
+				<item id="id_e" file="T31807_193_main"   />
+				<item id="id_f" file="TW30696_1077_main" />
+				<item id="id_g" file="T31713_3613_main"  />
+			</Category>                               
+		                                          
+			<Category id="Vests">                     
+				<item id="id_a" file="T31732_646_main"   />
+				<item id="id_b" file="T31769_195_main"   />
+				<item id="id_c" file="T31700_954_main"   />
+				<item id="id_d" file="T31744_927_main"   />
+				<item id="id_e" file="T31807_193_main"   />
+				<item id="id_f" file="TW30696_1077_main" />
+				<item id="id_g" file="T31713_3613_main"  />
+			</Category>                                                            
+			<Category id="Vests2">                     
+				<item id="id_a" file="T31732_646_main"   />
+				<item id="id_b" file="T31769_195_main"   />
+				<item id="id_c" file="T31700_954_main"   />
+				<item id="id_d" file="T31744_927_main"   />
+				<item id="id_e" file="T31807_193_main"   />
+				<item id="id_f" file="TW30696_1077_main" />
+				<item id="id_g" file="T31713_3613_main"  />
+			</Category>                                                            
+			<Category id="Vests3">                     
+				<item id="id_a" file="T31732_646_main"   />
+				<item id="id_b" file="T31769_195_main"   />
+				<item id="id_c" file="T31700_954_main"   />
+				<item id="id_d" file="T31744_927_main"   />
+				<item id="id_e" file="T31807_193_main"   />
+				<item id="id_f" file="TW30696_1077_main" />
+				<item id="id_g" file="T31713_3613_main"  />
+			</Category>                                                            
+			
+			<Category id="Coats">                     
+				<item id="id_a" file="T31732_646_main"   />
+				<item id="id_b" file="T31769_195_main"   />
+				<item id="id_c" file="T31700_954_main"   />
+				<item id="id_d" file="T31744_927_main"   />
+				<item id="id_e" file="T31807_193_main"   />
+				<item id="id_f" file="TW30696_1077_main" />
+				<item id="id_g" file="T31713_3613_main"  />
+				<!--item id="id_a4" file="T31732_646_main"   />
+				<item id="id_b4" file="T31769_195_main"   />
+				<item id="id_c4" file="T31700_954_main"   />
+				<item id="id_d4" file="T31744_927_main"   />
+				<item id="id_e4" file="T31807_193_main"   />
+				<item id="id_f4" file="TW30696_1077_main" />
+				<item id="id_g4" file="T31713_3613_main"  />
+				<item id="id_a5" file="T31732_646_main"   />
+				<item id="id_b5" file="T31769_195_main"   />
+				<item id="id_c5" file="T31700_954_main"   />
+				<item id="id_d5" file="T31744_927_main"   />
+				<item id="id_e5" file="T31807_193_main"   />
+				<item id="id_f5" file="TW30696_1077_main" />
+				<item id="id_g5" file="T31713_3613_main"  />
+				<item id="id_a6" file="T31732_646_main"   />
+				<item id="id_b6" file="T31769_195_main"   />
+				<item id="id_c6" file="T31700_954_main"   />
+				<item id="id_d6" file="T31744_927_main"   />
+				<item id="id_e6" file="T31807_193_main"   />
+				<item id="id_f6" file="TW30696_1077_main" />
+				<item id="id_g6" file="T31713_3613_main"  /-->
+			</Category>                               
+		</tops>                                       
+
+		<bottoms>                                     
+			<Category id="Pants">                                  
+				<item id="id_a2" file="IP1372_037_alt"    />
+				<item id="id_b2" file="IP1387_036_alt"    />
+				<item id="id_c2" file="IP1372_037_main"    />
+				<item id="id_d2" file="IP1387_036_main"   />
+				<item id="id_e2" file="T1281_151_alt1"    />
+				<item id="id_f2" file="T1281_151_main"    />
+				<item id="id_g2" file="T1281_064_alt1"    />
+			</Category>
+			<Category id="Shorts">
+				<item id="id_a2" file="T1281_064_main"    />
+				<item id="id_b2" file="T1281_023_alt1"    />
+				<item id="id_c2" file="T1281_023_main"    />
+				<item id="id_d2" file="T1281_005_alt1"   />
+				<item id="id_e2" file="T1281_005_main"    />
+				<item id="id_f2" file="T1376_064_alt1"    />
+				<item id="id_g2" file="T1376_064_main"    />
+			</Category>	
+			<Category id="Knickers">
+				<item id="id_a2" file="T1376_168_alt1"    />
+				<item id="id_b2" file="T1376_168_main"    />
+				<item id="id_c2" file="TR105_042_alt1"    />
+				<item id="id_d2" file="TR105_042_main"   />
+			</Category>                               
+                                                         
+		</bottoms> 
+	</items>                                   
+</Main>                          

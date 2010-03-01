@@ -3,7 +3,7 @@
 
 Frame #    Frame Bytes    Total Bytes    Scene
 -------    -----------    -----------    ----------------
-      1          25476          25476    Scene 1 (AS 2.0 Classes Export Frame)
+      1          25474          25474    Scene 1 (AS 2.0 Classes Export Frame)
 
 Scene                        Shape Bytes    Text Bytes    ActionScript Bytes
 -------------------------    -----------    ----------    ------------------
@@ -42,7 +42,7 @@ mainHolder                             0             0                     0
 ActionScript Bytes    Location
 ------------------    --------
                169    Scene 1:FlashAICB:1
-             25214    ActionScript 2.0 Classes
+             25212    ActionScript 2.0 Classes
 
 
 

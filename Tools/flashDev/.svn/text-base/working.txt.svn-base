@@ -1,0 +1,28 @@
+==Possible Shared Classes==
+
+> Product
+* Probably incorporate some sort of "quick look" or "info" hot spot
+* Clickable
+* Would be nice if it was very functional... options for interaction
+
+> Product Detail Information
+*Change Color (mini-thumbnails)
+*Product title
+*Product Description
+
+> Scroll Bars
+*Horizontal for mix and match
+** > Horizontal product position indicator, kind of a sister/cousin class
+
+> Flash Mini Modal
+*Probably would implement the -> "Product Detail" class
+
+>Buttons
+
+// How should I handle the different branding? Create a different library for each .fla? 
+
+*> Base Button Class for the rest to extend
+*> Add to cart
+*> Add to wish list
+*> Quick Look
+*> Dynamic button? (is it needed)
