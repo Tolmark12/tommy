@@ -12,6 +12,7 @@ public class AppFacade extends Facade implements IFacade
 	public static const SET_GLOBALS:String 				= "set_globals";
 	public static const STARTUP:String 					= "startup";
 	public static const JSON_LOADED:String 				= "json_loaded";
+	public static const XML_LOADED:String 				= "xml_loaded";
 	                                                	
 	// Slides                                       	
 	public static const INIT_SLOTS:String 				= "init_slots";
@@ -45,7 +46,8 @@ public class AppFacade extends Facade implements IFacade
 	{
 		super.initializeController();			
 		registerCommand( STARTUP, Startup );
-		registerCommand( JSON_LOADED, JsonLoaded );
+		registerCommand( JSON_LOADED, ProxyToProxy );
+		registerCommand( XML_LOADED, ProxyToProxy );
 		registerCommand( PREV_SLIDE, Clicks );
 		registerCommand( NEXT_SLIDE, Clicks );
 	}
